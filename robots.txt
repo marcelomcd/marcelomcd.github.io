@@ -1,0 +1,7 @@
+# robots.txt para marcelomcd.github.io
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://marcelomcd.github.io/sitemap.xml

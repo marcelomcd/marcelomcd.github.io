@@ -15,3 +15,8 @@ npm-debug.log*
 *.tmp
 *.temp
 *~
+
+# Backup files
+*.backup
+*.bak
+*.old
