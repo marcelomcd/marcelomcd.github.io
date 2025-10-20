@@ -21,11 +21,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // Mantido apenas toggle de tema neste bloco; demais interações nas funções init.* abaixo
+
   // ============= MOBILE NAVIGATION =============
-  const navToggle = document.querySelector(".nav-toggle");
-  const navList = document.querySelector(".nav-list");
-  const navLinks = document.querySelectorAll(".nav-list a");
-  if (navToggle && navList) {
+  const initMobileNav = () => {
+    const navToggle = document.querySelector(".nav-toggle");
+    const navList = document.querySelector(".nav-list");
+    const navLinks = document.querySelectorAll(".nav-list a");
+    if (!navToggle || !navList) return;
     navToggle.addEventListener("click", () => {
       navList.classList.toggle("active");
       navToggle.classList.toggle("active");
@@ -40,32 +43,53 @@ document.addEventListener("DOMContentLoaded", () => {
         document.body.style.overflow = "";
       });
     });
-  }
+  };
 
   // ============= HEADER SCROLL EFFECT =============
-  const header = document.querySelector(".site-header");
-  window.addEventListener("scroll", () => {
-    if (window.pageYOffset > 100) {
-      header.classList.add("scrolled");
-    } else {
-      header.classList.remove("scrolled");
-    }
-  });
+  const initHeaderScroll = () => {
+    const header = document.querySelector(".site-header");
+    if (!header) return;
+    const onScroll = () => {
+      if (window.pageYOffset > 100) header.classList.add("scrolled");
+      else header.classList.remove("scrolled");
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll);
+  };
 
-  // ============= SMOOTH SCROLL =============
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener("click", function (e) {
-      const target = document.querySelector(this.getAttribute("href"));
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
-    });
-  });
+  // ============= SCROLL ANIMATIONS =============
+  const initScrollAnimations = () => {
+    const elements = document.querySelectorAll(".fade-in, [data-anim]");
+    if (!elements.length) return;
+    const observer = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+            if (entry.target.classList.contains("skill-category")) {
+              // dispara animação de barras de habilidade quando categoria estiver visível
+              const bars = entry.target.querySelectorAll(".skill-progress");
+              bars.forEach((bar, i) => {
+                const progress = bar.getAttribute("data-progress") || "0%";
+                setTimeout(
+                  () => bar.style.setProperty("--progress", progress),
+                  i * 100
+                );
+              });
+            }
+            obs.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.18, rootMargin: "0px 0px -10% 0px" }
+    );
+    elements.forEach((el) => observer.observe(el));
+  };
 
   // ============= TYPING EFFECT =============
-  const typingElement = document.querySelector(".typing-effect");
-  if (typingElement) {
+  const initTypingEffect = () => {
+    const typingElement = document.querySelector(".typing-effect");
+    if (!typingElement) return;
     const texts = [
       "Solution Engineer",
       "RPA Developer",
@@ -98,7 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
       setTimeout(type, typingSpeed);
     };
     type();
-  }
+  };
 
   // ============= CODE WINDOW ANIMATION =============
   const initCodeAnimation = () => {
@@ -471,7 +495,7 @@ style.textContent = `
   }
 
   .nav-list a.active {
-    color: var(--accent-primary);
+    color: var(--accent);
   }
 
   .nav-list a.active::before {
