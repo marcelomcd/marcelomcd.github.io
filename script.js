@@ -180,10 +180,11 @@ document.addEventListener("DOMContentLoaded", () => {
           from_email: email,
           message: message,
           to_name: "Marcelo", // Seu nome
+          to_email: "marcelogalaxyw@gmail.com", // Email de destino (configurar no template)
         };
 
         // Enviar email usando EmailJS
-        // Substitua 'YOUR_SERVICE_ID' e 'YOUR_TEMPLATE_ID' pelos seus IDs do EmailJS
+        // Substitua 'YOUR_SERVICE_ID' e 'YOUR_TEMPLATE_ID' pelos seus IDs do EmailJS (SETUP.md)
         await emailjs.send(
           "YOUR_SERVICE_ID",
           "YOUR_TEMPLATE_ID",

@@ -5,10 +5,12 @@
 Para ativar o envio real de emails pelo formulário de contato, siga estes passos:
 
 ### 1. Criar conta no EmailJS
+
 1. Acesse [EmailJS](https://www.emailjs.com/)
 2. Crie uma conta gratuita (permite até 200 emails/mês)
 
 ### 2. Configurar Email Service
+
 1. No dashboard, vá em **Email Services**
 2. Clique em **Add New Service**
 3. Escolha seu provedor de email (Gmail, Outlook, etc.)
@@ -16,32 +18,39 @@ Para ativar o envio real de emails pelo formulário de contato, siga estes passo
 5. Anote o **Service ID** gerado
 
 ### 3. Criar Email Template
+
 1. Vá em **Email Templates**
 2. Clique em **Create New Template**
 3. Configure o template com estas variáveis:
+
    ```
    De: {{from_name}} ({{from_email}})
    Para: seu-email@exemplo.com
    Assunto: Nova mensagem do portfólio
-   
+
    Mensagem:
    {{message}}
    ```
+
 4. Anote o **Template ID** gerado
 
 ### 4. Obter Public Key
+
 1. Vá em **Account** → **General**
 2. Copie sua **Public Key**
 
 ### 5. Atualizar o código
+
 No arquivo `index.html`, linha ~22:
+
 ```javascript
 emailjs.init({
-  publicKey: "SUA_PUBLIC_KEY_AQUI",
+   publicKey: "OWmA8jTqnsdICdiii",
 });
 ```
 
 No arquivo `script.js`, linha ~186:
+
 ```javascript
 await emailjs.send(
   "SEU_SERVICE_ID_AQUI",
@@ -50,11 +59,17 @@ await emailjs.send(
 );
 ```
 
+Observações importantes:
+- Adicione no seu Template as variáveis: `from_name`, `from_email`, `message`, `to_name`, `to_email`.
+- Configure o campo "To" do template para `{{to_email}}` ou defina um email fixo (ex.: `marcelogalaxyw@gmail.com`).
+- NUNCA exponha sua Private Key no front-end. Use apenas a Public Key.
+
 ---
 
 ## 📊 Configuração do Google Analytics
 
 ### 1. Criar propriedade no Google Analytics
+
 1. Acesse [Google Analytics](https://analytics.google.com/)
 2. Clique em **Admin** (engrenagem no canto inferior esquerdo)
 3. Clique em **Criar propriedade**
@@ -63,18 +78,25 @@ await emailjs.send(
 6. Insira a URL: `https://marcelomcd.github.io`
 
 ### 2. Obter Measurement ID
+
 1. Após criar a propriedade, você verá o **Measurement ID** (formato: G-XXXXXXXXXX)
 2. Copie este ID
 
 ### 3. Atualizar o código
+
 No arquivo `index.html`, linha ~34:
+
 ```javascript
-gtag('config', 'G-XXXXXXXXXX'); // Substituir pelo seu Measurement ID
+gtag("config", "G-XXXXXXXXXX"); // Substituir pelo seu Measurement ID
 ```
 
 E na linha ~32:
+
 ```html
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
+></script>
 ```
 
 ---
@@ -84,10 +106,12 @@ E na linha ~32:
 ### Próximos passos planejados:
 
 1. **Converter imagens para WebP**
+
    - Melhor compressão que JPG/PNG
    - Suporte moderno em todos os navegadores
 
 2. **Adicionar imagens reais de projetos**
+
    - Substituir placeholders por screenshots
    - Adicionar previews com hover effects
 
@@ -96,6 +120,7 @@ E na linha ~32:
    - Melhorar performance inicial
 
 ### Ferramentas recomendadas:
+
 - [Squoosh](https://squoosh.app/) - Compressor de imagens online
 - [TinyPNG](https://tinypng.com/) - Compressão PNG/JPG
 - [CloudConvert](https://cloudconvert.com/) - Converter para WebP
@@ -108,6 +133,7 @@ Seu site já está configurado e publicado em:
 **https://marcelomcd.github.io**
 
 Para atualizar:
+
 ```bash
 git add .
 git commit -m "Atualizar configurações"
@@ -158,6 +184,7 @@ O GitHub Pages atualiza automaticamente em ~1-2 minutos.
 ## 🆘 Suporte
 
 Se tiver dúvidas durante a configuração:
+
 - **EmailJS**: [Documentação oficial](https://www.emailjs.com/docs/)
 - **Google Analytics**: [Central de ajuda](https://support.google.com/analytics)
 - **GitHub Pages**: [Documentação](https://docs.github.com/pages)
