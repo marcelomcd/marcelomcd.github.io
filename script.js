@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ============= SCROLL ANIMATIONS =============
   const initScrollAnimations = () => {
-    const elements = document.querySelectorAll(".fade-in, [data-anim]");
+    const elements = document.querySelectorAll(".fade-in, [data-anim], .stagger-animation");
     if (!elements.length) return;
     const observer = new IntersectionObserver(
       (entries, obs) => {
@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         });
       },
-      { threshold: 0.18, rootMargin: "0px 0px -10% 0px" }
+      { threshold: 0.15, rootMargin: "0px 0px -8% 0px" }
     );
     elements.forEach((el) => observer.observe(el));
   };
