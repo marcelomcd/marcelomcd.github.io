@@ -671,6 +671,20 @@ section {
   background: var(--accent);
   box-shadow: 0 0 0 5px rgba(0, 122, 255, 0.2);
   border: 2px solid white;
+  z-index: 2;
+}
+.timeline-year {
+  position: absolute;
+  left: -80px;
+  top: 10px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--accent);
+  background: var(--glass-bg);
+  padding: 0.35rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 122, 255, 0.2);
+  backdrop-filter: blur(10px);
 }
 .timeline-content {
   padding: var(--spacing-lg) var(--spacing-md);
@@ -825,22 +839,29 @@ section {
 .stat-item {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 1rem;
   font-size: 0.9rem;
 }
 .stat-item i {
   color: var(--accent);
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+.stat-content {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.stat-item h4 {
   font-size: 1.5rem;
-}
-.stat-item strong {
-  display: block;
-  font-size: 1.25rem;
   color: var(--text);
-  margin-bottom: 0.15rem;
+  margin-bottom: 0.25rem;
+  font-weight: 700;
 }
-.stat-item span {
+.stat-item p {
   color: var(--text-muted);
-  font-size: 0.85rem;
+  font-size: 0.9rem;
+  margin: 0;
 }
 .info-cards {
   display: grid;
@@ -1006,6 +1027,15 @@ section {
   .timeline-header {
     flex-direction: column;
     align-items: flex-start;
+  }
+  .timeline-year {
+    position: static;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+  }
+  .timeline {
+    margin-left: 0;
+    padding-left: 32px;
   }
   .timeline-date {
     margin-top: 0.25rem;
