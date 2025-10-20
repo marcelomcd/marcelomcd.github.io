@@ -34,11 +34,13 @@ Portfolio profissional desenvolvido com **HTML5**, **CSS3** e **JavaScript puro*
 ## 🚀 Tecnologias
 
 ### Frontend
+
 - **HTML5** - Estrutura semântica
 - **CSS3** - Design system com custom properties
 - **JavaScript ES6+** - Interatividade sem frameworks
 
 ### Recursos CSS
+
 - Glassmorphism & backdrop-filter
 - CSS Grid & Flexbox
 - Custom properties (variáveis CSS)
@@ -46,6 +48,7 @@ Portfolio profissional desenvolvido com **HTML5**, **CSS3** e **JavaScript puro*
 - Media queries responsivas
 
 ### JavaScript Features
+
 - Intersection Observer API
 - Smooth scroll
 - Form validation
@@ -54,6 +57,7 @@ Portfolio profissional desenvolvido com **HTML5**, **CSS3** e **JavaScript puro*
 - Scroll animations
 
 ### DevOps
+
 - **GitHub Actions** - Deploy automático
 - **GitHub Pages** - Hospedagem
 - Git workflow
@@ -88,36 +92,42 @@ marcelomcd.github.io/
 ## 🎨 Seções do Portfolio
 
 ### 🏠 Hero
+
 - Título com efeito de digitação
 - Code window com syntax highlighting
 - Links para redes sociais (GitHub, LinkedIn, Email, WhatsApp)
 - CTA buttons
 
 ### 👤 Sobre
+
 - Foto de perfil profissional
 - Estatísticas (6+ anos, 50+ projetos, 2 certificações)
 - Informações (localização, disponibilidade, idiomas)
 - Biografia profissional
 
 ### 💼 Experiência
+
 - Timeline vertical animada
 - 4 posições profissionais com achievements
 - Tags de tecnologias utilizadas
 - Seção de certificações (UiPath, BLIP)
 
 ### 💻 Habilidades
+
 - 6 categorias de skills
 - Barras de progresso animadas
 - Ícones personalizados
 - Glassmorphism cards
 
 ### 🚀 Projetos
+
 - 6 cards de projetos
 - Hover effects
 - Categorização por tipo
 - Tags de tecnologias
 
 ### 📧 Contato
+
 - 4 cards de contato (email, telefone, LinkedIn, localização)
 - Formulário funcional com validação
 - Links para redes sociais
@@ -127,12 +137,14 @@ marcelomcd.github.io/
 ## ⚙️ Como Usar
 
 ### 1️⃣ **Clonar Repositório**
+
 ```bash
 git clone https://github.com/marcelomcd/marcelomcd.github.io.git
 cd marcelomcd.github.io
 ```
 
 ### 2️⃣ **Abrir Localmente**
+
 ```bash
 # Opção 1: Abrir diretamente no navegador
 start index.html  # Windows
@@ -144,6 +156,7 @@ xdg-open index.html  # Linux
 ```
 
 ### 3️⃣ **Fazer Alterações**
+
 ```bash
 # Edite os arquivos HTML, CSS ou JS
 # Faça commit e push
@@ -159,25 +172,31 @@ git push origin main
 ## 🎨 Personalização
 
 ### **Trocar Cores**
+
 Edite as variáveis CSS em `style.css`:
+
 ```css
 :root {
-  --accent-primary: #00d4ff;    /* Cyan */
-  --accent-secondary: #7000ff;  /* Roxo */
-  --accent-tertiary: #ff006e;   /* Rosa */
+  --accent-primary: #00d4ff; /* Cyan */
+  --accent-secondary: #7000ff; /* Roxo */
+  --accent-tertiary: #ff006e; /* Rosa */
 }
 ```
 
 ### **Adicionar/Editar Projetos**
+
 Edite a seção `<section id="projects">` em `index.html`
 
 ### **Atualizar Experiências**
+
 Edite a seção `<section id="experience">` em `index.html`
 
 ### **Modificar Skills**
+
 Edite a seção `<section id="skills">` em `index.html`
 
 ### **Trocar Foto de Perfil**
+
 Substitua `assets/profile.jpg` pela sua foto
 
 ---
@@ -192,6 +211,7 @@ O projeto usa **GitHub Actions** para deploy automático:
 4. Processo leva 2-5 minutos
 
 ### Acompanhar Deploy
+
 https://github.com/marcelomcd/marcelomcd.github.io/actions
 
 ---
@@ -199,6 +219,7 @@ https://github.com/marcelomcd/marcelomcd.github.io/actions
 ## 📊 SEO & Performance
 
 ### Meta Tags Implementadas
+
 - ✅ Open Graph (Facebook, LinkedIn)
 - ✅ Twitter Cards
 - ✅ Meta description otimizada
@@ -207,10 +228,12 @@ https://github.com/marcelomcd/marcelomcd.github.io/actions
 - ✅ Theme color para mobile
 
 ### Arquivos SEO
+
 - ✅ `robots.txt` - Diretrizes para crawlers
 - ✅ `sitemap.xml` - Mapa do site para Google
 
 ### Performance
+
 - ✅ CSS inline crítico
 - ✅ Lazy loading de imagens
 - ✅ Minificação manual
@@ -222,11 +245,13 @@ https://github.com/marcelomcd/marcelomcd.github.io/actions
 ## 📱 Responsividade
 
 ### Breakpoints
+
 - 📱 **Mobile**: < 768px
 - 📲 **Tablet**: 768px - 1024px
 - 💻 **Desktop**: > 1024px
 
 ### Recursos Mobile
+
 - Menu hamburguer
 - Layout adaptativo
 - Touch-friendly
