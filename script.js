@@ -42,7 +42,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ============= SCROLL ANIMATIONS =============
   const initScrollAnimations = () => {
-    const elements = document.querySelectorAll(".fade-in, [data-anim], .stagger-animation");
+    const elements = document.querySelectorAll(
+      ".fade-in, [data-anim], .stagger-animation"
+    );
     if (!elements.length) return;
     const observer = new IntersectionObserver(
       (entries, obs) => {
