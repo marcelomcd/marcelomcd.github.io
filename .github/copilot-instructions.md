@@ -5,6 +5,7 @@
 Este é um portfolio profissional moderno desenvolvido com HTML5, CSS3 vanilla e JavaScript puro (sem frameworks).
 
 ### Stack Tecnológico
+
 - **HTML5**: Estrutura semântica
 - **CSS3**: Custom properties, glassmorphism, animações
 - **JavaScript ES6+**: Vanilla JS, sem dependências externas
@@ -13,6 +14,7 @@ Este é um portfolio profissional moderno desenvolvido com HTML5, CSS3 vanilla e
 - **GitHub Actions**: CI/CD automático
 
 ### Design System - Liquid Glass Theme (iOS 26)
+
 - **Tema**: Liquid Glass inspirado no iOS 26 da Apple
 - **Cores**: Blue (#007aff), Light Blue (#5ac8fa), Purple (#af52de), Pink (#ff2d55)
 - **Efeitos**: Glassmorphism com `backdrop-filter: blur(24px)`, `rgba(255,255,255,0.85)`
@@ -23,12 +25,14 @@ Este é um portfolio profissional moderno desenvolvido com HTML5, CSS3 vanilla e
 ## 📋 Regras de Código
 
 ### HTML
+
 1. **Semântica**: Use tags semânticas (`<section>`, `<article>`, `<nav>`)
 2. **Acessibilidade**: Sempre inclua `aria-label`, `alt`, `role` quando apropriado
 3. **IDs Únicos**: Evite IDs duplicados, prefira classes
 4. **Estrutura**: Mantenha hierarquia lógica de headings (h1 → h2 → h3)
 
 ### CSS
+
 1. **Custom Properties**: Use variáveis CSS para cores, espaçamentos e transições
 2. **Mobile First**: Media queries de mobile para desktop
 3. **Nomeação**: Use BEM-like (`.glass-card`, `.timeline-item`)
@@ -37,6 +41,7 @@ Este é um portfolio profissional moderno desenvolvido com HTML5, CSS3 vanilla e
 6. **Animações**: Use `cubic-bezier(0.4, 0, 0.2, 1)` para consistência
 
 ### JavaScript
+
 1. **Vanilla JS**: Sem jQuery ou frameworks
 2. **ES6+**: Use arrow functions, const/let, template literals
 3. **Event Listeners**: Delegação de eventos quando possível
@@ -76,11 +81,13 @@ Este é um portfolio profissional moderno desenvolvido com HTML5, CSS3 vanilla e
 ## 🔑 Integrações
 
 ### EmailJS
+
 - **Service ID**: `service_qsezf8s`
 - **Template ID**: `template_mflvfbo`
 - **Public Key**: `OWmA8jTqnsdICdiii`
 
 ### GitHub Pages
+
 - **URL**: https://marcelomcd.github.io
 - **Branch**: main
 - **Deployment**: Automático via GitHub Actions
@@ -88,6 +95,7 @@ Este é um portfolio profissional moderno desenvolvido com HTML5, CSS3 vanilla e
 ## 🎨 Componentes Padrão
 
 ### Glass Card
+
 ```css
 .glass-card {
   background: var(--glass-bg);
@@ -99,6 +107,7 @@ Este é um portfolio profissional moderno desenvolvido com HTML5, CSS3 vanilla e
 ```
 
 ### Timeline Item
+
 ```html
 <div class="timeline-item">
   <div class="timeline-marker"></div>
@@ -110,6 +119,7 @@ Este é um portfolio profissional moderno desenvolvido com HTML5, CSS3 vanilla e
 ```
 
 ### Skill Badge
+
 ```html
 <div class="skill-item">
   <span class="skill-tag">Python</span>
@@ -148,6 +158,7 @@ python optimize_images.py
 ## 🐛 Debugging
 
 Ao encontrar problemas:
+
 1. Verificar console do navegador (F12)
 2. Testar no modo mobile (DevTools)
 3. Validar HTML/CSS no W3C Validator

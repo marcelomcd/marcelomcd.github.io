@@ -21,3 +21,8 @@ npm-debug.log*
 *.backup
 *.bak
 *.old
+
+# Environment variables (NUNCA commitar tokens!)
+.env
+.env.local
+.env.*.local
