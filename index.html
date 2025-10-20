@@ -40,6 +40,25 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <link rel="stylesheet" href="style.css" />
+    
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function(){
+        emailjs.init({
+          publicKey: "YOUR_PUBLIC_KEY", // Substituir pela sua chave pública do EmailJS
+        });
+      })();
+    </script>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX'); // Substituir pelo seu ID do Google Analytics
+    </script>
   </head>
   <body>
     <!-- Particles Background -->
@@ -155,7 +174,18 @@
             <div class="about-image-container" data-anim>
               <div class="about-card glass-card">
                 <div class="profile-frame">
-                  <img src="assets/profile.jpg" alt="Marcelo Macedo" class="profile-img" />
+                  <picture>
+                    <source srcset="assets/profile.webp" type="image/webp">
+                    <source srcset="assets/profile.jpg" type="image/jpeg">
+                    <img 
+                      src="assets/profile.jpg" 
+                      alt="Marcelo Macedo - Solution Engineer" 
+                      class="profile-img"
+                      loading="lazy"
+                      width="300"
+                      height="300"
+                    />
+                  </picture>
                   <div class="profile-ring"></div>
                 </div>
                 <div class="quick-stats">

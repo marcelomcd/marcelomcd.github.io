@@ -168,13 +168,28 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      // Simula envio
+      // Envio real com EmailJS
       submitBtn.disabled = true;
       submitBtn.innerHTML =
         '<i class="fas fa-spinner fa-spin"></i> Enviando...';
 
-      // Simula delay de envio
-      setTimeout(() => {
+      try {
+        // Configurar os parâmetros do template
+        const templateParams = {
+          from_name: name,
+          from_email: email,
+          message: message,
+          to_name: "Marcelo", // Seu nome
+        };
+
+        // Enviar email usando EmailJS
+        // Substitua 'YOUR_SERVICE_ID' e 'YOUR_TEMPLATE_ID' pelos seus IDs do EmailJS
+        await emailjs.send(
+          "YOUR_SERVICE_ID",
+          "YOUR_TEMPLATE_ID",
+          templateParams
+        );
+
         submitBtn.innerHTML = '<i class="fas fa-check"></i> Enviado!';
         showNotification(
           `Obrigado, ${name}! Sua mensagem foi enviada com sucesso.`,
@@ -189,7 +204,20 @@ document.addEventListener("DOMContentLoaded", () => {
           submitBtn.disabled = false;
           submitBtn.innerHTML = originalText;
         }, 2000);
-      }, 1500);
+      } catch (error) {
+        console.error("Erro ao enviar email:", error);
+        submitBtn.innerHTML = '<i class="fas fa-times"></i> Erro';
+        showNotification(
+          "Ops! Algo deu errado. Por favor, tente novamente.",
+          "error"
+        );
+
+        // Restaura botão
+        setTimeout(() => {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalText;
+        }, 2000);
+      }
     });
   };
 
@@ -379,20 +407,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ============= LAZY LOAD IMAGES =============
   const initLazyLoad = () => {
-    const images = document.querySelectorAll("img[data-src]");
+    // Lazy load para imagens com data-src
+    const lazyImages = document.querySelectorAll("img[data-src]");
 
-    const imageObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const img = entry.target;
-          img.src = img.dataset.src;
-          img.removeAttribute("data-src");
-          imageObserver.unobserve(img);
-        }
-      });
+    const imageObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            img.src = img.dataset.src;
+            img.removeAttribute("data-src");
+            img.classList.add("loaded");
+            imageObserver.unobserve(img);
+          }
+        });
+      },
+      {
+        rootMargin: "50px", // Carrega 50px antes de entrar na viewport
+      }
+    );
+
+    lazyImages.forEach((img) => imageObserver.observe(img));
+
+    // Otimização para imagens com loading="lazy" nativo
+    const nativeImages = document.querySelectorAll('img[loading="lazy"]');
+    nativeImages.forEach((img) => {
+      // Fallback para navegadores sem suporte
+      if (!("loading" in HTMLImageElement.prototype)) {
+        imageObserver.observe(img);
+      }
     });
-
-    images.forEach((img) => imageObserver.observe(img));
   };
 
   // ============= CURSOR EFFECT (OPCIONAL) =============
