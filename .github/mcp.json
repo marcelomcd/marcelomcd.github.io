@@ -1,6 +1,7 @@
 {
   "mcpServers": {
     "github": {
+      "type": "stdio",
       "command": "npx",
       "args": ["-y", "@modelcontextprotocol/server-github"],
       "env": {
@@ -8,6 +9,7 @@
       }
     },
     "filesystem": {
+      "type": "stdio",
       "command": "npx",
       "args": [
         "-y",
