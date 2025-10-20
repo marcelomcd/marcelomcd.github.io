@@ -10,7 +10,7 @@
 
 **Portfolio pessoal moderno e responsivo com design exclusivo**
 
-[🌐 Ver Portfolio](https://marcelomcd.github.io) | [📧 Contato](mailto:marcelo.macedo.business@gmail.com) | [💼 LinkedIn](https://linkedin.com/in/marcelo-macedo-jr/)
+[🌐 Ver Portfolio](https://marcelomcd.github.io) | [📧 Email](mailto:marcelo.macedo.business@gmail.com) | [💼 LinkedIn](https://www.linkedin.com/in/marcelo-macedo-jr/) | [💬 WhatsApp](https://wa.me/5521979208480)
 
 </div>
 

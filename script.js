@@ -4,24 +4,7 @@
  */
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Alternância de tema dark/light
-  const themeToggle = document.querySelector(".theme-toggle");
-  const body = document.body;
-  let isLight = false;
-  if (themeToggle) {
-    themeToggle.addEventListener("click", () => {
-      isLight = !isLight;
-      if (isLight) {
-        body.classList.add("light-theme");
-        themeToggle.innerHTML = '<i class="fa fa-sun"></i>';
-      } else {
-        body.classList.remove("light-theme");
-        themeToggle.innerHTML = '<i class="fa fa-moon"></i>';
-      }
-    });
-  }
-
-  // Mantido apenas toggle de tema neste bloco; demais interações nas funções init.* abaixo
+  // Portfolio moderno - tema claro fixo
 
   // ============= MOBILE NAVIGATION =============
   const initMobileNav = () => {
@@ -179,15 +162,14 @@ document.addEventListener("DOMContentLoaded", () => {
           from_name: name,
           from_email: email,
           message: message,
-          to_name: "Marcelo", // Seu nome
-          to_email: "marcelogalaxyw@gmail.com", // Email de destino (configurar no template)
+          to_name: "Marcelo",
         };
 
         // Enviar email usando EmailJS
-        // Substitua 'YOUR_SERVICE_ID' e 'YOUR_TEMPLATE_ID' pelos seus IDs do EmailJS (SETUP.md)
+        // Usando service_id e template_id do EmailJS configurados
         await emailjs.send(
-          "YOUR_SERVICE_ID",
-          "YOUR_TEMPLATE_ID",
+          "service_qsezf8s", // Service ID do EmailJS
+          "template_mflvfbo", // Template ID do EmailJS
           templateParams
         );
 
@@ -258,7 +240,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Remove após 4 segundos
     setTimeout(() => {
-      notification.style.animation = "slideOut 0.3s ease";
+      notification.style.animation = "slideOutRight 0.3s ease";
       setTimeout(() => notification.remove(), 300);
     }, 4000);
   };
