@@ -45,7 +45,7 @@ No arquivo `index.html`, linha ~22:
 
 ```javascript
 emailjs.init({
-   publicKey: "OWmA8jTqnsdICdiii",
+  publicKey: "OWmA8jTqnsdICdiii",
 });
 ```
 
@@ -60,6 +60,7 @@ await emailjs.send(
 ```
 
 Observações importantes:
+
 - Adicione no seu Template as variáveis: `from_name`, `from_email`, `message`, `to_name`, `to_email`.
 - Configure o campo "To" do template para `{{to_email}}` ou defina um email fixo (ex.: `marcelogalaxyw@gmail.com`).
 - NUNCA exponha sua Private Key no front-end. Use apenas a Public Key.

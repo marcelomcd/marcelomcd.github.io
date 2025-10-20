@@ -8,10 +8,10 @@ Use este template para adicionar novos projetos ao portfólio.
 <div class="project-card glass-card" data-anim>
   <div class="project-image">
     <picture>
-      <source srcset="assets/projects/nome-do-projeto.webp" type="image/webp">
-      <source srcset="assets/projects/nome-do-projeto.jpg" type="image/jpeg">
-      <img 
-        src="assets/projects/nome-do-projeto.jpg" 
+      <source srcset="assets/projects/nome-do-projeto.webp" type="image/webp" />
+      <source srcset="assets/projects/nome-do-projeto.jpg" type="image/jpeg" />
+      <img
+        src="assets/projects/nome-do-projeto.jpg"
         alt="Nome do Projeto"
         loading="lazy"
         width="600"
@@ -20,10 +20,22 @@ Use este template para adicionar novos projetos ao portfólio.
     </picture>
     <div class="project-overlay">
       <div class="project-links">
-        <a href="https://github.com/seu-usuario/repo" target="_blank" rel="noopener" class="project-link" aria-label="Ver código no GitHub">
+        <a
+          href="https://github.com/seu-usuario/repo"
+          target="_blank"
+          rel="noopener"
+          class="project-link"
+          aria-label="Ver código no GitHub"
+        >
           <i class="fab fa-github"></i>
         </a>
-        <a href="https://demo.exemplo.com" target="_blank" rel="noopener" class="project-link" aria-label="Ver demonstração">
+        <a
+          href="https://demo.exemplo.com"
+          target="_blank"
+          rel="noopener"
+          class="project-link"
+          aria-label="Ver demonstração"
+        >
           <i class="fas fa-external-link-alt"></i>
         </a>
       </div>
@@ -35,7 +47,8 @@ Use este template para adicionar novos projetos ao portfólio.
       <span class="project-status status-completed">Concluído</span>
     </div>
     <p class="project-description">
-      Breve descrição do projeto, destacando os principais objetivos e funcionalidades implementadas.
+      Breve descrição do projeto, destacando os principais objetivos e
+      funcionalidades implementadas.
     </p>
     <div class="project-tech">
       <span class="tech-tag"><i class="fab fa-python"></i> Python</span>
@@ -69,6 +82,7 @@ Escolha um dos status disponíveis:
 ## 🏷️ Tags de Tecnologia
 
 ### Linguagens
+
 ```html
 <span class="tech-tag"><i class="fab fa-python"></i> Python</span>
 <span class="tech-tag"><i class="fab fa-js"></i> JavaScript</span>
@@ -78,6 +92,7 @@ Escolha um dos status disponíveis:
 ```
 
 ### Frameworks
+
 ```html
 <span class="tech-tag"><i class="fab fa-react"></i> React</span>
 <span class="tech-tag"><i class="fab fa-angular"></i> Angular</span>
@@ -87,6 +102,7 @@ Escolha um dos status disponíveis:
 ```
 
 ### Banco de Dados
+
 ```html
 <span class="tech-tag"><i class="fas fa-database"></i> SQL Server</span>
 <span class="tech-tag"><i class="fas fa-database"></i> PostgreSQL</span>
@@ -95,6 +111,7 @@ Escolha um dos status disponíveis:
 ```
 
 ### Cloud e DevOps
+
 ```html
 <span class="tech-tag"><i class="fab fa-microsoft"></i> Azure</span>
 <span class="tech-tag"><i class="fab fa-aws"></i> AWS</span>
@@ -103,6 +120,7 @@ Escolha um dos status disponíveis:
 ```
 
 ### Ferramentas
+
 ```html
 <span class="tech-tag"><i class="fas fa-chart-line"></i> Power BI</span>
 <span class="tech-tag"><i class="fas fa-robot"></i> UiPath</span>
@@ -113,17 +131,21 @@ Escolha um dos status disponíveis:
 ## 📸 Preparando Imagens
 
 ### Dimensões recomendadas:
+
 - **Thumbnails**: 600x400px (3:2)
 - **Hero images**: 1200x800px (3:2)
 - **Screenshots**: Resolução original, max 1920px largura
 
 ### Otimização:
+
 1. Use o script `optimize_images.py`:
+
    ```bash
    python optimize_images.py
    ```
 
 2. Ou use ferramentas online:
+
    - [Squoosh](https://squoosh.app/)
    - [TinyPNG](https://tinypng.com/)
    - [Compressor.io](https://compressor.io/)
@@ -140,18 +162,33 @@ Escolha um dos status disponíveis:
 ## 🔗 Links do Projeto
 
 ### GitHub
+
 ```html
-<a href="https://github.com/marcelomcd/nome-do-repo" target="_blank" rel="noopener">
+<a
+  href="https://github.com/marcelomcd/nome-do-repo"
+  target="_blank"
+  rel="noopener"
+></a>
 ```
 
 ### Demo ao vivo
+
 ```html
-<a href="https://marcelomcd.github.io/nome-do-projeto" target="_blank" rel="noopener">
+<a
+  href="https://marcelomcd.github.io/nome-do-projeto"
+  target="_blank"
+  rel="noopener"
+></a>
 ```
 
 ### Documentação
+
 ```html
-<a href="https://github.com/marcelomcd/projeto/wiki" target="_blank" rel="noopener">
+<a
+  href="https://github.com/marcelomcd/projeto/wiki"
+  target="_blank"
+  rel="noopener"
+></a>
 ```
 
 ## 📊 Estatísticas do Projeto
@@ -166,7 +203,7 @@ async function getGitHubStats(owner, repo) {
   return {
     stars: data.stargazers_count,
     forks: data.forks_count,
-    watchers: data.watchers_count
+    watchers: data.watchers_count,
   };
 }
 ```
@@ -174,12 +211,17 @@ async function getGitHubStats(owner, repo) {
 ## 🎯 Exemplos de Projetos
 
 ### Projeto de Automação RPA
+
 ```html
 <div class="project-card glass-card" data-anim>
   <div class="project-image">
     <picture>
-      <source srcset="assets/projects/automacao-rpa.webp" type="image/webp">
-      <img src="assets/projects/automacao-rpa.jpg" alt="Automação RPA" loading="lazy">
+      <source srcset="assets/projects/automacao-rpa.webp" type="image/webp" />
+      <img
+        src="assets/projects/automacao-rpa.jpg"
+        alt="Automação RPA"
+        loading="lazy"
+      />
     </picture>
   </div>
   <div class="project-content">
@@ -188,7 +230,8 @@ async function getGitHubStats(owner, repo) {
       <span class="project-status status-completed">Concluído</span>
     </div>
     <p class="project-description">
-      Automação de processos financeiros que reduziu em 80% o tempo de processamento de notas fiscais, utilizando UiPath e integração com SAP.
+      Automação de processos financeiros que reduziu em 80% o tempo de
+      processamento de notas fiscais, utilizando UiPath e integração com SAP.
     </p>
     <div class="project-tech">
       <span class="tech-tag"><i class="fas fa-robot"></i> UiPath</span>
@@ -201,12 +244,20 @@ async function getGitHubStats(owner, repo) {
 ```
 
 ### Dashboard Power BI
+
 ```html
 <div class="project-card glass-card" data-anim>
   <div class="project-image">
     <picture>
-      <source srcset="assets/projects/dashboard-vendas.webp" type="image/webp">
-      <img src="assets/projects/dashboard-vendas.jpg" alt="Dashboard de Vendas" loading="lazy">
+      <source
+        srcset="assets/projects/dashboard-vendas.webp"
+        type="image/webp"
+      />
+      <img
+        src="assets/projects/dashboard-vendas.jpg"
+        alt="Dashboard de Vendas"
+        loading="lazy"
+      />
     </picture>
   </div>
   <div class="project-content">
@@ -215,7 +266,8 @@ async function getGitHubStats(owner, repo) {
       <span class="project-status status-completed">Concluído</span>
     </div>
     <p class="project-description">
-      Dashboard interativo para análise de vendas em tempo real, com KPIs customizados e previsões baseadas em machine learning.
+      Dashboard interativo para análise de vendas em tempo real, com KPIs
+      customizados e previsões baseadas em machine learning.
     </p>
     <div class="project-tech">
       <span class="tech-tag"><i class="fas fa-chart-line"></i> Power BI</span>
@@ -247,10 +299,8 @@ Localize a seção `<!-- Projects Grid -->` no arquivo `index.html` (por volta d
 ```html
 <div class="projects-grid">
   <!-- Projetos existentes -->
-  
+
   <!-- SEU NOVO PROJETO AQUI -->
-  <div class="project-card glass-card" data-anim>
-    ...
-  </div>
+  <div class="project-card glass-card" data-anim>...</div>
 </div>
 ```

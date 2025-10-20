@@ -481,7 +481,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const init = () => {
     initMobileNav();
     initHeaderScroll();
-    initSmoothScroll();
+    // initSmoothScroll(); // Função não definida, causando erro
     initScrollAnimations();
     initTypingEffect();
     initCodeAnimation();
