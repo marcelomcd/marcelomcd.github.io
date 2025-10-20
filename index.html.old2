@@ -65,10 +65,11 @@
     <div id="particles-bg"></div>
     
     <header class="site-header">
-      <nav class="nav">
+      <nav class="nav container">
         <a href="#home" class="logo">
-          <i class="fas fa-code"></i>
-          <span>MM</span>
+          <span class="logo-bracket">&lt;</span>
+          <span class="logo-text">MM</span>
+          <span class="logo-bracket">/&gt;</span>
         </a>
         <ul class="nav-list">
           <li><a href="#home">Início</a></li>
@@ -78,10 +79,11 @@
           <li><a href="#projects">Projetos</a></li>
           <li><a href="#contact">Contato</a></li>
         </ul>
+        <button class="theme-toggle" aria-label="Alternar tema" title="Alternar tema">
+          <i class="fa fa-moon"></i>
+        </button>
         <button class="nav-toggle" aria-label="Abrir menu">
-          <span></span>
-          <span></span>
-          <span></span>
+          <i class="fa fa-bars"></i>
         </button>
       </nav>
     </header>
@@ -89,15 +91,15 @@
     <main>
       <!-- HERO SECTION -->
       <section id="home" class="hero">
-        <div class="container hero-container">
-          <div class="hero-content">
+  <div class="container hero-container fade-in">
+          <div class="hero-content" data-anim>
             <div class="hero-label">
               <i class="fas fa-code"></i>
               <span>Solution Engineer</span>
             </div>
             <h1 class="hero-title">
               Olá, eu sou<br/>
-              <span class="gradient-text">Marcelo Macedo</span>
+              <span class="gradient-text typing-effect">Marcelo Macedo</span>
             </h1>
             <p class="hero-subtitle">
               Solution Engineer | Automação, Dados & Cloud
@@ -119,18 +121,18 @@
               <a href="https://github.com/marcelomcd" target="_blank" aria-label="GitHub" class="social-link">
                 <i class="fab fa-github"></i>
               </a>
-              <a href="https://www.linkedin.com/in/marcelo-macedo-jr/" target="_blank" aria-label="LinkedIn" class="social-link">
+              <a href="https://linkedin.com/in/marcelo-macedo-jr/" target="_blank" aria-label="LinkedIn" class="social-link">
                 <i class="fab fa-linkedin"></i>
               </a>
               <a href="mailto:marcelo.macedo.business@gmail.com" aria-label="Email" class="social-link">
                 <i class="fas fa-envelope"></i>
               </a>
-              <a href="https://wa.me/5521979208480" target="_blank" aria-label="WhatsApp" class="social-link">
+              <a href="tel:+5521979208480" aria-label="WhatsApp" class="social-link">
                 <i class="fab fa-whatsapp"></i>
               </a>
             </div>
           </div>
-          <div class="hero-visual">
+          <div class="hero-visual" data-anim>
             <div class="code-window">
               <div class="window-header">
                 <span class="dot dot-red"></span>
@@ -155,86 +157,111 @@
             </div>
           </div>
         </div>
+        <div class="scroll-indicator">
+          <i class="fas fa-chevron-down"></i>
+        </div>
       </section>
 
       <!-- ABOUT SECTION -->
-      <section id="about" class="about">
-        <div class="container">
-          <div class="section-header">
+      <section id="about" class="about section-padding">
+  <div class="container fade-in">
+          <div class="section-header" data-anim>
+            <span class="section-label">Quem sou eu</span>
             <h2 class="section-title">Sobre Mim</h2>
-            <p class="section-subtitle">Minha trajetória profissional e expertise</p>
           </div>
           
           <div class="about-grid">
-            <div class="glass-card">
-              <p class="about-text">
-                Engenheiro de soluções apaixonado por automação, dados e tecnologia. Atuo há mais de 6 anos desenvolvendo integrações, robôs, dashboards e sistemas inteligentes para empresas de diversos segmentos.
-              </p>
-              <p class="about-text">
-                Meu foco é criar soluções que simplificam rotinas, aumentam a produtividade e trazem resultados mensuráveis. Domino <strong>Python, Power BI, Azure, UiPath, SQL e práticas DevOps</strong>.
-              </p>
-              <p class="about-text">
-                Já liderei projetos de automação financeira, integração de APIs, análise de dados e implantação de pipelines CI/CD. Busco sempre unir visão técnica e estratégica para entregar valor ao negócio.
-              </p>
-              
-              <div class="about-stats-inline">
-                <div class="stat-item">
-                  <i class="fas fa-briefcase"></i>
-                  <div>
-                    <h4>6+ Anos</h4>
-                    <p>de Experiência</p>
-                  </div>
+            <div class="about-image-container" data-anim>
+              <div class="about-card glass-card">
+                <div class="profile-frame">
+                  <img 
+                    src="assets/profile.jpg" 
+                    alt="Marcelo Macedo - Solution Engineer" 
+                    class="profile-img"
+                    loading="lazy"
+                    width="300"
+                    height="300"
+                  />
+                  <div class="profile-ring"></div>
                 </div>
-                <div class="stat-item">
-                  <i class="fas fa-project-diagram"></i>
-                  <div>
-                    <h4>20+ Projetos</h4>
-                    <p>de Automação</p>
+                <div class="quick-stats">
+                  <div class="stat-item">
+                    <i class="fas fa-briefcase"></i>
+                    <div>
+                      <strong>6+</strong>
+                      <span>Anos de Experiência</span>
+                    </div>
                   </div>
-                </div>
-                <div class="stat-item">
-                  <i class="fas fa-award"></i>
-                  <div>
-                    <h4>5 Certificações</h4>
-                    <p>Técnicas</p>
+                  <div class="stat-item">
+                    <i class="fas fa-project-diagram"></i>
+                    <div>
+                      <strong>20+</strong>
+                      <span>Projetos de Automação</span>
+                    </div>
+                  </div>
+                  <div class="stat-item">
+                    <i class="fas fa-award"></i>
+                    <div>
+                      <strong>5</strong>
+                      <span>Certificações Técnicas</span>
+                    </div>
                   </div>
                 </div>
               </div>
+            </div>
+
+            <div class="about-content" data-anim>
+              <div class="about-text">
+                <p class="lead-text">
+                  Engenheiro de soluções apaixonado por automação, dados e tecnologia. Atuo há mais de 6 anos desenvolvendo integrações, robôs, dashboards e sistemas inteligentes para empresas de diversos segmentos.
+                </p>
+                <p>
+                  Meu foco é criar soluções que simplificam rotinas, aumentam a produtividade e trazem resultados mensuráveis. Domino Python, Power BI, Azure, UiPath, SQL e práticas DevOps.
+                </p>
+                <p>
+                  Já liderei projetos de automação financeira, integração de APIs, análise de dados e implantação de pipelines CI/CD. Busco sempre unir visão técnica e estratégica para entregar valor ao negócio.
+                </p>
+              </div>
 
               <div class="info-cards">
-                <div class="info-card glass-card">
+                <div class="info-card">
                   <i class="fas fa-map-marker-alt"></i>
                   <div>
                     <strong>Localização</strong>
                     <span>Rio de Janeiro, RJ</span>
                   </div>
                 </div>
-                <div class="info-card glass-card">
+                <div class="info-card">
                   <i class="fas fa-globe"></i>
                   <div>
                     <strong>Disponibilidade</strong>
-                    <span>Remoto | Presencial</span>
+                    <span>Remoto | Presencial | Mudança</span>
                   </div>
                 </div>
-                <div class="info-card glass-card">
+                <div class="info-card">
                   <i class="fas fa-language"></i>
                   <div>
                     <strong>Idiomas</strong>
-                    <span>Português, Inglês (Intermediário)</span>
+                    <span>Português (Nativo), Inglês (Intermediário)</span>
                   </div>
                 </div>
               </div>
+
+              <a href="assets/curriculo.pdf" download class="btn btn-download">
+                <i class="fas fa-download"></i>
+                Baixar Currículo (PDF)
+              </a>
             </div>
           </div>
         </div>
       </section>
 
       <!-- EXPERIENCE SECTION -->
-      <section id="experience" class="experience">
-        <div class="container">
-          <div class="section-header">
-            <h2 class="section-title">Experiência Profissional</h2>
-            <p class="section-subtitle">Minha trajetória na área de tecnologia</p>
+      <section id="experience" class="experience section-padding bg-dark">
+  <div class="container fade-in">
+          <div class="section-header" data-anim>
+            <span class="section-label">Trajetória Profissional</span>
+            <h2 class="section-title">Experiência</h2>
           </div>
 
           <div class="timeline">
