@@ -532,4 +532,22 @@ style.textContent = `
   }
 `;
 document.head.appendChild(style);
+
+// ============= TIMELINE TOGGLE =============
+window.toggleTimeline = function(header) {
+  const timelineItem = header.closest('.timeline-item');
+  const details = timelineItem.querySelector('.timeline-details');
+  const toggleBtn = header.querySelector('.timeline-toggle i');
+  
+  if (details.classList.contains('expanded')) {
+    details.classList.remove('expanded');
+    toggleBtn.classList.remove('fa-chevron-up');
+    toggleBtn.classList.add('fa-chevron-down');
+  } else {
+    details.classList.add('expanded');
+    toggleBtn.classList.remove('fa-chevron-down');
+    toggleBtn.classList.add('fa-chevron-up');
+  }
+};
+
 // Fim do arquivo JS
