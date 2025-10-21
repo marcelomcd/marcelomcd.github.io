@@ -4,7 +4,24 @@
  */
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Portfolio moderno - tema claro fixo
+  // Alternância de tema dark/light
+  const themeToggle = document.querySelector(".theme-toggle");
+  const body = document.body;
+  let isLight = false;
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      isLight = !isLight;
+      if (isLight) {
+        body.classList.add("light-theme");
+        themeToggle.innerHTML = '<i class="fa fa-sun"></i>';
+      } else {
+        body.classList.remove("light-theme");
+        themeToggle.innerHTML = '<i class="fa fa-moon"></i>';
+      }
+    });
+  }
+
+  // Mantido apenas toggle de tema neste bloco; demais interações nas funções init.* abaixo
 
   // ============= MOBILE NAVIGATION =============
   const initMobileNav = () => {
@@ -40,49 +57,9 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("scroll", onScroll);
   };
 
-  // ============= THEME TOGGLE (LIGHT/DARK) =============
-  const initThemeToggle = () => {
-    const btn = document.querySelector('.theme-toggle');
-    if (!btn) return;
-    const root = document.documentElement;
-    const saved = localStorage.getItem('theme');
-    if (!saved) {
-      localStorage.setItem('theme', 'light');
-    }
-    if (localStorage.getItem('theme') === 'dark') {
-      root.setAttribute('data-theme', 'dark');
-      btn.innerHTML = '<i class="fas fa-sun"></i>';
-      btn.title = 'Alternar para claro';
-      btn.setAttribute('aria-pressed', 'true');
-    } else {
-      root.removeAttribute('data-theme');
-      btn.innerHTML = '<i class="fas fa-moon"></i>';
-      btn.title = 'Alternar para escuro';
-      btn.setAttribute('aria-pressed', 'false');
-    }
-    btn.addEventListener('click', () => {
-      const isDark = root.getAttribute('data-theme') === 'dark';
-      if (isDark) {
-        root.removeAttribute('data-theme');
-        localStorage.setItem('theme', 'light');
-        btn.innerHTML = '<i class="fas fa-moon"></i>';
-        btn.title = 'Alternar para escuro';
-        btn.setAttribute('aria-pressed', 'false');
-      } else {
-        root.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark');
-        btn.innerHTML = '<i class="fas fa-sun"></i>';
-        btn.title = 'Alternar para claro';
-        btn.setAttribute('aria-pressed', 'true');
-      }
-    });
-  };
-
   // ============= SCROLL ANIMATIONS =============
   const initScrollAnimations = () => {
-    const elements = document.querySelectorAll(
-      ".fade-in, [data-anim], .stagger-animation"
-    );
+    const elements = document.querySelectorAll(".fade-in, [data-anim]");
     if (!elements.length) return;
     const observer = new IntersectionObserver(
       (entries, obs) => {
@@ -104,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         });
       },
-      { threshold: 0.15, rootMargin: "0px 0px -8% 0px" }
+      { threshold: 0.18, rootMargin: "0px 0px -10% 0px" }
     );
     elements.forEach((el) => observer.observe(el));
   };
@@ -202,14 +179,15 @@ document.addEventListener("DOMContentLoaded", () => {
           from_name: name,
           from_email: email,
           message: message,
-          to_name: "Marcelo",
+          to_name: "Marcelo", // Seu nome
+          to_email: "marcelogalaxyw@gmail.com", // Email de destino (configurar no template)
         };
 
         // Enviar email usando EmailJS
-        // Usando service_id e template_id do EmailJS configurados
+        // Substitua 'YOUR_SERVICE_ID' e 'YOUR_TEMPLATE_ID' pelos seus IDs do EmailJS (SETUP.md)
         await emailjs.send(
-          "service_qsezf8s", // Service ID do EmailJS
-          "template_mflvfbo", // Template ID do EmailJS
+          "YOUR_SERVICE_ID",
+          "YOUR_TEMPLATE_ID",
           templateParams
         );
 
@@ -244,65 +222,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-  // ============= RESPONSIVE HEADER TAGS (compact +x) =============
-  const initHeaderTagsResponsive = () => {
-    const headers = document.querySelectorAll('.timeline-header .header-tags');
-    if (!headers.length) return;
-
-    const compute = () => {
-      const w = window.innerWidth;
-      let showCount = 4;
-      if (w <= 480) showCount = 1;
-      else if (w <= 768) showCount = 2;
-      else if (w <= 1024) showCount = 3;
-
-      headers.forEach((container) => {
-        const tags = Array.from(container.querySelectorAll('.tag'));
-        // Remove existing more button if present
-        const existingBtn = container.querySelector('.tags-more-btn');
-        if (existingBtn) existingBtn.remove();
-
-        // Reset all
-        tags.forEach((t) => t.classList.remove('hidden-by-js'));
-
-        if (tags.length > showCount) {
-          const overflow = tags.length - showCount;
-          // hide beyond showCount
-          tags.forEach((t, idx) => {
-            if (idx >= showCount) t.classList.add('hidden-by-js');
-          });
-
-          const moreBtn = document.createElement('button');
-          moreBtn.className = 'tags-more-btn';
-          moreBtn.type = 'button';
-          moreBtn.innerText = `+${overflow}`;
-          moreBtn.addEventListener('click', () => {
-            const isExpanded = moreBtn.getAttribute('aria-expanded') === 'true';
-            if (!isExpanded) {
-              tags.forEach((t) => t.classList.remove('hidden-by-js'));
-              moreBtn.setAttribute('aria-expanded', 'true');
-              moreBtn.innerText = 'Ocultar';
-            } else {
-              tags.forEach((t, idx) => {
-                if (idx >= showCount) t.classList.add('hidden-by-js');
-              });
-              moreBtn.setAttribute('aria-expanded', 'false');
-              moreBtn.innerText = `+${overflow}`;
-            }
-          });
-          container.appendChild(moreBtn);
-        }
-      });
-    };
-
-    let resizeTimer;
-    window.addEventListener('resize', () => {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(compute, 150);
-    });
-    compute();
-  };
-
   // ============= UTILITIES =============
   const isValidEmail = (email) => {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -317,7 +236,8 @@ document.addEventListener("DOMContentLoaded", () => {
       position: fixed;
       top: 100px;
       right: 20px;
-      background: ${type === "success" ? "rgba(40, 200, 64, 0.9)" : "rgba(255, 95, 87, 0.9)"
+      background: ${
+        type === "success" ? "rgba(40, 200, 64, 0.9)" : "rgba(255, 95, 87, 0.9)"
       };
       color: white;
       padding: 1rem 1.5rem;
@@ -328,7 +248,8 @@ document.addEventListener("DOMContentLoaded", () => {
       backdrop-filter: blur(10px);
     `;
     notification.innerHTML = `
-      <i class="fas fa-${type === "success" ? "check-circle" : "exclamation-circle"
+      <i class="fas fa-${
+        type === "success" ? "check-circle" : "exclamation-circle"
       }"></i>
       <span style="margin-left: 0.5rem;">${message}</span>
     `;
@@ -337,7 +258,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Remove após 4 segundos
     setTimeout(() => {
-      notification.style.animation = "slideOutRight 0.3s ease";
+      notification.style.animation = "slideOut 0.3s ease";
       setTimeout(() => notification.remove(), 300);
     }, 4000);
   };
@@ -569,9 +490,6 @@ document.addEventListener("DOMContentLoaded", () => {
     initProjectCards();
     initActiveSection();
     initTimeline();
-    initTimelineCollapsed();
-    initThemeToggle();
-    initHeaderTagsResponsive();
     initScrollToTop();
     initLazyLoad();
     // initCustomCursor(); // Descomente se quiser cursor customizado
@@ -630,36 +548,4 @@ style.textContent = `
   }
 `;
 document.head.appendChild(style);
-
-// ============= TIMELINE TOGGLE =============
-window.toggleTimeline = function (header) {
-  const timelineItem = header.closest('.timeline-item');
-  const details = timelineItem.querySelector('.timeline-details');
-  const toggleBtn = header.querySelector('.timeline-toggle i');
-
-  if (details.classList.contains('expanded')) {
-    details.classList.remove('expanded');
-    toggleBtn.classList.remove('fa-chevron-up');
-    toggleBtn.classList.add('fa-chevron-down');
-  } else {
-    details.classList.add('expanded');
-    toggleBtn.classList.remove('fa-chevron-down');
-    toggleBtn.classList.add('fa-chevron-up');
-  }
-};
-
-// ============= INITIALIZE TIMELINE COLLAPSED STATE =============
-const initTimelineCollapsed = () => {
-  const allDetails = document.querySelectorAll('.timeline-details');
-  allDetails.forEach(details => {
-    details.classList.remove('expanded');
-  });
-
-  const allToggles = document.querySelectorAll('.timeline-toggle i');
-  allToggles.forEach(toggle => {
-    toggle.classList.remove('fa-chevron-up');
-    toggle.classList.add('fa-chevron-down');
-  });
-};
-
 // Fim do arquivo JS

@@ -3,32 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    
-    <!-- Meta Tags Básicas -->
-    <meta name="description" content="Marcelo Macedo - Solution Engineer com 6+ anos de experiência em automação de processos, RPA, Python, Power BI, Azure e soluções em nuvem. Especialista em transformação digital e otimização de processos." />
-    <meta name="keywords" content="Solution Engineer, Python, Power BI, Automação, RPA, UiPath, DevOps, Azure, BI, Data Analytics, ETL, ChatBot, FastAPI, SSIS, SQL Server, PostgreSQL" />
-    <meta name="author" content="Marcelo Macedo" />
+    <meta name="description" content="Marcelo Macedo - Solution Engineer especializado em automação de processos, Python, Power BI e soluções em nuvem." />
+    <meta name="keywords" content="Solution Engineer, Python, Power BI, Automação, RPA, DevOps, Azure" />
     <title>Marcelo Macedo | Solution Engineer & Automation Specialist</title>
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://marcelomcd.github.io/" />
-    <meta property="og:title" content="Marcelo Macedo | Solution Engineer & Automation Specialist" />
-    <meta property="og:description" content="Solution Engineer com 6+ anos de experiência em automação de processos, RPA, Python, Power BI e soluções em nuvem." />
-    <meta property="og:image" content="https://marcelomcd.github.io/assets/profile.jpg" />
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://marcelomcd.github.io/" />
-    <meta property="twitter:title" content="Marcelo Macedo | Solution Engineer & Automation Specialist" />
-    <meta property="twitter:description" content="Solution Engineer com 6+ anos de experiência em automação de processos, RPA, Python, Power BI e soluções em nuvem." />
-    <meta property="twitter:image" content="https://marcelomcd.github.io/assets/profile.jpg" />
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💼</text></svg>" />
-    
-    <!-- Theme Color -->
-    <meta name="theme-color" content="#0a0e27" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -40,25 +17,6 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <link rel="stylesheet" href="style.css" />
-    
-    <!-- EmailJS SDK -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script type="text/javascript">
-      (function(){
-        emailjs.init({
-          publicKey: "OWmA8jTqnsdICdiii", // Chave pública do EmailJS
-        });
-      })();
-    </script>
-    
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX'); // Substituir pelo seu ID do Google Analytics
-    </script>
   </head>
   <body>
     <!-- Particles Background -->
@@ -79,9 +37,6 @@
           <li><a href="#projects">Projetos</a></li>
           <li><a href="#contact">Contato</a></li>
         </ul>
-        <button class="theme-toggle" aria-label="Alternar tema" title="Alternar tema">
-          <i class="fa fa-moon"></i>
-        </button>
         <button class="nav-toggle" aria-label="Abrir menu">
           <i class="fa fa-bars"></i>
         </button>
@@ -91,7 +46,7 @@
     <main>
       <!-- HERO SECTION -->
       <section id="home" class="hero">
-  <div class="container hero-container fade-in">
+        <div class="container hero-container">
           <div class="hero-content" data-anim>
             <div class="hero-label">
               <i class="fas fa-code"></i>
@@ -102,10 +57,10 @@
               <span class="gradient-text typing-effect">Marcelo Macedo</span>
             </h1>
             <p class="hero-subtitle">
-              Solution Engineer | Automação, Dados & Cloud
+              Especialista em <strong>Automação de Processos</strong> e <strong>Desenvolvimento de Soluções Digitais</strong>
             </p>
             <p class="hero-description">
-              Especialista em transformar processos, integrar sistemas e criar soluções digitais que geram valor real para empresas. Experiência sólida com Python, Power BI, Azure, RPA e DevOps.
+              Transformo processos manuais em fluxos inteligentes e automatizados com <strong>Python</strong>, <strong>Power BI</strong>, <strong>Power Automate</strong> e <strong>Azure</strong>.
             </p>
             <div class="hero-buttons">
               <a href="#contact" class="btn btn-primary">
@@ -164,7 +119,7 @@
 
       <!-- ABOUT SECTION -->
       <section id="about" class="about section-padding">
-  <div class="container fade-in">
+        <div class="container">
           <div class="section-header" data-anim>
             <span class="section-label">Quem sou eu</span>
             <h2 class="section-title">Sobre Mim</h2>
@@ -174,14 +129,7 @@
             <div class="about-image-container" data-anim>
               <div class="about-card glass-card">
                 <div class="profile-frame">
-                  <img 
-                    src="assets/profile.jpg" 
-                    alt="Marcelo Macedo - Solution Engineer" 
-                    class="profile-img"
-                    loading="lazy"
-                    width="300"
-                    height="300"
-                  />
+                  <img src="assets/profile.svg" alt="Marcelo Macedo" class="profile-img" />
                   <div class="profile-ring"></div>
                 </div>
                 <div class="quick-stats">
@@ -195,15 +143,15 @@
                   <div class="stat-item">
                     <i class="fas fa-project-diagram"></i>
                     <div>
-                      <strong>20+</strong>
-                      <span>Projetos de Automação</span>
+                      <strong>50+</strong>
+                      <span>Projetos Concluídos</span>
                     </div>
                   </div>
                   <div class="stat-item">
                     <i class="fas fa-award"></i>
                     <div>
-                      <strong>5</strong>
-                      <span>Certificações Técnicas</span>
+                      <strong>2</strong>
+                      <span>Certificações</span>
                     </div>
                   </div>
                 </div>
@@ -213,13 +161,19 @@
             <div class="about-content" data-anim>
               <div class="about-text">
                 <p class="lead-text">
-                  Engenheiro de soluções apaixonado por automação, dados e tecnologia. Atuo há mais de 6 anos desenvolvendo integrações, robôs, dashboards e sistemas inteligentes para empresas de diversos segmentos.
+                  Sou <strong>Solution Engineer</strong> com mais de seis anos de experiência em automação de processos, análise de dados e soluções em nuvem.
                 </p>
                 <p>
-                  Meu foco é criar soluções que simplificam rotinas, aumentam a produtividade e trazem resultados mensuráveis. Domino Python, Power BI, Azure, UiPath, SQL e práticas DevOps.
+                  Minha carreira é marcada pela capacidade de <strong>transformar processos manuais em fluxos inteligentes e automatizados</strong>, reduzindo erros e aumentando a eficiência operacional.
                 </p>
                 <p>
-                  Já liderei projetos de automação financeira, integração de APIs, análise de dados e implantação de pipelines CI/CD. Busco sempre unir visão técnica e estratégica para entregar valor ao negócio.
+                  Tenho sólida atuação em projetos utilizando <strong>Python</strong>, <strong>Power BI</strong>, <strong>Power Automate</strong>, <strong>Azure</strong> e <strong>RPA</strong>, desenvolvendo integrações entre sistemas, dashboards gerenciais e soluções com inteligência artificial.
+                </p>
+                <p>
+                  Ao longo da minha trajetória, colaborei com empresas de diferentes setores, entregando <strong>projetos escaláveis</strong> que geraram ganhos de produtividade e redução de custos.
+                </p>
+                <p>
+                  Sou reconhecido por aliar <strong>visão técnica e compreensão de negócios</strong>, o que me permite desenhar soluções que realmente atendem às necessidades estratégicas das organizações.
                 </p>
               </div>
 
@@ -258,7 +212,7 @@
 
       <!-- EXPERIENCE SECTION -->
       <section id="experience" class="experience section-padding bg-dark">
-  <div class="container fade-in">
+        <div class="container">
           <div class="section-header" data-anim>
             <span class="section-label">Trajetória Profissional</span>
             <h2 class="section-title">Experiência</h2>
@@ -273,87 +227,32 @@
               <div class="timeline-content glass-card">
                 <div class="timeline-header">
                   <div>
-                    <h3>Solution Engineer</h3>
+                    <h3>Líder Técnico em Automação de Processos</h3>
                     <h4>Quali IT</h4>
                   </div>
                   <span class="timeline-date">
                     <i class="fas fa-calendar-alt"></i>
-                    2024 - Atual
+                    Out 2024 - Atual
                   </span>
                 </div>
                 <ul class="timeline-achievements">
-                  <li><i class="fas fa-check-circle"></i> Liderança técnica em projetos de automação e integração de sistemas</li>
-                  <li><i class="fas fa-check-circle"></i> Implantação de pipelines CI/CD e práticas DevOps</li>
-                  <li><i class="fas fa-check-circle"></i> Desenvolvimento de robôs RPA e integrações backend</li>
-                  <li><i class="fas fa-check-circle"></i> Otimização de processos financeiros e operacionais</li>
+                  <li><i class="fas fa-check-circle"></i> Liderança técnica em soluções de automação e integrações backend/frontend</li>
+                  <li><i class="fas fa-check-circle"></i> Aplicação de padrões arquiteturais (camadas, modularização e APIs) para garantir manutenibilidade e escalabilidade</li>
+                  <li><i class="fas fa-check-circle"></i> Participação em práticas de DevOps e versionamento de código integrado ao Azure DevOps</li>
+                  <li><i class="fas fa-check-circle"></i> Adoção de políticas de segurança da informação em fluxos automatizados e troca de dados sensíveis</li>
+                  <li><i class="fas fa-check-circle"></i> Desenvolvimento de automações inteligentes integradas a bancos relacionais (SQL Server, PostgreSQL)</li>
                 </ul>
                 <div class="timeline-tags">
                   <span class="tag">Python</span>
-                  <span class="tag">Azure</span>
-                  <span class="tag">RPA</span>
-                  <span class="tag">DevOps</span>
+                  <span class="tag">Azure DevOps</span>
+                  <span class="tag">SQL Server</span>
+                  <span class="tag">PostgreSQL</span>
+                  <span class="tag">Arquitetura</span>
                 </div>
               </div>
             </div>
 
             <!-- Experience Item 2 -->
-            <div class="timeline-item" data-anim>
-              <div class="timeline-marker">
-                <div class="timeline-dot"></div>
-              </div>
-              <div class="timeline-content glass-card">
-                <div class="timeline-header">
-                  <div>
-                    <h3>Analista de Dados</h3>
-                    <h4>Tata Consultancy Services</h4>
-                  </div>
-                  <span class="timeline-date">
-                    <i class="fas fa-calendar-alt"></i>
-                    2022 - 2024
-                  </span>
-                </div>
-                <ul class="timeline-achievements">
-                  <li><i class="fas fa-check-circle"></i> Desenvolvimento de dashboards Power BI para diretoria</li>
-                  <li><i class="fas fa-check-circle"></i> Automação de relatórios e ETL com Python e SQL</li>
-                  <li><i class="fas fa-check-circle"></i> Suporte a projetos de integração de dados</li>
-                </ul>
-                <div class="timeline-tags">
-                  <span class="tag">Power BI</span>
-                  <span class="tag">Python</span>
-                  <span class="tag">SQL</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Experience Item 3 -->
-            <div class="timeline-item" data-anim>
-              <div class="timeline-marker">
-                <div class="timeline-dot"></div>
-              </div>
-              <div class="timeline-content glass-card">
-                <div class="timeline-header">
-                  <div>
-                    <h3>Desenvolvedor RPA</h3>
-                    <h4>Freelancer</h4>
-                  </div>
-                  <span class="timeline-date">
-                    <i class="fas fa-calendar-alt"></i>
-                    2019 - 2022
-                  </span>
-                </div>
-                <ul class="timeline-achievements">
-                  <li><i class="fas fa-check-circle"></i> Criação de robôs UiPath para automação de processos fiscais</li>
-                  <li><i class="fas fa-check-circle"></i> Integração de sistemas via API</li>
-                  <li><i class="fas fa-check-circle"></i> Redução de custos operacionais com automação</li>
-                </ul>
-                <div class="timeline-tags">
-                  <span class="tag">UiPath</span>
-                  <span class="tag">APIs</span>
-                  <span class="tag">Automação</span>
-                </div>
-              </div>
-            </div>
-          </div>
             <div class="timeline-item" data-anim>
               <div class="timeline-marker">
                 <div class="timeline-dot"></div>
@@ -476,7 +375,7 @@
 
       <!-- SKILLS SECTION -->
       <section id="skills" class="skills section-padding">
-  <div class="container fade-in">
+        <div class="container">
           <div class="section-header" data-anim>
             <span class="section-label">Expertise Técnica</span>
             <h2 class="section-title">Habilidades & Tecnologias</h2>
@@ -755,7 +654,7 @@
 
       <section id="skills" class="skills container">
         <h2 class="section-title">Habilidades</h2>
-          <div class="container fade-in">
+        <div class="skills-grid">
           <div class="skill">
             <i class="fa-brands fa-python skill-icon"></i>
             <span>Python</span>

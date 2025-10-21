@@ -158,13 +158,6 @@
         <span></span>
         <span></span>
       </button>
-      <button
-        class="theme-toggle"
-        aria-label="Alternar tema"
-        title="Alternar tema"
-      >
-        <i class="fas fa-moon"></i>
-      </button>
     </nav>
   </header>
 
@@ -372,10 +365,10 @@
 
         <div class="timeline">
           <!-- Experience Item 1 - Atual -->
-          <div class="timeline-item">
+          <div class="timeline-item glass-card">
             <div class="timeline-marker"></div>
             <div class="timeline-year">2024</div>
-            <div class="timeline-content glass-card">
+            <div class="timeline-content">
               <div
                 class="timeline-header"
                 onclick="toggleTimeline(this)"
@@ -383,15 +376,6 @@
                 <div>
                   <h3>Líder Técnico em Automação de Processos</h3>
                   <h4>Quali IT</h4>
-                  <div class="timeline-tags header-tags">
-                    <span class="tag">Python</span>
-                    <span class="tag">Azure DevOps</span>
-                    <span class="tag">RPA</span>
-                    <span class="tag">DevOps</span>
-                    <span class="tag">SQL Server</span>
-                    <span class="tag">PostgreSQL</span>
-                    <span class="tag">CI/CD</span>
-                  </div>
                 </div>
                 <div class="timeline-header-right">
                   <span class="timeline-date">
@@ -427,22 +411,25 @@
                     automações inteligentes integradas a bancos relacionais (SQL
                     Server, PostgreSQL)
                   </li>
-                  <li>
-                    <i class="fas fa-check-circle"></i> Colaboração com áreas
-                    de negócio e times de desenvolvimento para assegurar
-                    qualidade de software desde a concepção até a entrega.
-                  </li>
                 </ul>
-                <!-- tags visible in header for collapsed view -->
+                <div class="timeline-tags">
+                  <span class="tag">Python</span>
+                  <span class="tag">Azure DevOps</span>
+                  <span class="tag">RPA</span>
+                  <span class="tag">DevOps</span>
+                  <span class="tag">SQL Server</span>
+                  <span class="tag">PostgreSQL</span>
+                  <span class="tag">CI/CD</span>
+                </div>
               </div>
             </div>
           </div>
 
           <!-- Experience Item 2 - ONS -->
-          <div class="timeline-item">
+          <div class="timeline-item glass-card">
             <div class="timeline-marker"></div>
             <div class="timeline-year">2023</div>
-            <div class="timeline-content glass-card">
+            <div class="timeline-content">
               <div
                 class="timeline-header"
                 onclick="toggleTimeline(this)"
@@ -450,14 +437,6 @@
                 <div>
                   <h3>Dev Full-Stack Python</h3>
                   <h4>ONS - Operador Nacional do Sistema Elétrico</h4>
-                  <div class="timeline-tags header-tags">
-                    <span class="tag">Python</span>
-                    <span class="tag">Power Automate</span>
-                    <span class="tag">RPA</span>
-                    <span class="tag">CI/CD</span>
-                    <span class="tag">Git</span>
-                    <span class="tag">SQL</span>
-                  </div>
                 </div>
                 <div class="timeline-header-right">
                   <span class="timeline-date">
@@ -472,49 +451,42 @@
                   </button>
                 </div>
               </div>
-              <div class="timeline-details">
-                <ul class="timeline-achievements">
-                  <li>
-                    <i class="fas fa-check-circle"></i> Desenvolvimento de
-                    scripts e APIs em Python com integração a bancos relacionais
-                  </li>
-                  <li>
-                    <i class="fas fa-check-circle"></i> Criação de soluções com
-                    Power Automate e RPA, integrando dados entre sistemas
-                    internos
-                  </li>
-                  <li>
-                    <i class="fas fa-check-circle"></i> Participação em rotinas
-                    de deploy contínuo (CI/CD) e versionamento com Git
-                  </li>
-                  <li>
-                    <i class="fas fa-check-circle"></i> Implementação de boas
-                    práticas de código limpo e testes unitários
-                  </li>
-                  <li>
-                    <i class="fas fa-check-circle"></i> Apoio na definição de
-                    arquitetura e documentação técnica das soluções
-                    desenvolvidas.
-                  </li>
-                </ul>
-                <div class="timeline-tags">
-                  <span class="tag">Python</span>
-                  <span class="tag">Power Automate</span>
-                  <span class="tag">RPA</span>
-                  <span class="tag">CI/CD</span>
-                  <span class="tag">Git</span>
-                  <span class="tag">SQL</span>
-                </div>
+              <ul class="timeline-achievements">
+                <li>
+                  <i class="fas fa-check-circle"></i> Desenvolvimento de
+                  scripts e APIs em Python com integração a bancos relacionais
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i> Criação de soluções com
+                  Power Automate e RPA, integrando dados entre sistemas
+                  internos
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i> Participação em rotinas
+                  de deploy contínuo (CI/CD) e versionamento com Git
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i> Implementação de boas
+                  práticas de código limpo e testes unitários
+                </li>
+              </ul>
+              <div class="timeline-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Power Automate</span>
+                <span class="tag">RPA</span>
+                <span class="tag">CI/CD</span>
+                <span class="tag">Git</span>
+                <span class="tag">SQL</span>
               </div>
             </div>
           </div>
         </div>
 
         <!-- Experience Item 3 - Tata (Desenvolvedor) -->
-        <div class="timeline-item">
+        <div class="timeline-item glass-card">
           <div class="timeline-marker"></div>
           <div class="timeline-year">2022</div>
-          <div class="timeline-content glass-card">
+          <div class="timeline-content">
             <div
               class="timeline-header"
               onclick="toggleTimeline(this)"
@@ -522,19 +494,10 @@
               <div>
                 <h3>Analista Desenvolvedor</h3>
                 <h4>Tata Consultancy Services</h4>
-                <div class="timeline-tags header-tags">
-                  <span class="tag">RPA</span>
-                  <span class="tag">UiPath</span>
-                  <span class="tag">Automation Anywhere</span>
-                  <span class="tag">Python</span>
-                  <span class="tag">.NET (C#)</span>
-                  <span class="tag">Power BI</span>
-                </div>
               </div>
               <div class="timeline-header-right">
-                <span class="timeline-date">
-                  <i class="fas fa-calendar-alt"></i>
-                  Abr 2022 - Mai 2023
+                <i class="fas fa-calendar-alt"></i>
+                Abr 2022 - Mai 2023
                 </span>
                 <button
                   class="timeline-toggle"
@@ -547,38 +510,22 @@
             <div class="timeline-details">
               <ul class="timeline-achievements">
                 <li>
-                  <i class="fas fa-check-circle"></i> Criação e suporte a
-                  soluções RPA utilizando UiPath e Automation Anywhere,
-                  integrando com APIs REST, bancos de dados e sistemas
-                  corporativos.
+                  <i class="fas fa-check-circle"></i> Desenvolvimento e
+                  manutenção de soluções RPA e DevOps para clientes
+                  corporativos
                 </li>
                 <li>
-                  <i class="fas fa-check-circle"></i> Desenvolvimento de
-                  scripts em Python e .NET (C#) para automação de processos,
-                  manipulação de dados e construção de serviços backend.
+                  <i class="fas fa-check-circle"></i> Contribuição em
+                  pipelines de integração e entrega contínua (CI/CD)
                 </li>
                 <li>
-                  <i class="fas fa-check-circle"></i> Implementação de
-                  dashboards internos para monitoramento de bots e
-                  indicadores de desempenho, usando HTML, CSS, JavaScript e
-                  Power BI Embedded.
+                  <i class="fas fa-check-circle"></i> Participação em projetos
+                  com foco em qualidade de software
                 </li>
                 <li>
-                  <i class="fas fa-check-circle"></i> Participação em
-                  projetos de modernização de sistemas legados, com foco em
-                  integração entre aplicações via serviços web e filas de
-                  mensagens.
-                </li>
-                <li>
-                  <i class="fas fa-check-circle"></i> Colaboração com
-                  times multidisciplinares (negócios, QA e infraestrutura) em
-                  um ambiente ágil (Scrum).
-                </li>
-                <li>
-                  <i class="fas fa-check-circle"></i> Contribuição para
-                  melhoria contínua e redução de falhas em processos
-                  automatizados, ampliando a eficiência operacional e o
-                  tempo de resposta a incidentes.
+                  <i class="fas fa-check-circle"></i> Suporte na aplicação de
+                  políticas de segurança da informação em processos
+                  automatizados
                 </li>
               </ul>
               <div class="timeline-tags">
@@ -593,10 +540,10 @@
         </div>
 
         <!-- Experience Item 4 - Tata (Jr) -->
-        <div class="timeline-item">
+        <div class="timeline-item glass-card">
           <div class="timeline-marker"></div>
           <div class="timeline-year">2019</div>
-          <div class="timeline-content glass-card">
+          <div class="timeline-content">
             <div
               class="timeline-header"
               onclick="toggleTimeline(this)"
@@ -646,7 +593,110 @@
       </div>
     </section>
 
+    <!-- CERTIFICATIONS SECTION -->
+    <section
+      id="certifications"
+      class="certifications"
+    >
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Certificações</h2>
+          <p class="section-subtitle">Qualificações e especializações conquistadas</p>
+        </div>
 
+        <div class="certs-grid">
+          <div class="cert-card glass-card">
+            <div class="cert-icon">
+              <i class="fas fa-robot"></i>
+            </div>
+            <h3>UiPath Advanced RPA Developer</h3>
+            <p>Desenvolvimento avançado de automações com UiPath</p>
+            <span class="cert-year">2023</span>
+          </div>
+
+          <div class="cert-card glass-card">
+            <div class="cert-icon">
+              <i class="fab fa-microsoft"></i>
+            </div>
+            <h3>Microsoft Power Platform</h3>
+            <p>Power Automate e Power Apps</p>
+            <span class="cert-year">2024</span>
+          </div>
+
+          <div class="cert-card glass-card">
+            <div class="cert-icon">
+              <i class="fab fa-python"></i>
+            </div>
+            <h3>Python for Data Science</h3>
+            <p>Análise de dados e automação com Python</p>
+            <span class="cert-year">2022</span>
+          </div>
+
+          <div class="cert-card glass-card">
+            <div class="cert-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3>Power BI Data Analyst</h3>
+            <p>Visualização e análise de dados</p>
+            <span class="cert-year">2023</span>
+          </div>
+
+          <div class="cert-card glass-card">
+            <div class="cert-icon">
+              <i class="fas fa-cloud"></i>
+            </div>
+            <h3>Azure Fundamentals (AZ-900)</h3>
+            <p>Fundamentos de computação em nuvem</p>
+            <span class="cert-year">2024</span>
+          </div>
+
+          <div class="cert-card glass-card">
+            <div class="cert-icon">
+              <i class="fas fa-code-branch"></i>
+            </div>
+            <h3>Git & GitHub Essentials</h3>
+            <p>Controle de versão e colaboração</p>
+            <span class="cert-year">2021</span>
+          </div>
+
+          <div class="cert-card glass-card">
+            <div class="cert-icon">
+              <i class="fas fa-database"></i>
+            </div>
+            <h3>SQL Server Administration</h3>
+            <p>Gerenciamento de bancos de dados</p>
+            <span class="cert-year">2022</span>
+          </div>
+
+          <div class="cert-card glass-card">
+            <div class="cert-icon">
+              <i class="fas fa-infinity"></i>
+            </div>
+            <h3>DevOps Essentials</h3>
+            <p>CI/CD e práticas ágeis</p>
+            <span class="cert-year">2023</span>
+          </div>
+
+          <div class="cert-card glass-card">
+            <div class="cert-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3>OWASP Security Principles</h3>
+            <p>Segurança em aplicações web</p>
+            <span class="cert-year">2023</span>
+          </div>
+
+          <div class="cert-card glass-card">
+            <div class="cert-icon">
+              <i class="fas fa-robot"></i>
+            </div>
+            <h3>Automation Anywhere Certified</h3>
+            <p>Desenvolvimento de bots RPA</p>
+            <span class="cert-year">2022</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- SKILLS SECTION -->
     <section
@@ -657,73 +707,6 @@
         <div class="section-header">
           <h2 class="section-title">Habilidades Técnicas</h2>
           <p class="section-subtitle">Tecnologias e ferramentas que domino</p>
-        </div>
-
-        <!-- Certificações / Qualificações movidas para Habilidades -->
-        <div
-          class="certs-grid"
-          aria-label="Certificações e qualificações"
-        >
-          <div class="cert-card glass-card">
-            <div class="cert-icon"><i class="fas fa-robot"></i></div>
-            <h3>UiPath Advanced RPA Developer</h3>
-            <p>Desenvolvimento avançado de automações com UiPath</p>
-            <span class="cert-year">2023</span>
-          </div>
-          <div class="cert-card glass-card">
-            <div class="cert-icon"><i class="fab fa-microsoft"></i></div>
-            <h3>Microsoft Power Platform</h3>
-            <p>Power Automate e Power Apps</p>
-            <span class="cert-year">2024</span>
-          </div>
-          <div class="cert-card glass-card">
-            <div class="cert-icon"><i class="fab fa-python"></i></div>
-            <h3>Python for Data Science</h3>
-            <p>Análise de dados e automação com Python</p>
-            <span class="cert-year">2022</span>
-          </div>
-          <div class="cert-card glass-card">
-            <div class="cert-icon"><i class="fas fa-chart-line"></i></div>
-            <h3>Power BI Data Analyst</h3>
-            <p>Visualização e análise de dados</p>
-            <span class="cert-year">2023</span>
-          </div>
-          <div class="cert-card glass-card">
-            <div class="cert-icon"><i class="fas fa-cloud"></i></div>
-            <h3>Azure Fundamentals (AZ-900)</h3>
-            <p>Fundamentos de computação em nuvem</p>
-            <span class="cert-year">2024</span>
-          </div>
-          <div class="cert-card glass-card">
-            <div class="cert-icon"><i class="fas fa-code-branch"></i></div>
-            <h3>Git & GitHub Essentials</h3>
-            <p>Controle de versão e colaboração</p>
-            <span class="cert-year">2021</span>
-          </div>
-          <div class="cert-card glass-card">
-            <div class="cert-icon"><i class="fas fa-database"></i></div>
-            <h3>SQL Server Administration</h3>
-            <p>Gerenciamento de bancos de dados</p>
-            <span class="cert-year">2022</span>
-          </div>
-          <div class="cert-card glass-card">
-            <div class="cert-icon"><i class="fas fa-infinity"></i></div>
-            <h3>DevOps Essentials</h3>
-            <p>CI/CD e práticas ágeis</p>
-            <span class="cert-year">2023</span>
-          </div>
-          <div class="cert-card glass-card">
-            <div class="cert-icon"><i class="fas fa-shield-alt"></i></div>
-            <h3>OWASP Security Principles</h3>
-            <p>Segurança em aplicações web</p>
-            <span class="cert-year">2023</span>
-          </div>
-          <div class="cert-card glass-card">
-            <div class="cert-icon"><i class="fas fa-robot"></i></div>
-            <h3>Automation Anywhere Certified</h3>
-            <p>Desenvolvimento de bots RPA</p>
-            <span class="cert-year">2022</span>
-          </div>
         </div>
 
         <div class="skills-grid">
@@ -1064,9 +1047,452 @@
       </div>
     </section>
 
+    <!-- PROJECTS SECTION -->
+    <section
+      id="projects"
+      class="projects"
+    >
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Projetos em Destaque</h2>
+          <p class="section-subtitle">Alguns dos meus trabalhos recentes</p>
+        </div>
 
+        <div class="projects-grid">
+          <article class="project-card glass-card">
+            <div class="project-image">
+              <img
+                src="assets/project1.svg"
+                alt="Dashboard Vendas"
+              />
+            </div>
+            <div class="project-body">
+              <h3>Dashboard Vendas</h3>
+              <p>
+                Painel em Power BI integrado com Python para ETL e automação
+                de relatórios.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Power BI</span>
+                <span class="tag">Python</span>
+                <span class="tag">ETL</span>
+              </div>
+              <
+                políticas
+                de
+                segurança
+                da
+                informação
+                em
+                processos
+                automatizados
+                </li
+              >
+                </ul>
+                <div class="timeline-tags">
+                  <span class="tag">RPA</span>
+                  <span class="tag">DevOps</span>
+                  <span class="tag">UiPath</span>
+                  <span class="tag">Segurança</span>
+                </div>
+            </div>
+        </div>
 
+        <!-- Experience Item 4 -->
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-header">
+              <div>
+                <h3>Analista Desenvolvedor Jr.</h3>
+                <h4>Tata Consultancy Services</h4>
+              </div>
+              <span class="timeline-date">
+                <i class="fas fa-calendar-alt"></i>
+                Nov 2019 - Fev 2022
+              </span>
+            </div>
+            <ul class="timeline-achievements">
+              <li>
+                <i class="fas fa-check-circle"></i> Criação e suporte a
+                soluções RPA com UiPath e Automation Anywhere
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i> Foco na eficiência
+                operacional e suporte a clientes em demandas de automação
+              </li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tag">UiPath</span>
+              <span class="tag">Automation Anywhere</span>
+              <span class="tag">RPA</span>
+            </div>
+          </div>
+        </div>
+      </div>
 
+      <!-- Certifications -->
+      <div class="certifications">
+        <h3 class="subsection-title">
+          <i class="fas fa-certificate"></i>
+          Certificações
+        </h3>
+        <div class="cert-grid">
+          <div class="cert-card glass-card">
+            <div class="cert-icon">
+              <i class="fas fa-robot"></i>
+            </div>
+            <h4>RPA Developer Advanced</h4>
+            <p>UiPath</p>
+            <span class="cert-year">2020</span>
+          </div>
+          <div class="cert-card glass-card">
+            <div class="cert-icon">
+              <i class="fas fa-comments"></i>
+            </div>
+            <h4>ChatBot Developer</h4>
+            <p>BLIP</p>
+            <span class="cert-year">2020</span>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section
+      id="projects"
+      class="projects"
+    >
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Projetos em Destaque</h2>
+          <p class="section-subtitle">Alguns dos meus trabalhos recentes</p>
+        </div>
+        <div class="skill-bar">
+          <div
+            class="skill-progress"
+            style="--progress: 95%"
+          ></div>
+        </div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-info">
+          <i class="fab fa-microsoft"></i>
+          <span>C#</span>
+        </div>
+        <div class="skill-bar">
+          <div
+            class="skill-progress"
+            style="--progress: 75%"
+          ></div>
+        </div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-info">
+          <i class="fas fa-database"></i>
+          <span>SQL</span>
+        </div>
+        <div class="skill-bar">
+          <div
+            class="skill-progress"
+            style="--progress: 90%"
+          ></div>
+        </div>
+      </div>
+      </div>
+      </div>
+
+      <!-- Arquitetura & DevOps -->
+      <div class="skill-category glass-card">
+        <div class="category-header">
+          <i class="fas fa-project-diagram"></i>
+          <h3>Arquitetura & DevOps</h3>
+        </div>
+        <div class="skill-list">
+          <div class="skill-item">
+            <div class="skill-info">
+              <i class="fab fa-git-alt"></i>
+              <span>Git & GitHub</span>
+            </div>
+            <div class="skill-bar">
+              <div
+                class="skill-progress"
+                style="--progress: 90%"
+              ></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <i class="fab fa-microsoft"></i>
+              <span>Azure DevOps</span>
+            </div>
+            <div class="skill-bar">
+              <div
+                class="skill-progress"
+                style="--progress: 85%"
+              ></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <i class="fas fa-layer-group"></i>
+              <span>Padrões Arquiteturais (MVC)</span>
+            </div>
+            <div class="skill-bar">
+              <div
+                class="skill-progress"
+                style="--progress: 80%"
+              ></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <i class="fas fa-cogs"></i>
+              <span>CI/CD Pipelines</span>
+            </div>
+            <div class="skill-bar">
+              <div
+                class="skill-progress"
+                style="--progress: 85%"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bancos de Dados -->
+      <div class="skill-category glass-card">
+        <div class="category-header">
+          <i class="fas fa-server"></i>
+          <h3>Bancos de Dados</h3>
+        </div>
+        <div class="skill-list">
+          <div class="skill-item">
+            <div class="skill-info">
+              <i class="fas fa-database"></i>
+              <span>SQL Server</span>
+            </div>
+            <div class="skill-bar">
+              <div
+                class="skill-progress"
+                style="--progress: 90%"
+              ></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <i class="fas fa-elephant"></i>
+              <span>PostgreSQL</span>
+            </div>
+            <div class="skill-bar">
+              <div
+                class="skill-progress"
+                style="--progress: 85%"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RPA & Automação -->
+      <div class="skill-category glass-card">
+        <div class="category-header">
+          <i class="fas fa-robot"></i>
+          <h3>RPA & Automação</h3>
+        </div>
+        <div class="skill-list">
+          <div class="skill-item">
+            <div class="skill-info">
+              <i class="fas fa-robot"></i>
+              <span>UiPath</span>
+            </div>
+            <div class="skill-bar">
+              <div
+                class="skill-progress"
+                style="--progress: 95%"
+              ></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <i class="fab fa-microsoft"></i>
+              <span>Power Automate</span>
+            </div>
+            <div class="skill-bar">
+              <div
+                class="skill-progress"
+                style="--progress: 92%"
+              ></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <i class="fas fa-cog"></i>
+              <span>Automation Anywhere</span>
+            </div>
+            <div class="skill-bar">
+              <div
+                class="skill-progress"
+                style="--progress: 80%"
+              ></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <i class="fas fa-comments"></i>
+              <span>Copilot Studio</span>
+            </div>
+            <div class="skill-bar">
+              <div
+                class="skill-progress"
+                style="--progress: 85%"
+              ></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <i class="fas fa-cogs"></i>
+              <span>AssistEdge</span>
+            </div>
+            <div class="skill-bar">
+              <div
+                class="skill-progress"
+                style="--progress: 75%"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ferramentas & Plataformas -->
+      <div class="skill-category glass-card">
+        <div class="category-header">
+          <i class="fas fa-tools"></i>
+          <h3>Ferramentas & Plataformas</h3>
+        </div>
+        <div class="skill-list">
+          <div class="skill-item">
+            <div class="skill-info">
+              <i class="fab fa-microsoft"></i>
+              <span>Microsoft 365</span>
+            </div>
+            <div class="skill-bar">
+              <div
+                class="skill-progress"
+                style="--progress: 90%"
+              ></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <i class="fab fa-microsoft"></i>
+              <span>Teams (Bots)</span>
+            </div>
+            <div class="skill-bar">
+              <div
+                class="skill-progress"
+                style="--progress: 85%"
+              ></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <i class="fab fa-windows"></i>
+              <span>Azure Cloud</span>
+            </div>
+            <div class="skill-bar">
+              <div
+                class="skill-progress"
+                style="--progress: 85%"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BI & Dados -->
+      <div class="skill-category glass-card">
+        <div class="category-header">
+          <i class="fas fa-chart-line"></i>
+          <h3>BI & Análise de Dados</h3>
+        </div>
+        <div class="skill-list">
+          <div class="skill-item">
+            <div class="skill-info">
+              <i class="fas fa-chart-bar"></i>
+              <span>Power BI</span>
+            </div>
+            <div class="skill-bar">
+              <div
+                class="skill-progress"
+                style="--progress: 95%"
+              ></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <i class="fas fa-file-excel"></i>
+              <span>Excel (VBA)</span>
+            </div>
+            <div class="skill-bar">
+              <div
+                class="skill-progress"
+                style="--progress: 85%"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Qualidade & Segurança -->
+      <div class="skill-category glass-card">
+        <div class="category-header">
+          <i class="fas fa-shield-alt"></i>
+          <h3>Qualidade & Segurança</h3>
+        </div>
+        <div class="skill-list">
+          <div class="skill-item">
+            <div class="skill-info">
+              <i class="fas fa-vial"></i>
+              <span>Testes Unitários</span>
+            </div>
+            <div class="skill-bar">
+              <div
+                class="skill-progress"
+                style="--progress: 85%"
+              ></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <i class="fas fa-lock"></i>
+              <span>OWASP (Princípios Básicos)</span>
+            </div>
+            <div class="skill-bar">
+              <div
+                class="skill-progress"
+                style="--progress: 75%"
+              ></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <i class="fas fa-code-branch"></i>
+              <span>Boas Práticas de Código</span>
+            </div>
+            <div class="skill-bar">
+              <div
+                class="skill-progress"
+                style="--progress: 75%"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      </div>
+    </section>
 
     <!-- PROJECTS SECTION -->
     <section
@@ -1169,33 +1595,6 @@
       </div>
     </section>
 
-    <!-- CERTIFICAÇÕES (Final) -->
-    <section
-      class="certifications"
-      aria-label="Certificações"
-    >
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Certificações</h2>
-          <p class="section-subtitle">Conquistas profissionais</p>
-        </div>
-        <div class="cert-grid">
-          <div class="cert-card glass-card">
-            <div class="cert-icon"><i class="fas fa-robot"></i></div>
-            <h4>RPA Developer Advanced</h4>
-            <p>UiPath</p>
-            <span class="cert-year">2020</span>
-          </div>
-          <div class="cert-card glass-card">
-            <div class="cert-icon"><i class="fas fa-comments"></i></div>
-            <h4>ChatBot Developer</h4>
-            <p>BLIP</p>
-            <span class="cert-year">2025</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- CONTACT SECTION -->
     <section
       id="contact"
@@ -1259,77 +1658,63 @@
           </div>
 
           <div class="contact-info">
-            <div class="contact-item">
+            <div class="glass-card contact-card">
               <div class="contact-icon">
                 <i class="fas fa-envelope"></i>
               </div>
-              <div class="contact-details">
-                <h3>Email</h3>
-                <p>marcelo.macedo.business@gmail.com</p>
-              </div>
+              <h3>Email</h3>
+              <p>marcelo.macedo.business@gmail.com</p>
               <a
                 href="mailto:marcelo.macedo.business@gmail.com"
                 class="btn btn-outline"
-                aria-label="Enviar email"
               >
-                <i class="fas fa-paper-plane"></i> Enviar
+                <i class="fas fa-envelope"></i> Enviar Email
               </a>
             </div>
 
-            <div class="contact-item">
+            <div class="glass-card contact-card">
               <div class="contact-icon">
                 <i class="fab fa-whatsapp"></i>
               </div>
-              <div class="contact-details">
-                <h3>WhatsApp</h3>
-                <p>+55 (21) 9 7920-8480</p>
-              </div>
+              <h3>WhatsApp</h3>
+              <p>+55 (21) 9 7920-8480</p>
               <a
                 href="https://wa.me/5521979208480"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="btn btn-outline"
-                aria-label="Abrir WhatsApp"
               >
                 <i class="fab fa-whatsapp"></i> Chamar
               </a>
             </div>
 
-            <div class="contact-item">
+            <div class="glass-card contact-card">
               <div class="contact-icon">
                 <i class="fab fa-linkedin"></i>
               </div>
-              <div class="contact-details">
-                <h3>LinkedIn</h3>
-                <p>linkedin.com/in/marcelo-macedo-jr</p>
-              </div>
+              <h3>LinkedIn</h3>
               <a
                 href="https://www.linkedin.com/in/marcelo-macedo-jr/"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="btn btn-outline"
-                aria-label="Conectar no LinkedIn"
               >
                 <i class="fab fa-linkedin"></i> Conectar
               </a>
             </div>
 
-            <div class="contact-item">
+            <div class="glass-card contact-card">
               <div class="contact-icon">
                 <i class="fab fa-github"></i>
               </div>
-              <div class="contact-details">
-                <h3>GitHub</h3>
-                <p>github.com/marcelomcd</p>
-              </div>
+              <h3>GitHub</h3>
               <a
                 href="https://github.com/marcelomcd"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="btn btn-outline"
-                aria-label="Ver repositórios no GitHub"
               >
-                <i class="fab fa-github"></i> Ver Repos
+                <i class="fab fa-github"></i> Ver Repositórios
               </a>
             </div>
           </div>
@@ -1337,8 +1722,6 @@
       </div>
     </section>
   </main>
-
-
 
   <!-- FOOTER -->
   <footer class="footer">
