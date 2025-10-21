@@ -46,10 +46,19 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!btn) return;
     const root = document.documentElement;
     const saved = localStorage.getItem('theme');
-    if (saved === 'dark') {
+    if (!saved) {
+      localStorage.setItem('theme', 'light');
+    }
+    if (localStorage.getItem('theme') === 'dark') {
       root.setAttribute('data-theme', 'dark');
       btn.innerHTML = '<i class="fas fa-sun"></i>';
       btn.title = 'Alternar para claro';
+      btn.setAttribute('aria-pressed', 'true');
+    } else {
+      root.removeAttribute('data-theme');
+      btn.innerHTML = '<i class="fas fa-moon"></i>';
+      btn.title = 'Alternar para escuro';
+      btn.setAttribute('aria-pressed', 'false');
     }
     btn.addEventListener('click', () => {
       const isDark = root.getAttribute('data-theme') === 'dark';
@@ -58,11 +67,13 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.setItem('theme', 'light');
         btn.innerHTML = '<i class="fas fa-moon"></i>';
         btn.title = 'Alternar para escuro';
+        btn.setAttribute('aria-pressed', 'false');
       } else {
         root.setAttribute('data-theme', 'dark');
         localStorage.setItem('theme', 'dark');
         btn.innerHTML = '<i class="fas fa-sun"></i>';
         btn.title = 'Alternar para claro';
+        btn.setAttribute('aria-pressed', 'true');
       }
     });
   };
