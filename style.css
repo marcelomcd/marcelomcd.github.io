@@ -115,6 +115,9 @@
   --liquid-ease-in: cubic-bezier(0.65, 0, 0.35, 1);
   --liquid-ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 
+  /* Alias for legacy usage */
+  --glass: var(--glass-bg);
+
   /* Spacing & Layout - Mais Respiro */
   --radius: 24px;
   --radius-sm: 16px;
@@ -131,6 +134,38 @@
   --transition: all 0.4s var(--liquid-ease);
   --transition-fast: all 0.2s var(--liquid-ease);
   --transition-slow: all 0.6s var(--liquid-ease-out);
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+  --bg: linear-gradient(135deg, #0b1118 0%, #0e1620 50%, #0f1b29 100%);
+  --bg-elevated: rgba(20, 26, 36, 0.85);
+  --card: rgba(16, 22, 32, 0.6);
+  --card-hover: rgba(20, 28, 40, 0.8);
+
+  --text: #e6edf3;
+  --text-muted: #b6c2cf;
+  --text-dim: #8b96a3;
+
+  --accent: #5ac8fa;
+  --accent-light: #a9e7ff;
+  --accent-hover: #3db5ec;
+  --purple: #c792ea;
+  --pink: #ff6b8a;
+  --orange: #ffb86b;
+  --green: #78e08f;
+
+  --glass-bg: rgba(20, 26, 36, 0.6);
+  --glass-border: rgba(90, 200, 250, 0.18);
+  --glass-shadow: 0 12px 40px rgba(0, 122, 255, 0.08), 0 4px 16px rgba(0, 0, 0, 0.35);
+  --glass-blur: blur(24px);
+
+  --gradient-accent: linear-gradient(135deg, #5ac8fa 0%, #af52de 100%);
+  --gradient-purple: linear-gradient(135deg, #af52de 0%, #ff6b8a 100%);
+  --gradient-shine: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%);
+
+  /* Alias for legacy usage */
+  --glass: var(--glass-bg);
 }
 
 /* Liquid Glass is the default theme - removed dark theme toggle */
@@ -1117,6 +1152,14 @@ section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.25rem;
+}
+
+/* Alias: moved certifications inside Skills */
+.certs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: var(--spacing-xl);
 }
 
 .cert-card {

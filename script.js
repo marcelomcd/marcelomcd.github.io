@@ -40,6 +40,33 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("scroll", onScroll);
   };
 
+  // ============= THEME TOGGLE (LIGHT/DARK) =============
+  const initThemeToggle = () => {
+    const btn = document.querySelector('.theme-toggle');
+    if (!btn) return;
+    const root = document.documentElement;
+    const saved = localStorage.getItem('theme');
+    if (saved === 'dark') {
+      root.setAttribute('data-theme', 'dark');
+      btn.innerHTML = '<i class="fas fa-sun"></i>';
+      btn.title = 'Alternar para claro';
+    }
+    btn.addEventListener('click', () => {
+      const isDark = root.getAttribute('data-theme') === 'dark';
+      if (isDark) {
+        root.removeAttribute('data-theme');
+        localStorage.setItem('theme', 'light');
+        btn.innerHTML = '<i class="fas fa-moon"></i>';
+        btn.title = 'Alternar para escuro';
+      } else {
+        root.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+        btn.innerHTML = '<i class="fas fa-sun"></i>';
+        btn.title = 'Alternar para claro';
+      }
+    });
+  };
+
   // ============= SCROLL ANIMATIONS =============
   const initScrollAnimations = () => {
     const elements = document.querySelectorAll(
@@ -473,6 +500,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initActiveSection();
     initTimeline();
     initTimelineCollapsed();
+    initThemeToggle();
     initScrollToTop();
     initLazyLoad();
     // initCustomCursor(); // Descomente se quiser cursor customizado
