@@ -220,8 +220,7 @@ document.addEventListener("DOMContentLoaded", () => {
       position: fixed;
       top: 100px;
       right: 20px;
-      background: ${
-        type === "success" ? "rgba(40, 200, 64, 0.9)" : "rgba(255, 95, 87, 0.9)"
+      background: ${type === "success" ? "rgba(40, 200, 64, 0.9)" : "rgba(255, 95, 87, 0.9)"
       };
       color: white;
       padding: 1rem 1.5rem;
@@ -232,8 +231,7 @@ document.addEventListener("DOMContentLoaded", () => {
       backdrop-filter: blur(10px);
     `;
     notification.innerHTML = `
-      <i class="fas fa-${
-        type === "success" ? "check-circle" : "exclamation-circle"
+      <i class="fas fa-${type === "success" ? "check-circle" : "exclamation-circle"
       }"></i>
       <span style="margin-left: 0.5rem;">${message}</span>
     `;
@@ -534,11 +532,11 @@ style.textContent = `
 document.head.appendChild(style);
 
 // ============= TIMELINE TOGGLE =============
-window.toggleTimeline = function(header) {
+window.toggleTimeline = function (header) {
   const timelineItem = header.closest('.timeline-item');
   const details = timelineItem.querySelector('.timeline-details');
   const toggleBtn = header.querySelector('.timeline-toggle i');
-  
+
   if (details.classList.contains('expanded')) {
     details.classList.remove('expanded');
     toggleBtn.classList.remove('fa-chevron-up');
