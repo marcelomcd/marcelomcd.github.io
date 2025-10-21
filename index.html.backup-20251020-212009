@@ -496,9 +496,8 @@
                 <h4>Tata Consultancy Services</h4>
               </div>
               <div class="timeline-header-right">
-                <span class="timeline-date">
-                  <i class="fas fa-calendar-alt"></i>
-                  Abr 2022 - Mai 2023
+                <i class="fas fa-calendar-alt"></i>
+                Abr 2022 - Mai 2023
                 </span>
                 <button
                   class="timeline-toggle"
@@ -602,7 +601,7 @@
       <div class="container">
         <div class="section-header">
           <h2 class="section-title">Certificações</h2>
-          <p class="section-subtitle">Certificações profissionais conquistadas</p>
+          <p class="section-subtitle">Qualificações e especializações conquistadas</p>
         </div>
 
         <div class="certs-grid">
@@ -610,18 +609,90 @@
             <div class="cert-icon">
               <i class="fas fa-robot"></i>
             </div>
-            <h3>RPA Developer Advanced</h3>
-            <p>UiPath</p>
-            <span class="cert-year">2020</span>
+            <h3>UiPath Advanced RPA Developer</h3>
+            <p>Desenvolvimento avançado de automações com UiPath</p>
+            <span class="cert-year">2023</span>
           </div>
 
           <div class="cert-card glass-card">
             <div class="cert-icon">
-              <i class="fas fa-comments"></i>
+              <i class="fab fa-microsoft"></i>
             </div>
-            <h3>ChatBot Developer</h3>
-            <p>BLIP</p>
-            <span class="cert-year">2020</span>
+            <h3>Microsoft Power Platform</h3>
+            <p>Power Automate e Power Apps</p>
+            <span class="cert-year">2024</span>
+          </div>
+
+          <div class="cert-card glass-card">
+            <div class="cert-icon">
+              <i class="fab fa-python"></i>
+            </div>
+            <h3>Python for Data Science</h3>
+            <p>Análise de dados e automação com Python</p>
+            <span class="cert-year">2022</span>
+          </div>
+
+          <div class="cert-card glass-card">
+            <div class="cert-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3>Power BI Data Analyst</h3>
+            <p>Visualização e análise de dados</p>
+            <span class="cert-year">2023</span>
+          </div>
+
+          <div class="cert-card glass-card">
+            <div class="cert-icon">
+              <i class="fas fa-cloud"></i>
+            </div>
+            <h3>Azure Fundamentals (AZ-900)</h3>
+            <p>Fundamentos de computação em nuvem</p>
+            <span class="cert-year">2024</span>
+          </div>
+
+          <div class="cert-card glass-card">
+            <div class="cert-icon">
+              <i class="fas fa-code-branch"></i>
+            </div>
+            <h3>Git & GitHub Essentials</h3>
+            <p>Controle de versão e colaboração</p>
+            <span class="cert-year">2021</span>
+          </div>
+
+          <div class="cert-card glass-card">
+            <div class="cert-icon">
+              <i class="fas fa-database"></i>
+            </div>
+            <h3>SQL Server Administration</h3>
+            <p>Gerenciamento de bancos de dados</p>
+            <span class="cert-year">2022</span>
+          </div>
+
+          <div class="cert-card glass-card">
+            <div class="cert-icon">
+              <i class="fas fa-infinity"></i>
+            </div>
+            <h3>DevOps Essentials</h3>
+            <p>CI/CD e práticas ágeis</p>
+            <span class="cert-year">2023</span>
+          </div>
+
+          <div class="cert-card glass-card">
+            <div class="cert-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3>OWASP Security Principles</h3>
+            <p>Segurança em aplicações web</p>
+            <span class="cert-year">2023</span>
+          </div>
+
+          <div class="cert-card glass-card">
+            <div class="cert-icon">
+              <i class="fas fa-robot"></i>
+            </div>
+            <h3>Automation Anywhere Certified</h3>
+            <p>Desenvolvimento de bots RPA</p>
+            <span class="cert-year">2022</span>
           </div>
         </div>
       </div>
@@ -634,7 +705,7 @@
     >
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title">Habilidades Técnicas — Tecnologias e ferramentas que domino</h2>
+          <h2 class="section-title">Habilidades Técnicas</h2>
           <p class="section-subtitle">Tecnologias e ferramentas que domino</p>
         </div>
 
@@ -1587,77 +1658,63 @@
           </div>
 
           <div class="contact-info">
-            <div class="contact-item">
+            <div class="glass-card contact-card">
               <div class="contact-icon">
                 <i class="fas fa-envelope"></i>
               </div>
-              <div class="contact-details">
-                <h3>Email</h3>
-                <p>marcelo.macedo.business@gmail.com</p>
-              </div>
+              <h3>Email</h3>
+              <p>marcelo.macedo.business@gmail.com</p>
               <a
                 href="mailto:marcelo.macedo.business@gmail.com"
                 class="btn btn-outline"
-                aria-label="Enviar email"
               >
-                <i class="fas fa-paper-plane"></i> Enviar
+                <i class="fas fa-envelope"></i> Enviar Email
               </a>
             </div>
 
-            <div class="contact-item">
+            <div class="glass-card contact-card">
               <div class="contact-icon">
                 <i class="fab fa-whatsapp"></i>
               </div>
-              <div class="contact-details">
-                <h3>WhatsApp</h3>
-                <p>+55 (21) 9 7920-8480</p>
-              </div>
+              <h3>WhatsApp</h3>
+              <p>+55 (21) 9 7920-8480</p>
               <a
                 href="https://wa.me/5521979208480"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="btn btn-outline"
-                aria-label="Abrir WhatsApp"
               >
                 <i class="fab fa-whatsapp"></i> Chamar
               </a>
             </div>
 
-            <div class="contact-item">
+            <div class="glass-card contact-card">
               <div class="contact-icon">
                 <i class="fab fa-linkedin"></i>
               </div>
-              <div class="contact-details">
-                <h3>LinkedIn</h3>
-                <p>linkedin.com/in/marcelo-macedo-jr</p>
-              </div>
+              <h3>LinkedIn</h3>
               <a
                 href="https://www.linkedin.com/in/marcelo-macedo-jr/"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="btn btn-outline"
-                aria-label="Conectar no LinkedIn"
               >
                 <i class="fab fa-linkedin"></i> Conectar
               </a>
             </div>
 
-            <div class="contact-item">
+            <div class="glass-card contact-card">
               <div class="contact-icon">
                 <i class="fab fa-github"></i>
               </div>
-              <div class="contact-details">
-                <h3>GitHub</h3>
-                <p>github.com/marcelomcd</p>
-              </div>
+              <h3>GitHub</h3>
               <a
                 href="https://github.com/marcelomcd"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="btn btn-outline"
-                aria-label="Ver repositórios no GitHub"
               >
-                <i class="fab fa-github"></i> Ver Repos
+                <i class="fab fa-github"></i> Ver Repositórios
               </a>
             </div>
           </div>

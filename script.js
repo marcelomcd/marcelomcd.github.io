@@ -472,6 +472,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initProjectCards();
     initActiveSection();
     initTimeline();
+    initTimelineCollapsed();
     initScrollToTop();
     initLazyLoad();
     // initCustomCursor(); // Descomente se quiser cursor customizado
@@ -546,6 +547,20 @@ window.toggleTimeline = function (header) {
     toggleBtn.classList.remove('fa-chevron-down');
     toggleBtn.classList.add('fa-chevron-up');
   }
+};
+
+// ============= INITIALIZE TIMELINE COLLAPSED STATE =============
+const initTimelineCollapsed = () => {
+  const allDetails = document.querySelectorAll('.timeline-details');
+  allDetails.forEach(details => {
+    details.classList.remove('expanded');
+  });
+
+  const allToggles = document.querySelectorAll('.timeline-toggle i');
+  allToggles.forEach(toggle => {
+    toggle.classList.remove('fa-chevron-up');
+    toggle.classList.add('fa-chevron-down');
+  });
 };
 
 // Fim do arquivo JS
