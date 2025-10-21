@@ -1538,8 +1538,8 @@ section {
 .skill-category {
   background: var(--glass);
   border: 1px solid var(--glass-border);
-  border-radius: var(--radius);
-  padding: var(--spacing-lg);
+  border-radius: var(--radius-sm);
+  padding: calc(var(--spacing-sm) + 0.25rem);
   transition: var(--transition);
   opacity: 0;
   transform: translateY(20px);
@@ -1556,8 +1556,8 @@ section {
 }
 
 .skill-category h3 {
-  font-size: 1.3rem;
-  margin-bottom: var(--spacing-md);
+  font-size: 1.05rem;
+  margin-bottom: var(--spacing-sm);
   color: var(--accent);
   display: flex;
   align-items: center;
@@ -1568,13 +1568,20 @@ section {
   font-size: 1.5rem;
 }
 
-.skills-list {
+.skill-list {
   display: grid;
-  gap: var(--spacing-md);
+  gap: var(--spacing-sm);
+}
+
+/* Compact skills grid */
+.skills-grid {
+  gap: var(--spacing-sm);
+  margin-bottom: 0;
 }
 
 .skill-item {
   position: relative;
+  padding: 0.35rem 0;
 }
 
 .skill-info {
