@@ -6,6 +6,11 @@
     transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Reduce bottom space for skills section to avoid large gap */
+.skills {
+  padding-bottom: var(--spacing-md);
+}
+
 .fade-in.in-view {
   opacity: 1;
   transform: translateY(0);
@@ -495,6 +500,23 @@ section {
   .hero-container {
     grid-template-columns: 1fr;
   }
+
+  /* Tighter spacing for mobile */
+  section {
+    padding: var(--spacing-lg) 0;
+  }
+
+  .glass-card,
+  .project-card,
+  .cert-card,
+  .skill-category,
+  .contact-form-wrapper {
+    padding: calc(var(--spacing-sm) - 0.1rem);
+  }
+
+  .projects-grid {
+    gap: var(--spacing-sm);
+  }
 }
 
 .hero-title {
@@ -670,6 +692,23 @@ section {
   overflow: hidden;
   padding: calc(var(--spacing-sm) + 0.25rem);
   transition: var(--transition-slow);
+}
+
+/* Standard card token -- apply to specific containers for uniformity */
+.card-standard {
+  border-radius: var(--radius-sm) !important;
+  padding: calc(var(--spacing-sm) + 0.25rem) !important;
+  box-shadow: var(--glass-shadow) !important;
+}
+
+/* Apply standardization overrides to specific card types */
+.project-card,
+.cert-card,
+.skill-category,
+.contact-form-wrapper,
+.timeline-content {
+  border-radius: var(--radius-sm);
+  padding: calc(var(--spacing-sm) + 0.25rem);
 }
 
 .glass-card::before {
@@ -864,6 +903,40 @@ section {
   color: var(--accent);
   font-size: 0.85rem;
   font-weight: 600;
+}
+
+/* Compact tags shown in timeline header when collapsed */
+.timeline-header .header-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.5rem;
+}
+
+.timeline-header .header-tags .tag {
+  padding: 0.28rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin: 0 0.25rem 0 0;
+}
+
+/* Hide tags controlled via JS */
+.timeline-header .header-tags .tag.hidden-by-js {
+  display: none !important;
+}
+
+.timeline-header .header-tags .tags-more-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.28rem 0.5rem;
+  margin-left: 0.25rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), var(--purple));
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
 }
 
 /* About */
@@ -1178,7 +1251,7 @@ section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.25rem;
-  margin-bottom: var(--spacing-xl);
+  margin-bottom: var(--spacing-sm);
 }
 
 .cert-card {
@@ -2157,6 +2230,18 @@ section {
 
   .section-title {
     font-size: 1.8rem;
+  }
+
+  /* Further compaction on very small screens */
+  .hero {
+    padding-top: 100px;
+  }
+
+  .glass-card,
+  .project-card,
+  .cert-card,
+  .skill-category {
+    padding: 0.6rem;
   }
 
   .timeline-item:nth-child(odd),

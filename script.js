@@ -244,6 +244,65 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
+  // ============= RESPONSIVE HEADER TAGS (compact +x) =============
+  const initHeaderTagsResponsive = () => {
+    const headers = document.querySelectorAll('.timeline-header .header-tags');
+    if (!headers.length) return;
+
+    const compute = () => {
+      const w = window.innerWidth;
+      let showCount = 4;
+      if (w <= 480) showCount = 1;
+      else if (w <= 768) showCount = 2;
+      else if (w <= 1024) showCount = 3;
+
+      headers.forEach((container) => {
+        const tags = Array.from(container.querySelectorAll('.tag'));
+        // Remove existing more button if present
+        const existingBtn = container.querySelector('.tags-more-btn');
+        if (existingBtn) existingBtn.remove();
+
+        // Reset all
+        tags.forEach((t) => t.classList.remove('hidden-by-js'));
+
+        if (tags.length > showCount) {
+          const overflow = tags.length - showCount;
+          // hide beyond showCount
+          tags.forEach((t, idx) => {
+            if (idx >= showCount) t.classList.add('hidden-by-js');
+          });
+
+          const moreBtn = document.createElement('button');
+          moreBtn.className = 'tags-more-btn';
+          moreBtn.type = 'button';
+          moreBtn.innerText = `+${overflow}`;
+          moreBtn.addEventListener('click', () => {
+            const isExpanded = moreBtn.getAttribute('aria-expanded') === 'true';
+            if (!isExpanded) {
+              tags.forEach((t) => t.classList.remove('hidden-by-js'));
+              moreBtn.setAttribute('aria-expanded', 'true');
+              moreBtn.innerText = 'Ocultar';
+            } else {
+              tags.forEach((t, idx) => {
+                if (idx >= showCount) t.classList.add('hidden-by-js');
+              });
+              moreBtn.setAttribute('aria-expanded', 'false');
+              moreBtn.innerText = `+${overflow}`;
+            }
+          });
+          container.appendChild(moreBtn);
+        }
+      });
+    };
+
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(compute, 150);
+    });
+    compute();
+  };
+
   // ============= UTILITIES =============
   const isValidEmail = (email) => {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -512,6 +571,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initTimeline();
     initTimelineCollapsed();
     initThemeToggle();
+    initHeaderTagsResponsive();
     initScrollToTop();
     initLazyLoad();
     // initCustomCursor(); // Descomente se quiser cursor customizado
