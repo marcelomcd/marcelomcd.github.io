@@ -725,6 +725,7 @@ section {
 
 .timeline-content {
   padding: var(--spacing-lg);
+  border-radius: var(--radius);
 }
 
 .timeline-header {
@@ -924,9 +925,14 @@ section {
 }
 
 .about-text {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
+  font-size: 1.05rem;
+  color: var(--text);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.about-text:last-of-type {
+  margin-bottom: 0;
 }
 
 .lead-text {
