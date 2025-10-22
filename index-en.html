@@ -132,44 +132,47 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
 
-            <button
-                class="nav-toggle"
-                aria-label="Open menu"
-            ><span></span><span></span><span></span></button>
-            <button
-                class="theme-toggle"
-                aria-label="Toggle theme"
-                title="Toggle theme"
-            ><i class="fas fa-moon"></i></button>
+            <div class="header-actions">
+                <button
+                    class="nav-toggle"
+                    aria-label="Open menu"
+                    data-tooltip="Open menu"
+                ><span></span><span></span><span></span></button>
+                <button
+                    class="theme-toggle"
+                    aria-label="Toggle theme"
+                    data-tooltip="Toggle theme"
+                ><i class="fas fa-moon"></i></button>
 
-            <div
-                class="language-switch"
-                aria-label="Language selection"
-            >
-                <a
-                    href="index.html"
-                    class="lang-flag-link"
-                    aria-label="Portuguese (BR)"
-                    title="Portuguese"
+                <div
+                    class="language-switch"
+                    aria-label="Language selection"
                 >
-                    <img
-                        src="assets/flag-br.svg"
-                        alt="PT"
-                        class="lang-flag-img"
-                    />
-                </a>
-                <a
-                    href="index-en.html"
-                    class="lang-flag-link"
-                    aria-label="English (US)"
-                    title="English"
-                >
-                    <img
-                        src="assets/flag-us.svg"
-                        alt="EN"
-                        class="lang-flag-img"
-                    />
-                </a>
+                    <a
+                        href="index.html"
+                        class="lang-flag-link"
+                        aria-label="Portuguese (BR)"
+                        data-tooltip="Portuguese"
+                    >
+                        <img
+                            src="assets/flag-br.svg"
+                            alt="PT"
+                            class="lang-flag-img"
+                        />
+                    </a>
+                    <a
+                        href="index-en.html"
+                        class="lang-flag-link"
+                        aria-label="English (US)"
+                        data-tooltip="English"
+                    >
+                        <img
+                            src="assets/flag-us.svg"
+                            alt="EN"
+                            class="lang-flag-img"
+                        />
+                    </a>
+                </div>
             </div>
         </nav>
     </header>

@@ -134,6 +134,40 @@
   display: block;
 }
 
+/* Simple accessible CSS tooltips using data-tooltip */
+[data-tooltip] {
+  position: relative;
+}
+
+[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(20, 26, 36, 0.95);
+  color: white;
+  padding: 0.35rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  transform-origin: top center;
+  z-index: 1200;
+}
+
+[data-tooltip]:hover::after,
+[data-tooltip]:focus::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-4px);
+}
+
+.header-actions {
+  z-index: 1100;
+}
+
 /* Avatar styles for hero */
 .hero-avatar-wrap {
   display: flex;
@@ -478,7 +512,8 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--spacing-md) 0;
+  padding: calc(var(--spacing-sm) + 0.15rem) 0;
+  /* slightly reduced header height */
 }
 
 .logo {
@@ -541,6 +576,15 @@ section {
   gap: 5px;
   padding: 0.5rem;
   cursor: pointer;
+}
+
+/* Header action area: align theme + language controls to the right */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: auto;
+  /* push to the right */
 }
 
 /* Mobile menu behavior */
@@ -1262,7 +1306,8 @@ section {
 
 .info-card i {
   color: var(--accent);
-  font-size: 1.5rem;
+  font-size: 1.4rem;
+  /* slightly smaller to improve space for text */
 }
 
 .info-card strong {
@@ -1283,14 +1328,15 @@ section {
     /* slightly larger on desktop */
   }
 
+  /* Allow wrapping of card text so values fit on multiple lines instead of truncating */
   .info-card strong {
-    white-space: nowrap;
+    white-space: normal;
   }
 
   .info-card span {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
   }
 }
 
@@ -1461,18 +1507,23 @@ section {
   }
 }
 
-.about-stats-inline {
-  grid-template-columns: 1fr;
-  gap: 1rem;
-}
-
-.quick-stats {
-  .info-card i {
-    font-size: 2rem;
-    /* larger icon for visual weight */
+@media (max-width: 900px) {
+  .about-stats-inline {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
-  grid-template-columns: 1fr;
+  .quick-stats {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: var(--spacing-md);
+  }
+
+  .quick-stats .info-card i {
+    font-size: 2rem;
+    /* larger icon for visual weight on mobile */
+  }
 }
 
 .timeline-header {
@@ -1493,7 +1544,6 @@ section {
 
 .timeline-date {
   margin-top: 0.25rem;
-}
 }
 
 /* About image legacy */

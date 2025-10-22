@@ -168,49 +168,52 @@
             data-i18n="nav.contact"
           >Contato</a></li>
       </ul>
-      <button
-        class="nav-toggle"
-        aria-label="Abrir menu"
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <button
-        class="theme-toggle"
-        aria-label="Alternar tema"
-        title="Alternar tema"
-      >
-        <i class="fas fa-moon"></i>
-      </button>
-      <div
-        class="language-switch"
-        aria-label="Seleção de idioma"
-      >
-        <a
-          href="index.html"
-          class="lang-flag-link"
-          aria-label="Português (BR)"
-          title="Português"
+      <div class="header-actions">
+        <button
+          class="nav-toggle"
+          aria-label="Abrir menu"
+          data-tooltip="Abrir menu"
         >
-          <img
-            src="assets/flag-br.svg"
-            alt="PT"
-            class="lang-flag-img"
-          />
-        </a>
-        <a
-          href="index-en.html"
-          class="lang-flag-link"
-          aria-label="English (US)"
-          title="English"
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <button
+          class="theme-toggle"
+          aria-label="Alternar tema"
+          data-tooltip="Alternar tema"
         >
-          <img
-            src="assets/flag-us.svg"
-            alt="EN"
-            class="lang-flag-img"
-          />
-        </a>
+          <i class="fas fa-moon"></i>
+        </button>
+        <div
+          class="language-switch"
+          aria-label="Seleção de idioma"
+        >
+          <a
+            href="index.html"
+            class="lang-flag-link"
+            aria-label="Português (BR)"
+            data-tooltip="Português"
+          >
+            <img
+              src="assets/flag-br.svg"
+              alt="PT"
+              class="lang-flag-img"
+            />
+          </a>
+          <a
+            href="index-en.html"
+            class="lang-flag-link"
+            aria-label="English (US)"
+            data-tooltip="English"
+          >
+            <img
+              src="assets/flag-us.svg"
+              alt="EN"
+              class="lang-flag-img"
+            />
+          </a>
+        </div>
       </div>
     </nav>
   </header>
