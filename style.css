@@ -911,6 +911,8 @@ section {
 .timeline-content {
   padding: var(--spacing-lg);
   border-radius: var(--radius);
+  overflow: visible; /* allow toggle button to be visible when positioned at the edge */
+  padding-right: calc(var(--spacing-lg) + 1.25rem);
 }
 
 .timeline-header {
