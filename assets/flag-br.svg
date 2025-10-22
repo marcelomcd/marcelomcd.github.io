@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 341">
+</svg>
+<!-- Optimized: removed comments/whitespace, preserved semantics -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 341" width="512" height="341" role="img" aria-label="Brazil flag">
+  <rect width="512" height="341" fill="#006600"/>
+  <polygon points="256,40 448,170 256,302 64,170" fill="#FFCC00"/>
+  <circle cx="256" cy="170" r="68" fill="#3E4095"/>
+  <path d="M216 170a40 40 0 1 0 80 0 40 40 0 1 0-80 0z" fill="none" stroke="#FFF" stroke-width="2"/>
+</svg>
+</svg>

@@ -183,35 +183,16 @@
       >
         <i class="fas fa-moon"></i>
       </button>
-      <div
-        class="language-switch"
-        aria-label="Seleção de idioma"
+      <button
+        class="language-toggle"
+        aria-label="Alternar idioma"
+        title="Alternar idioma"
       >
-        <a
-          href="index.html"
-          class="lang-flag-link"
-          aria-label="Português (BR)"
-          title="Português"
-        >
-          <img
-            src="assets/flag-br.svg"
-            alt="PT"
-            class="lang-flag-img"
-          />
-        </a>
-        <a
-          href="index-en.html"
-          class="lang-flag-link"
-          aria-label="English (US)"
-          title="English"
-        >
-          <img
-            src="assets/flag-us.svg"
-            alt="EN"
-            class="lang-flag-img"
-          />
-        </a>
-      </div>
+        <span
+          class="lang-flag"
+          aria-hidden="true"
+        >🇧🇷</span>
+      </button>
     </nav>
   </header>
 
@@ -337,42 +318,27 @@
     >
       <div class="container">
         <div class="section-header">
-          <h2
-            class="section-title"
-            data-i18n="about.title"
-          >Sobre Mim</h2>
-          <p
-            class="section-subtitle"
-            data-i18n="about.subtitle"
-          >
+          <h2 class="section-title" data-i18n="about.title">Sobre Mim</h2>
+          <p class="section-subtitle" data-i18n="about.subtitle">
             Minha trajetória profissional e expertise
           </p>
         </div>
 
         <div class="about-grid">
           <div class="glass-card">
-            <p
-              class="about-text"
-              data-i18n="about.p1"
-            >
+            <p class="about-text" data-i18n="about.p1">
               Engenheiro de soluções apaixonado por automação, dados e
               tecnologia. Atuo há mais de 6 anos desenvolvendo integrações,
               robôs, dashboards e sistemas inteligentes para empresas de
               diversos segmentos.
             </p>
-            <p
-              class="about-text"
-              data-i18n="about.p2"
-            >
+            <p class="about-text" data-i18n="about.p2">
               Meu foco é criar soluções que simplificam rotinas, aumentam a
               produtividade e trazem resultados mensuráveis. Domino
               <strong>Python, Power BI, Azure, UiPath, SQL e práticas
                 DevOps</strong>.
             </p>
-            <p
-              class="about-text"
-              data-i18n="about.p3"
-            >
+            <p class="about-text" data-i18n="about.p3">
               Já liderei projetos de automação financeira, integração de APIs,
               análise de dados e implantação de pipelines CI/CD. Busco sempre
               unir visão técnica e estratégica para entregar valor ao negócio.
@@ -412,22 +378,22 @@
                 <div class="info-card glass-card">
                   <i class="fas fa-map-marker-alt"></i>
                   <div>
-                    <strong data-i18n="info.location.title">Localização</strong>
-                    <span data-i18n="info.location.value">Rio de Janeiro, RJ</span>
+                      <strong data-i18n="info.location.title">Localização</strong>
+                      <span data-i18n="info.location.value">Rio de Janeiro, RJ</span>
                   </div>
                 </div>
                 <div class="info-card glass-card">
                   <i class="fas fa-globe"></i>
                   <div>
-                    <strong data-i18n="info.availability.title">Disponibilidade</strong>
-                    <span data-i18n="info.availability.value">Remoto | Híbrido | Presencial</span>
+                      <strong data-i18n="info.availability.title">Disponibilidade</strong>
+                      <span data-i18n="info.availability.value">Remoto | Híbrido | Presencial</span>
                   </div>
                 </div>
                 <div class="info-card glass-card">
                   <i class="fas fa-language"></i>
                   <div>
-                    <strong data-i18n="info.languages.title">Idiomas</strong>
-                    <span data-i18n="info.languages.value">Português, Inglês (Intermediário)</span>
+                      <strong data-i18n="info.languages.title">Idiomas</strong>
+                      <span data-i18n="info.languages.value">Português, Inglês (Intermediário)</span>
                   </div>
                 </div>
               </div>
@@ -443,14 +409,8 @@
     >
       <div class="container">
         <div class="section-header">
-          <h2
-            class="section-title"
-            data-i18n="experience.title"
-          >Experiência Profissional</h2>
-          <p
-            class="section-subtitle"
-            data-i18n="experience.subtitle"
-          >
+          <h2 class="section-title" data-i18n="experience.title">Experiência Profissional</h2>
+          <p class="section-subtitle" data-i18n="experience.subtitle">
             Minha trajetória na área de tecnologia
           </p>
         </div>
@@ -740,14 +700,8 @@
     >
       <div class="container">
         <div class="section-header">
-          <h2
-            class="section-title"
-            data-i18n="skills.title"
-          >Habilidades Técnicas</h2>
-          <p
-            class="section-subtitle"
-            data-i18n="skills.subtitle"
-          >Tecnologias e ferramentas que domino</p>
+          <h2 class="section-title" data-i18n="skills.title">Habilidades Técnicas</h2>
+          <p class="section-subtitle" data-i18n="skills.subtitle">Tecnologias e ferramentas que domino</p>
         </div>
 
         <!-- Certificações / Qualificações movidas para Habilidades -->
@@ -963,21 +917,12 @@
     >
       <div class="container">
         <div class="section-header">
-          <h2
-            class="section-title"
-            data-i18n="projects.title"
-          >Projetos em Destaque</h2>
-          <p
-            class="section-subtitle"
-            data-i18n="projects.subtitle"
-          >Alguns dos meus trabalhos recentes</p>
+          <h2 class="section-title" data-i18n="projects.title">Projetos em Destaque</h2>
+          <p class="section-subtitle" data-i18n="projects.subtitle">Alguns dos meus trabalhos recentes</p>
         </div>
 
         <div class="projects-grid">
-          <article
-            class="project-card glass-card"
-            data-i18n="project.1"
-          >
+          <article class="project-card glass-card" data-i18n="project.1">
             <div class="project-image">
               <img
                 src="assets/project1.svg"
@@ -1006,10 +951,7 @@
             </div>
           </article>
 
-          <article
-            class="project-card glass-card"
-            data-i18n="project.2"
-          >
+          <article class="project-card glass-card" data-i18n="project.2">
             <div class="project-image">
               <img
                 src="assets/project2.svg"
@@ -1038,10 +980,7 @@
             </div>
           </article>
 
-          <article
-            class="project-card glass-card"
-            data-i18n="project.3"
-          >
+          <article class="project-card glass-card" data-i18n="project.3">
             <div class="project-image">
               <img
                 src="assets/project3.svg"
@@ -1079,14 +1018,8 @@
     >
       <div class="container">
         <div class="section-header">
-          <h2
-            class="section-title"
-            data-i18n="certs.title"
-          >Certificações</h2>
-          <p
-            class="section-subtitle"
-            data-i18n="certs.subtitle"
-          >Conquistas profissionais</p>
+          <h2 class="section-title" data-i18n="certs.title">Certificações</h2>
+          <p class="section-subtitle" data-i18n="certs.subtitle">Conquistas profissionais</p>
         </div>
         <div class="cert-grid">
           <div class="cert-card glass-card">
@@ -1112,14 +1045,8 @@
     >
       <div class="container">
         <div class="section-header">
-          <h2
-            class="section-title"
-            data-i18n="contact.title"
-          >Entre em Contato</h2>
-          <p
-            class="section-subtitle"
-            data-i18n="contact.subtitle"
-          >
+          <h2 class="section-title" data-i18n="contact.title">Entre em Contato</h2>
+          <p class="section-subtitle" data-i18n="contact.subtitle">
             Vamos conversar sobre seu próximo projeto
           </p>
         </div>
@@ -1131,10 +1058,7 @@
               class="contact-form"
             >
               <div class="form-group">
-                <label
-                  for="name"
-                  data-i18n="form.label.name"
-                >Nome</label>
+                <label for="name" data-i18n="form.label.name">Nome</label>
                 <input
                   type="text"
                   id="name"
@@ -1145,10 +1069,7 @@
               </div>
 
               <div class="form-group">
-                <label
-                  for="email"
-                  data-i18n="form.label.email"
-                >E-mail</label>
+                <label for="email" data-i18n="form.label.email">E-mail</label>
                 <input
                   type="email"
                   id="email"
@@ -1159,10 +1080,7 @@
               </div>
 
               <div class="form-group">
-                <label
-                  for="message"
-                  data-i18n="form.label.message"
-                >Mensagem</label>
+                <label for="message" data-i18n="form.label.message">Mensagem</label>
                 <textarea
                   id="message"
                   name="message"

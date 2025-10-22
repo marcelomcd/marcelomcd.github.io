@@ -182,19 +182,19 @@ document.addEventListener("DOMContentLoaded", () => {
       const message = document.getElementById("message").value.trim();
 
       if (!name || !email || !message) {
-        showNotification("Por favor, preencha todos os campos", "error");
+        showNotification(i18n[CURRENT_LANG].form_fill, "error");
         return;
       }
 
       if (!isValidEmail(email)) {
-        showNotification("Por favor, insira um email válido", "error");
+        showNotification(i18n[CURRENT_LANG].form_invalid_email, "error");
         return;
       }
 
       // Envio real com EmailJS
       submitBtn.disabled = true;
       submitBtn.innerHTML =
-        '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+        '<i class="fas fa-spinner fa-spin"></i> ' + i18n[CURRENT_LANG].sending;
 
       try {
         // Configurar os parâmetros do template
@@ -213,11 +213,8 @@ document.addEventListener("DOMContentLoaded", () => {
           templateParams
         );
 
-        submitBtn.innerHTML = '<i class="fas fa-check"></i> Enviado!';
-        showNotification(
-          `Obrigado, ${name}! Sua mensagem foi enviada com sucesso.`,
-          "success"
-        );
+        submitBtn.innerHTML = '<i class="fas fa-check"></i> ' + i18n[CURRENT_LANG].sent;
+        showNotification(i18n[CURRENT_LANG].success(name), "success");
 
         // Reseta formulário
         form.reset();
@@ -230,10 +227,7 @@ document.addEventListener("DOMContentLoaded", () => {
       } catch (error) {
         console.error("Erro ao enviar email:", error);
         submitBtn.innerHTML = '<i class="fas fa-times"></i> Erro';
-        showNotification(
-          "Ops! Algo deu errado. Por favor, tente novamente.",
-          "error"
-        );
+        showNotification(i18n[CURRENT_LANG].send_error, "error");
 
         // Restaura botão
         setTimeout(() => {
@@ -281,7 +275,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (!isExpanded) {
               tags.forEach((t) => t.classList.remove('hidden-by-js'));
               moreBtn.setAttribute('aria-expanded', 'true');
-              moreBtn.innerText = 'Ocultar';
+              moreBtn.innerText = i18n[CURRENT_LANG].tags_hide || 'Hide';
             } else {
               tags.forEach((t, idx) => {
                 if (idx >= showCount) t.classList.add('hidden-by-js');
@@ -341,6 +335,34 @@ document.addEventListener("DOMContentLoaded", () => {
       setTimeout(() => notification.remove(), 300);
     }, 4000);
   };
+
+  // ============= LANGUAGE (small localized messages for JS) =============
+  // We removed the previous dynamic page-wide i18n in favor of two static pages
+  // (index.html = pt-BR, index-en.html = en). Here we keep only the small set of
+  // strings used by JS (form validation, notifications, UI bits) and pick the
+  // appropriate language based on the document <html lang="..."> attribute.
+  const i18n = {
+    pt: {
+      form_fill: "Por favor, preencha todos os campos",
+      form_invalid_email: "Por favor, insira um email válido",
+      sending: "Enviando...",
+      sent: "Enviado!",
+      success: (name) => `Obrigado, ${name}! Sua mensagem foi enviada com sucesso.`,
+      send_error: "Ops! Algo deu errado. Por favor, tente novamente.",
+      tags_hide: "Ocultar"
+    },
+    en: {
+      form_fill: "Please fill all fields",
+      form_invalid_email: "Please enter a valid email",
+      sending: "Sending...",
+      sent: "Sent!",
+      success: (name) => `Thanks, ${name}! Your message was sent successfully.`,
+      send_error: "Oops! Something went wrong. Please try again.",
+      tags_hide: "Hide"
+    }
+  };
+
+  const CURRENT_LANG = (document.documentElement.getAttribute('lang') || '').toLowerCase().startsWith('pt') ? 'pt' : 'en';
 
   // ============= PARTICLES EFFECT =============
   const initParticles = () => {

@@ -8,7 +8,4 @@
     <circle cx="290" cy="120" r="6"/>
     <circle cx="320" cy="120" r="6"/>
   </g>
-  <rect width="600" height="400" fill="#eef5ff"/>
-  <rect x="40" y="40" width="520" height="320" rx="12" fill="#fff" stroke="#e6eefc"/>
-  <text x="80" y="120" font-size="20" fill="#333">Dashboard</text>
 </svg>
