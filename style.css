@@ -1269,12 +1269,16 @@ section {
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
   }
+
   .info-card {
-    padding: 1.5rem 2.5rem; /* slightly larger on desktop */
+    padding: 1.5rem 2.5rem;
+    /* slightly larger on desktop */
   }
+
   .info-card strong {
     white-space: nowrap;
   }
+
   .info-card span {
     white-space: nowrap;
     overflow: hidden;
