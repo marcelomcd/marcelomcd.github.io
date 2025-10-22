@@ -32,12 +32,24 @@ document.addEventListener("DOMContentLoaded", () => {
   const initHeaderScroll = () => {
     const header = document.querySelector(".site-header");
     if (!header) return;
+    
+    let ticking = false;
     const onScroll = () => {
-      if (window.pageYOffset > 100) header.classList.add("scrolled");
-      else header.classList.remove("scrolled");
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          if (window.pageYOffset > 100) {
+            header.classList.add("scrolled");
+          } else {
+            header.classList.remove("scrolled");
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
+    
     onScroll();
-    window.addEventListener("scroll", onScroll);
+    window.addEventListener("scroll", onScroll, { passive: true });
   };
 
   // ============= THEME TOGGLE (LIGHT/DARK) =============
@@ -84,27 +96,36 @@ document.addEventListener("DOMContentLoaded", () => {
       ".fade-in, [data-anim], .stagger-animation"
     );
     if (!elements.length) return;
+    
+    // Verificar se o usuário prefere animações reduzidas (acessibilidade)
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    
     const observer = new IntersectionObserver(
       (entries, obs) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add("in-view");
-            if (entry.target.classList.contains("skill-category")) {
-              // dispara animação de barras de habilidade quando categoria estiver visível
-              const bars = entry.target.querySelectorAll(".skill-progress");
-              bars.forEach((bar, i) => {
-                const progress = bar.getAttribute("data-progress") || "0%";
-                setTimeout(
-                  () => bar.style.setProperty("--progress", progress),
-                  i * 100
-                );
-              });
+            if (prefersReducedMotion) {
+              // Se o usuário prefere movimento reduzido, apenas mostrar sem animação
+              entry.target.classList.add("in-view");
+            } else {
+              entry.target.classList.add("in-view");
+              if (entry.target.classList.contains("skill-category")) {
+                // dispara animação de barras de habilidade quando categoria estiver visível
+                const bars = entry.target.querySelectorAll(".skill-progress");
+                bars.forEach((bar, i) => {
+                  const progress = bar.getAttribute("data-progress") || "0%";
+                  setTimeout(
+                    () => bar.style.setProperty("--progress", progress),
+                    i * 100
+                  );
+                });
+              }
             }
             obs.unobserve(entry.target);
           }
         });
       },
-      { threshold: 0.15, rootMargin: "0px 0px -8% 0px" }
+      { threshold: 0.1, rootMargin: prefersReducedMotion ? "0px" : "0px 0px -8% 0px" }
     );
     elements.forEach((el) => observer.observe(el));
   };
@@ -269,6 +290,7 @@ document.addEventListener("DOMContentLoaded", () => {
           const moreBtn = document.createElement('button');
           moreBtn.className = 'tags-more-btn';
           moreBtn.type = 'button';
+          moreBtn.setAttribute('aria-label', `${i18n[CURRENT_LANG].tags_show || 'Show'} ${overflow} ${i18n[CURRENT_LANG].tags_more || 'more'}`);
           moreBtn.innerText = `+${overflow}`;
           moreBtn.addEventListener('click', () => {
             const isExpanded = moreBtn.getAttribute('aria-expanded') === 'true';
@@ -276,12 +298,14 @@ document.addEventListener("DOMContentLoaded", () => {
               tags.forEach((t) => t.classList.remove('hidden-by-js'));
               moreBtn.setAttribute('aria-expanded', 'true');
               moreBtn.innerText = i18n[CURRENT_LANG].tags_hide || 'Hide';
+              moreBtn.setAttribute('aria-label', i18n[CURRENT_LANG].tags_hide || 'Hide');
             } else {
               tags.forEach((t, idx) => {
                 if (idx >= showCount) t.classList.add('hidden-by-js');
               });
               moreBtn.setAttribute('aria-expanded', 'false');
               moreBtn.innerText = `+${overflow}`;
+              moreBtn.setAttribute('aria-label', `${i18n[CURRENT_LANG].tags_show || 'Show'} ${overflow} ${i18n[CURRENT_LANG].tags_more || 'more'}`);
             }
           });
           container.appendChild(moreBtn);
@@ -289,11 +313,20 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     };
 
-    let resizeTimer;
-    window.addEventListener('resize', () => {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(compute, 150);
-    });
+    // Usar ResizeObserver para melhor performance
+    if (window.ResizeObserver) {
+      const resizeObserver = new ResizeObserver(() => {
+        compute();
+      });
+      resizeObserver.observe(document.body);
+    } else {
+      // Fallback para navegadores antigos
+      let resizeTimer;
+      window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(compute, 150);
+      }, { passive: true });
+    }
     compute();
   };
 
@@ -349,7 +382,9 @@ document.addEventListener("DOMContentLoaded", () => {
       sent: "Enviado!",
       success: (name) => `Obrigado, ${name}! Sua mensagem foi enviada com sucesso.`,
       send_error: "Ops! Algo deu errado. Por favor, tente novamente.",
-      tags_hide: "Ocultar"
+      tags_hide: "Ocultar",
+      tags_show: "Mostrar",
+      tags_more: "mais"
     },
     en: {
       form_fill: "Please fill all fields",
@@ -358,7 +393,9 @@ document.addEventListener("DOMContentLoaded", () => {
       sent: "Sent!",
       success: (name) => `Thanks, ${name}! Your message was sent successfully.`,
       send_error: "Oops! Something went wrong. Please try again.",
-      tags_hide: "Hide"
+      tags_hide: "Hide",
+      tags_show: "Show",
+      tags_more: "more"
     }
   };
 
@@ -406,27 +443,37 @@ document.addEventListener("DOMContentLoaded", () => {
   const initActiveSection = () => {
     const sections = document.querySelectorAll("section[id]");
     const navLinks = document.querySelectorAll(".nav-list a");
+    if (!sections.length || !navLinks.length) return;
 
+    let ticking = false;
     const highlightNav = () => {
-      let scrollY = window.pageYOffset;
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          let scrollY = window.pageYOffset;
+          const offset = window.innerWidth > 768 ? 120 : 80;
 
-      sections.forEach((section) => {
-        const sectionHeight = section.offsetHeight;
-        const sectionTop = section.offsetTop - 100;
-        const sectionId = section.getAttribute("id");
+          sections.forEach((section) => {
+            const sectionHeight = section.offsetHeight;
+            const sectionTop = section.offsetTop - offset;
+            const sectionId = section.getAttribute("id");
 
-        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-          navLinks.forEach((link) => {
-            link.classList.remove("active");
-            if (link.getAttribute("href") === `#${sectionId}`) {
-              link.classList.add("active");
+            if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+              navLinks.forEach((link) => {
+                link.classList.remove("active");
+                if (link.getAttribute("href") === `#${sectionId}`) {
+                  link.classList.add("active");
+                }
+              });
             }
           });
-        }
-      });
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
-    window.addEventListener("scroll", highlightNav);
+    window.addEventListener("scroll", highlightNav, { passive: true });
+    highlightNav(); // Executa uma vez no carregamento
   };
 
   // ============= TIMELINE ANIMATION =============
@@ -455,55 +502,33 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ============= SCROLL TO TOP BUTTON =============
   const initScrollToTop = () => {
-    const scrollBtn = document.createElement("button");
-    scrollBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
-    scrollBtn.className = "scroll-to-top";
-    scrollBtn.style.cssText = `
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      width: 50px;
-      height: 50px;
-      background: linear-gradient(135deg, #00d4ff, #7000ff);
-      border: none;
-      border-radius: 50%;
-      color: white;
-      font-size: 1.2rem;
-      cursor: pointer;
-      opacity: 0;
-      pointer-events: none;
-      transition: all 0.3s ease;
-      z-index: 1000;
-      box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
-    `;
+    // Usar o botão existente no HTML ao invés de criar um novo
+    const scrollBtn = document.getElementById("scrollToTop");
+    if (!scrollBtn) return;
 
-    document.body.appendChild(scrollBtn);
-
-    window.addEventListener("scroll", () => {
-      if (window.pageYOffset > 500) {
-        scrollBtn.style.opacity = "1";
-        scrollBtn.style.pointerEvents = "all";
-      } else {
-        scrollBtn.style.opacity = "0";
-        scrollBtn.style.pointerEvents = "none";
+    let ticking = false;
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          if (window.pageYOffset > 500) {
+            scrollBtn.classList.add("visible");
+          } else {
+            scrollBtn.classList.remove("visible");
+          }
+          ticking = false;
+        });
+        ticking = true;
       }
-    });
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll(); // Verifica estado inicial
 
     scrollBtn.addEventListener("click", () => {
       window.scrollTo({
         top: 0,
         behavior: "smooth",
       });
-    });
-
-    scrollBtn.addEventListener("mouseenter", () => {
-      scrollBtn.style.transform = "translateY(-5px)";
-      scrollBtn.style.boxShadow = "0 8px 25px rgba(0, 212, 255, 0.5)";
-    });
-
-    scrollBtn.addEventListener("mouseleave", () => {
-      scrollBtn.style.transform = "translateY(0)";
-      scrollBtn.style.boxShadow = "0 4px 15px rgba(0, 212, 255, 0.3)";
     });
   };
 
