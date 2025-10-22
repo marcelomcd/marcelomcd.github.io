@@ -1,0 +1,18 @@
+plugins:
+  - name: removeDoctype
+    active: true
+  - name: removeComments
+    active: true
+  - name: removeMetadata
+    active: false
+  - name: removeTitle
+    active: false
+  - name: removeDesc
+    active: false
+  - name: cleanupIDs
+    params:
+      preserve: true
+  - name: removeUnknownsAndDefaults
+    active: true
+  - name: collapseGroups
+    active: true

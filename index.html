@@ -133,6 +133,8 @@
   <!-- Particles Background -->
   <div id="particles-bg"></div>
 
+  <!-- HEADER / Navegação principal -->
+  <!-- Comentário: Cabeçalho fixo com logo, navegação e controles de ação (tema, idioma) -->
   <header class="site-header">
     <nav class="nav">
       <a
@@ -143,31 +145,82 @@
         <span>MM</span>
       </a>
       <ul class="nav-list">
-        <li><a href="#home">Início</a></li>
-        <li><a href="#about">Sobre</a></li>
-        <li><a href="#experience">Experiência</a></li>
-        <li><a href="#skills">Habilidades</a></li>
-        <li><a href="#projects">Projetos</a></li>
-        <li><a href="#contact">Contato</a></li>
+        <li><a
+            href="#home"
+            data-i18n="nav.home"
+          >Início</a></li>
+        <li><a
+            href="#about"
+            data-i18n="nav.about"
+          >Sobre</a></li>
+        <li><a
+            href="#experience"
+            data-i18n="nav.experience"
+          >Experiência</a></li>
+        <li><a
+            href="#skills"
+            data-i18n="nav.skills"
+          >Habilidades</a></li>
+        <li><a
+            href="#projects"
+            data-i18n="nav.projects"
+          >Projetos</a></li>
+        <li><a
+            href="#contact"
+            data-i18n="nav.contact"
+          >Contato</a></li>
       </ul>
-      <button
-        class="nav-toggle"
-        aria-label="Abrir menu"
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <button
-        class="theme-toggle"
-        aria-label="Alternar tema"
-        title="Alternar tema"
-      >
-        <i class="fas fa-moon"></i>
-      </button>
+      <div class="header-actions">
+        <button
+          class="nav-toggle"
+          aria-label="Abrir menu"
+          data-tooltip="Abrir menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <button
+          class="theme-toggle"
+          aria-label="Alternar tema"
+          data-tooltip="Alternar tema"
+        >
+          <i class="fas fa-moon"></i>
+        </button>
+        <div
+          class="language-switch"
+          aria-label="Seleção de idioma"
+        >
+          <a
+            href="index.html"
+            class="lang-flag-link"
+            aria-label="Português (BR)"
+            data-tooltip="Português"
+          >
+            <img
+              src="assets/flag-br.svg"
+              alt="PT"
+              class="lang-flag-img"
+            />
+          </a>
+          <a
+            href="index-en.html"
+            class="lang-flag-link"
+            aria-label="English (US)"
+            data-tooltip="English"
+          >
+            <img
+              src="assets/flag-us.svg"
+              alt="EN"
+              class="lang-flag-img"
+            />
+          </a>
+        </div>
+      </div>
     </nav>
   </header>
 
+  <!-- CONTEÚDO PRINCIPAL -->
   <main>
     <!-- HERO SECTION -->
     <section
@@ -178,16 +231,25 @@
         <div class="hero-content">
           <div class="hero-label">
             <i class="fas fa-code"></i>
-            <span>Solution Engineer</span>
+            <span data-i18n="hero.label">Solution Engineer</span>
           </div>
           <h1 class="hero-title">
-            Olá, eu sou<br />
-            <span class="gradient-text">Marcelo Macedo</span>
+            <span data-i18n="hero.greeting">Olá, eu sou</span><br />
+            <span
+              class="gradient-text"
+              data-i18n="hero.name"
+            >Marcelo Macedo</span>
           </h1>
-          <p class="hero-subtitle">
+          <p
+            class="hero-subtitle"
+            data-i18n="hero.subtitle"
+          >
             Solution Engineer | Automação, Dados & Cloud
           </p>
-          <p class="hero-description">
+          <p
+            class="hero-description"
+            data-i18n="hero.description"
+          >
             Especialista em transformar processos, integrar sistemas e criar
             soluções digitais que geram valor real para empresas. Experiência
             sólida com Python, Power BI, Azure, RPA e DevOps.
@@ -196,6 +258,7 @@
             <a
               href="#contact"
               class="btn btn-primary"
+              data-i18n="hero.cta_contact"
             >
               <i class="fas fa-envelope"></i>
               Entre em Contato
@@ -203,6 +266,7 @@
             <a
               href="#projects"
               class="btn btn-outline"
+              data-i18n="hero.cta_projects"
             >
               <i class="fas fa-folder-open"></i>
               Ver Projetos
@@ -246,6 +310,26 @@
           </div>
         </div>
         <div class="hero-visual">
+          <div class="hero-avatar-wrap">
+            <picture
+              class="hero-avatar"
+              aria-hidden="false"
+            >
+              <source
+                srcset="assets/profile.webp"
+                type="image/webp"
+              >
+              <source
+                srcset="assets/profile.opt.jpg"
+                type="image/jpeg"
+              >
+              <img
+                src="assets/profile.jpg"
+                alt="Foto de Marcelo Macedo"
+                loading="lazy"
+              >
+            </picture>
+          </div>
           <div class="code-window">
             <div class="window-header">
               <span class="dot dot-red"></span>
@@ -273,88 +357,99 @@
     </section>
 
     <!-- ABOUT SECTION -->
+    <!-- Comentário: seção 'Sobre' com descrição, estatísticas rápidas (about-stats-inline) e cartões informativos (info-cards) -->
     <section
       id="about"
       class="about"
     >
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title">Sobre Mim</h2>
-          <p class="section-subtitle">
+          <h2
+            class="section-title"
+            data-i18n="about.title"
+          >Sobre Mim</h2>
+          <p
+            class="section-subtitle"
+            data-i18n="about.subtitle"
+          >
             Minha trajetória profissional e expertise
           </p>
         </div>
 
         <div class="about-grid">
           <div class="glass-card">
-            <p class="about-text">
+            <p
+              class="about-text"
+              data-i18n="about.p1"
+            >
               Engenheiro de soluções apaixonado por automação, dados e
               tecnologia. Atuo há mais de 6 anos desenvolvendo integrações,
               robôs, dashboards e sistemas inteligentes para empresas de
               diversos segmentos.
             </p>
-            <p class="about-text">
+            <p
+              class="about-text"
+              data-i18n="about.p2"
+            >
               Meu foco é criar soluções que simplificam rotinas, aumentam a
               produtividade e trazem resultados mensuráveis. Domino
               <strong>Python, Power BI, Azure, UiPath, SQL e práticas
                 DevOps</strong>.
             </p>
-            <p class="about-text">
+            <p
+              class="about-text"
+              data-i18n="about.p3"
+            >
               Já liderei projetos de automação financeira, integração de APIs,
               análise de dados e implantação de pipelines CI/CD. Busco sempre
               unir visão técnica e estratégica para entregar valor ao negócio.
             </p>
 
+            <!-- Estatísticas rápidas: anos, habilidades, certificações -->
             <div class="about-stats-inline">
               <div class="stat-item">
                 <i class="fas fa-briefcase"></i>
                 <div class="stat-content">
                   <h4>6+</h4>
-                  <p>Anos de Experiência</p>
-                </div>
-              </div>
-              <div class="stat-item">
-                <i class="fas fa-project-diagram"></i>
-                <div class="stat-content">
-                  <h4>20+</h4>
-                  <p>Projetos Entregues</p>
+                  <p data-i18n="stats.years">Anos de Experiência</p>
                 </div>
               </div>
               <div class="stat-item">
                 <i class="fas fa-book"></i>
                 <div class="stat-content">
                   <h4>15+</h4>
-                  <p>Habilidades</p>
+                  <p data-i18n="stats.skills">Habilidades</p>
                 </div>
               </div>
               <div class="stat-item">
                 <i class="fas fa-award"></i>
                 <div class="stat-content">
                   <h4>2</h4>
-                  <p>Certificações</p>
+                  <p data-i18n="stats.certs">Certificações</p>
                 </div>
               </div>
 
+              <!-- Cartões de informação: localização, disponibilidade, idiomas (dispostos em linha no desktop) -->
               <div class="info-cards">
                 <div class="info-card glass-card">
                   <i class="fas fa-map-marker-alt"></i>
                   <div>
-                    <strong>Localização</strong>
-                    <span>Rio de Janeiro, RJ</span>
+                    <strong data-i18n="info.location.title">Localização</strong>
+                    <span data-i18n="info.location.value">Rio de Janeiro, RJ</span>
                   </div>
                 </div>
                 <div class="info-card glass-card">
                   <i class="fas fa-globe"></i>
                   <div>
-                    <strong>Disponibilidade</strong>
-                    <span>Remoto | Híbrido | Presencial</span>
+                    <strong data-i18n="info.availability.title">Disponibilidade</strong>
+                    <span data-i18n="info.availability.value">Remoto | Realocação</span>
                   </div>
                 </div>
                 <div class="info-card glass-card">
                   <i class="fas fa-language"></i>
                   <div>
-                    <strong>Idiomas</strong>
-                    <span>Português, Inglês (Intermediário)</span>
+                    <strong data-i18n="info.languages.title">Idiomas</strong>
+                    <span data-i18n="info.languages.value">Português | Inglês (Intermediário)</span>
                   </div>
                 </div>
               </div>
@@ -370,8 +465,14 @@
     >
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title">Experiência Profissional</h2>
-          <p class="section-subtitle">
+          <h2
+            class="section-title"
+            data-i18n="experience.title"
+          >Experiência Profissional</h2>
+          <p
+            class="section-subtitle"
+            data-i18n="experience.subtitle"
+          >
             Minha trajetória na área de tecnologia
           </p>
         </div>
@@ -661,8 +762,14 @@
     >
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title">Habilidades Técnicas</h2>
-          <p class="section-subtitle">Tecnologias e ferramentas que domino</p>
+          <h2
+            class="section-title"
+            data-i18n="skills.title"
+          >Habilidades Técnicas</h2>
+          <p
+            class="section-subtitle"
+            data-i18n="skills.subtitle"
+          >Tecnologias e ferramentas que domino</p>
         </div>
 
         <!-- Certificações / Qualificações movidas para Habilidades -->
@@ -878,12 +985,21 @@
     >
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title">Projetos em Destaque</h2>
-          <p class="section-subtitle">Alguns dos meus trabalhos recentes</p>
+          <h2
+            class="section-title"
+            data-i18n="projects.title"
+          >Projetos em Destaque</h2>
+          <p
+            class="section-subtitle"
+            data-i18n="projects.subtitle"
+          >Alguns dos meus trabalhos recentes</p>
         </div>
 
         <div class="projects-grid">
-          <article class="project-card glass-card">
+          <article
+            class="project-card glass-card"
+            data-i18n="project.1"
+          >
             <div class="project-image">
               <img
                 src="assets/project1.svg"
@@ -891,8 +1007,8 @@
               />
             </div>
             <div class="project-body">
-              <h3>Dashboard Vendas</h3>
-              <p>
+              <h3 data-i18n="project.1.title">Dashboard Vendas</h3>
+              <p data-i18n="project.1.desc">
                 Painel em Power BI integrado com Python para ETL e automação
                 de relatórios.
               </p>
@@ -912,7 +1028,10 @@
             </div>
           </article>
 
-          <article class="project-card glass-card">
+          <article
+            class="project-card glass-card"
+            data-i18n="project.2"
+          >
             <div class="project-image">
               <img
                 src="assets/project2.svg"
@@ -920,8 +1039,8 @@
               />
             </div>
             <div class="project-body">
-              <h3>API Analytics</h3>
-              <p>
+              <h3 data-i18n="project.2.title">API Analytics</h3>
+              <p data-i18n="project.2.desc">
                 API em Python para processamento de dados e integração com
                 dashboards.
               </p>
@@ -941,7 +1060,10 @@
             </div>
           </article>
 
-          <article class="project-card glass-card">
+          <article
+            class="project-card glass-card"
+            data-i18n="project.3"
+          >
             <div class="project-image">
               <img
                 src="assets/project3.svg"
@@ -949,8 +1071,8 @@
               />
             </div>
             <div class="project-body">
-              <h3>Automação ETL</h3>
-              <p>
+              <h3 data-i18n="project.3.title">Automação ETL</h3>
+              <p data-i18n="project.3.desc">
                 Pipelines de ETL em Python com testes e monitoramento básico.
               </p>
               <div class="project-tags">
@@ -979,8 +1101,14 @@
     >
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title">Certificações</h2>
-          <p class="section-subtitle">Conquistas profissionais</p>
+          <h2
+            class="section-title"
+            data-i18n="certs.title"
+          >Certificações</h2>
+          <p
+            class="section-subtitle"
+            data-i18n="certs.subtitle"
+          >Conquistas profissionais</p>
         </div>
         <div class="cert-grid">
           <div class="cert-card glass-card">
@@ -1006,8 +1134,14 @@
     >
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title">Entre em Contato</h2>
-          <p class="section-subtitle">
+          <h2
+            class="section-title"
+            data-i18n="contact.title"
+          >Entre em Contato</h2>
+          <p
+            class="section-subtitle"
+            data-i18n="contact.subtitle"
+          >
             Vamos conversar sobre seu próximo projeto
           </p>
         </div>
@@ -1019,7 +1153,10 @@
               class="contact-form"
             >
               <div class="form-group">
-                <label for="name">Nome</label>
+                <label
+                  for="name"
+                  data-i18n="form.label.name"
+                >Nome</label>
                 <input
                   type="text"
                   id="name"
@@ -1030,7 +1167,10 @@
               </div>
 
               <div class="form-group">
-                <label for="email">E-mail</label>
+                <label
+                  for="email"
+                  data-i18n="form.label.email"
+                >E-mail</label>
                 <input
                   type="email"
                   id="email"
@@ -1041,7 +1181,10 @@
               </div>
 
               <div class="form-group">
-                <label for="message">Mensagem</label>
+                <label
+                  for="message"
+                  data-i18n="form.label.message"
+                >Mensagem</label>
                 <textarea
                   id="message"
                   name="message"
@@ -1054,6 +1197,7 @@
               <button
                 type="submit"
                 class="btn btn-primary"
+                data-i18n="form.submit"
               >
                 <i class="fas fa-paper-plane"></i>
                 Enviar Mensagem
