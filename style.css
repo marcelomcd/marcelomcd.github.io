@@ -206,6 +206,11 @@
    Modern Professional Portfolio
    =========================================== */
 
+/* =====================
+  VARIÁVEIS GLOBAIS (Design System - Liquid Glass)
+  Explicação: aqui definimos cores, espaçamentos, bordas e transições usadas em todo o site.
+  Alterar esses valores atualiza o tema globalmente.
+  ===================== */
 :root {
   /* Liquid Glass - iOS 26 Inspired Theme */
   --bg: linear-gradient(135deg, #f5f7fa 0%, #e8ecf3 50%, #dfe5ed 100%);
@@ -484,6 +489,8 @@ section {
   z-index: 1;
 }
 
+/* Header & navegação abaixo (regras reais começam na próxima seção) */
+
 /* ========== HEADER & NAVIGATION - Liquid Glass ========== */
 .site-header {
   position: fixed;
@@ -508,6 +515,10 @@ section {
   transition: background 0.4s var(--liquid-ease), color 0.4s var(--liquid-ease), border-color 0.4s var(--liquid-ease);
 }
 
+/* NAV: estrutura da barra de navegação principal
+    - alinhamento, espaço interno reduzido para header compacto
+    - contém logo, lista de links e área de ações (theme/lang/menu)
+  */
 .nav {
   display: flex;
   align-items: center;
@@ -620,6 +631,7 @@ section {
 }
 
 /* HERO */
+/* Comentário: área de destaque inicial (hero). Controla espaçamento, grid e apresentação do avatar e CTA */
 .hero {
   padding-top: 120px;
   position: relative;
@@ -631,6 +643,11 @@ section {
   align-items: center;
   gap: var(--spacing-2xl);
 }
+
+/* INFO-CARDS: cartões de informação (localização, disponibilidade, idiomas)
+   - mobile-first: empilhados
+   - em desktop são exibidos em linha para melhor leitura
+*/
 
 @media (max-width: 1000px) {
   .info-cards {
@@ -1602,6 +1619,8 @@ section {
 }
 
 /* ========== EXPERIENCE TIMELINE ========== */
+/* Comentário: regras visuais para a linha do tempo (timeline). Usa pseudo-elementos para a linha central
+  e posicionamento alternado (odd/even) para os cards. */
 .timeline {
   position: relative;
   max-width: 900px;

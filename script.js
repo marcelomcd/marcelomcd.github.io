@@ -602,11 +602,11 @@ document.addEventListener("DOMContentLoaded", () => {
   // Executa inicialização
   init();
 
-  // Log de carregamento
-  console.log(
-    "%c🚀 Portfolio Loaded Successfully! ",
-    "background: linear-gradient(135deg, #00d4ff, #7000ff); color: white; font-size: 16px; padding: 10px; border-radius: 5px;"
-  );
+  // Log de carregamento (comentado para produção — útil apenas em desenvolvimento)
+  // console.log(
+  //   "%c🚀 Portfolio Loaded Successfully! ",
+  //   "background: linear-gradient(135deg, #00d4ff, #7000ff); color: white; font-size: 16px; padding: 10px; border-radius: 5px;"
+  // );
 });
 
 // ============= CSS ANIMATIONS (ADICIONADAS VIA JS) =============
