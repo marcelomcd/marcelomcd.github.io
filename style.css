@@ -1336,14 +1336,15 @@ section {
 
 .info-card i {
   color: var(--accent);
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   /* slightly smaller to improve space for text */
 }
 
 .info-card strong {
   display: block;
   margin-bottom: 0.2rem;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+  line-height: 1.1;
 }
 
 /* Limit text values to maximum of 2 lines so cards keep a compact
@@ -1355,6 +1356,8 @@ section {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-size: 0.9rem;
+  line-height: 1.25;
 }
 
 /* Desktop: show info-cards in a single row */
@@ -1378,6 +1381,25 @@ section {
     white-space: normal;
     overflow: visible;
     text-overflow: clip;
+  }
+
+  /* For desktop: make the info-cards row span the full width of the
+     parent .about-stats-inline grid and ensure each card has equal height */
+  .about-stats-inline>.info-cards {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    grid-auto-rows: 1fr;
+    /* make rows equally tall */
+    align-items: stretch;
+  }
+
+  .about-stats-inline>.info-cards>.info-card {
+    height: 100%;
+    /* stretch each card to the grid row height */
+    display: flex;
+    align-items: center;
   }
 }
 
