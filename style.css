@@ -589,19 +589,27 @@ section {
 }
 
 @media (max-width: 1000px) {
-  .hero-container {
-    grid-template-columns: 1fr;
+  .info-cards {
+    /* ensure the info cards have a comfortable minimum width so content doesn't wrap */
+    grid-template-columns: repeat(3, minmax(280px, 1fr));
+    align-items: center;
+    justify-items: start;
+    gap: 1rem;
   }
 
-  /* Tighter spacing for mobile */
-  section {
-    padding: var(--spacing-lg) 0;
+  .info-card {
+    padding: 2rem 2.5rem;
+    /* larger on desktop for more surface area */
+    min-height: 120px;
+    /* increase height so cards look prominent */
+    gap: 1.5rem;
   }
 
-  .glass-card,
-  .project-card,
-  .cert-card,
-  .skill-category,
+  .info-card i {
+    font-size: 2.25rem;
+    /* larger icon for visual weight */
+  }
+
   .contact-form-wrapper {
     padding: calc(var(--spacing-sm) - 0.1rem);
   }
@@ -1438,43 +1446,54 @@ section {
 
 /* Responsividade adicional */
 @media (max-width: 768px) {
-  .hero-container {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-lg);
+  .info-cards {
+    /* ensure the info cards have a comfortable minimum width so content doesn't wrap */
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    align-items: center;
+    justify-items: start;
   }
 
-  .about-grid {
-    max-width: 100%;
+  .info-card {
+    padding: 1.75rem 2.5rem;
+    /* slightly larger on desktop */
+    min-height: 88px;
+    /* increase height so cards look more prominent */
+  }
+}
+
+.about-stats-inline {
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.quick-stats {
+  .info-card i {
+    font-size: 2rem;
+    /* larger icon for visual weight */
   }
 
-  .about-stats-inline {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
+  grid-template-columns: 1fr;
+}
 
-  .quick-stats {
-    grid-template-columns: 1fr;
-  }
+.timeline-header {
+  flex-direction: column;
+  align-items: flex-start;
+}
 
-  .timeline-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+.timeline-year {
+  position: static;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
 
-  .timeline-year {
-    position: static;
-    display: inline-block;
-    margin-bottom: 0.5rem;
-  }
+.timeline {
+  margin-left: 0;
+  padding-left: 32px;
+}
 
-  .timeline {
-    margin-left: 0;
-    padding-left: 32px;
-  }
-
-  .timeline-date {
-    margin-top: 0.25rem;
-  }
+.timeline-date {
+  margin-top: 0.25rem;
+}
 }
 
 /* About image legacy */
@@ -2515,5 +2534,30 @@ section {
       bottom: 20px;
       right: 20px;
     }
+  }
+}
+
+/* Large-desktop override: give info-cards more presence on very wide screens */
+@media (min-width: 1300px) {
+  .info-cards {
+    gap: 1.5rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .info-card {
+    padding: 2.25rem 3rem;
+    /* more surface area */
+    min-height: 160px;
+    /* taller cards for better balance */
+    gap: 2rem;
+  }
+
+  .info-card i {
+    font-size: 2.5rem;
+    /* larger icon for weight */
+  }
+
+  .info-card strong {
+    font-size: 1.05rem;
   }
 }
