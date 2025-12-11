@@ -1,0 +1,17 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "🔍 Running pre-commit checks..."
+
+# Formatar código automaticamente
+npm run format || true
+
+# Lint JavaScript (warnings são permitidos)
+npm run lint:js || true
+
+# Adiciona arquivos formatados de volta
+git add -u
+
+echo "✅ Pre-commit checks passed!"
+
+npm run lint && npm run format

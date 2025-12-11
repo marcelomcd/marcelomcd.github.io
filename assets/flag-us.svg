@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7410 3900" width="640" height="480" role="img" aria-label="United States flag">
+  <rect width="7410" height="3900" fill="#b22234"/>
+  <g fill="#fff">
+    <rect y="300" width="7410" height="300"/>
+    <rect y="900" width="7410" height="300"/>
+    <rect y="1500" width="7410" height="300"/>
+    <rect y="2100" width="7410" height="300"/>
+    <rect y="2700" width="7410" height="300"/>
+    <rect y="3300" width="7410" height="300"/>
+  </g>
+  <rect width="2964" height="2100" fill="#3c3b6e"/>
+  <defs>
+    <g id="s"><path d="M0,-12 L3.5,-3.5 L12,0 L3.5,3.5 L0,12 L-3.5,3.5 L-12,0 L-3.5,-3.5 Z"/></g>
+  </defs>
+  <g fill="#fff" transform="translate(120,120) scale(0.7)">
+    <g id="stars">
+      <g transform="translate(30,30)">
+        <use href="#s" x="0" y="0"/>
+        <use href="#s" x="110" y="0"/>
+        <use href="#s" x="220" y="0"/>
+        <use href="#s" x="330" y="0"/>
+        <use href="#s" x="440" y="0"/>
+        <use href="#s" x="550" y="0"/>
+      </g>
+      <g transform="translate(85,110)">
+        <use href="#s" x="0" y="0"/>
+        <use href="#s" x="110" y="0"/>
+        <use href="#s" x="220" y="0"/>
+        <use href="#s" x="330" y="0"/>
+        <use href="#s" x="440" y="0"/>
+      </g>
+      <g transform="translate(30,190)">
+        <use href="#s" x="0" y="0"/>
+        <use href="#s" x="110" y="0"/>
+        <use href="#s" x="220" y="0"/>
+        <use href="#s" x="330" y="0"/>
+        <use href="#s" x="440" y="0"/>
+        <use href="#s" x="550" y="0"/>
+      </g>
+      <g transform="translate(85,270)">
+        <use href="#s" x="0" y="0"/>
+        <use href="#s" x="110" y="0"/>
+        <use href="#s" x="220" y="0"/>
+        <use href="#s" x="330" y="0"/>
+        <use href="#s" x="440" y="0"/>
+      </g>
+      <g transform="translate(30,350)">
+        <use href="#s" x="0" y="0"/>
+        <use href="#s" x="110" y="0"/>
+        <use href="#s" x="220" y="0"/>
+        <use href="#s" x="330" y="0"/>
+        <use href="#s" x="440" y="0"/>
+        <use href="#s" x="550" y="0"/>
+      </g>
+      <g transform="translate(85,430)">
+        <use href="#s" x="0" y="0"/>
+        <use href="#s" x="110" y="0"/>
+        <use href="#s" x="220" y="0"/>
+        <use href="#s" x="330" y="0"/>
+        <use href="#s" x="440" y="0"/>
+      </g>
+      <g transform="translate(30,510)">
+        <use href="#s" x="0" y="0"/>
+        <use href="#s" x="110" y="0"/>
+        <use href="#s" x="220" y="0"/>
+        <use href="#s" x="330" y="0"/>
+        <use href="#s" x="440" y="0"/>
+        <use href="#s" x="550" y="0"/>
+      </g>
+      <g transform="translate(85,590)">
+        <use href="#s" x="0" y="0"/>
+        <use href="#s" x="110" y="0"/>
+        <use href="#s" x="220" y="0"/>
+        <use href="#s" x="330" y="0"/>
+        <use href="#s" x="440" y="0"/>
+      </g>
+      <g transform="translate(30,670)">
+        <use href="#s" x="0" y="0"/>
+        <use href="#s" x="110" y="0"/>
+        <use href="#s" x="220" y="0"/>
+        <use href="#s" x="330" y="0"/>
+        <use href="#s" x="440" y="0"/>
+        <use href="#s" x="550" y="0"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,21 @@
+{
+  "extends": ["stylelint-config-standard"],
+  "rules": {
+    "color-hex-length": null,
+    "color-named": null,
+    "selector-max-id": 1,
+    "selector-class-pattern": null,
+    "max-nesting-depth": 4,
+    "declaration-no-important": null,
+    "no-descending-specificity": null,
+    "no-duplicate-selectors": null,
+    "keyframes-name-pattern": null,
+    "selector-pseudo-element-no-unknown": [
+      true,
+      {
+        "ignorePseudoElements": ["before", "after"]
+      }
+    ]
+  },
+  "ignoreFiles": ["**/*.min.css", "node_modules/**/*.css"]
+}

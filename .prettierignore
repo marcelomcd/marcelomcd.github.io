@@ -1,0 +1,11 @@
+node_modules
+.git
+.github
+*.min.js
+*.min.css
+assets/backup_temp
+dist
+build
+index.html
+index-en.html
+
