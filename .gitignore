@@ -1,7 +1,8 @@
-# Editor
+# Editor e IDE
 .vscode/*
 !.vscode/settings.json
 .idea/
+.cursor/
 
 # OS
 .DS_Store
@@ -11,6 +12,8 @@ desktop.ini
 # Logs
 *.log
 npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
 # Temporary files
 *.tmp
@@ -31,31 +34,24 @@ npm-debug.log*
 node_modules/
 package-lock.json
 yarn.lock
+pnpm-lock.yaml
 
 # Test coverage
 coverage/
 .nyc_output/
 
-# IDE
-.vscode/*
-!.vscode/settings.json
-.idea/
+# Arquivos pessoais que não devem estar no repo
+*.pdf
+!README.pdf
+Curriculo*.pdf
+Carta*.pdf
 
-# OS
-.DS_Store
-Thumbs.db
-desktop.ini
+# Configurações específicas do editor/IDE
+.github/copilot-instructions.md
+.github/mcp.json
 
-# Logs
-*.log
-npm-debug.log*
-
-# Temporary files
-*.tmp
-*.temp
-*~
-
-# Backup files
-*.backup
-*.bak
-*.old
+# Build outputs (se houver)
+dist/
+build/
+*.min.js
+*.min.css

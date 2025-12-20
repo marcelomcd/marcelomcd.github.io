@@ -1064,7 +1064,7 @@ section {
     0 6px 16px rgb(0 0 0 / 10%),
     inset 0 1px 0 rgb(255 255 255 / 60%);
   backdrop-filter: blur(32px);
-  -webkit-backdrop-filter: blur(32px);
+  backdrop-filter: blur(32px);
   border-color: rgb(0 122 255 / 30%);
 }
 
@@ -2256,7 +2256,7 @@ section {
     0 4px 12px rgb(0 0 0 / 10%),
     inset 0 1px 0 rgb(255 255 255 / 50%);
   backdrop-filter: blur(28px);
-  -webkit-backdrop-filter: blur(28px);
+  backdrop-filter: blur(28px);
 }
 
 .project-card:active {
