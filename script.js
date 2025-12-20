@@ -1,12 +1,9 @@
 /*
- * Interações: menu mobile, animações on-scroll, form submit simulado, animação de digitação e alternância de tema
  * MARCELO MACEDO - PORTFOLIO 2025
+ * Modern Professional Portfolio
  */
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Portfolio moderno - tema claro fixo
-
-  // ============= MOBILE NAVIGATION =============
   const initMobileNav = () => {
     const navToggle = document.querySelector(".nav-toggle");
     const navList = document.querySelector(".nav-list");
@@ -26,7 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-  // ============= HEADER SCROLL EFFECT =============
   const initHeaderScroll = () => {
     const header = document.querySelector(".site-header");
     if (!header) return;
@@ -50,7 +46,6 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("scroll", onScroll, { passive: true });
   };
 
-  // ============= THEME TOGGLE (LIGHT/DARK) =============
   const initThemeToggle = () => {
     const btn = document.querySelector(".theme-toggle");
     if (!btn) return;
@@ -88,32 +83,34 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-  // ============= SCROLL ANIMATIONS =============
   const initScrollAnimations = () => {
     const elements = document.querySelectorAll(".fade-in, [data-anim], .stagger-animation");
     if (!elements.length) return;
 
-    // Verificar se o usuário prefere animações reduzidas (acessibilidade)
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     const observer = new IntersectionObserver(
       (entries, obs) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            if (prefersReducedMotion) {
-              // Se o usuário prefere movimento reduzido, apenas mostrar sem animação
-              entry.target.classList.add("in-view");
-            } else {
-              entry.target.classList.add("in-view");
-              if (entry.target.classList.contains("skill-category")) {
-                // dispara animação de barras de habilidade quando categoria estiver visível
-                const bars = entry.target.querySelectorAll(".skill-progress");
-                bars.forEach((bar, i) => {
-                  const progress = bar.getAttribute("data-progress") || "0%";
-                  setTimeout(() => bar.style.setProperty("--progress", progress), i * 100);
-                });
+            requestAnimationFrame(() => {
+              if (prefersReducedMotion) {
+                entry.target.classList.add("in-view");
+              } else {
+                entry.target.classList.add("in-view");
+                if (entry.target.classList.contains("skill-category")) {
+                  const bars = entry.target.querySelectorAll(".skill-progress");
+                  bars.forEach((bar, i) => {
+                    const progress = bar.getAttribute("data-progress") || "0%";
+                    requestAnimationFrame(() => {
+                      setTimeout(() => {
+                        bar.style.setProperty("--progress", progress);
+                      }, i * 100);
+                    });
+                  });
+                }
               }
-            }
+            });
             obs.unobserve(entry.target);
           }
         });
@@ -123,7 +120,6 @@ document.addEventListener("DOMContentLoaded", () => {
     elements.forEach((el) => observer.observe(el));
   };
 
-  // ============= TYPING EFFECT =============
   const initTypingEffect = () => {
     const typingElement = document.querySelector(".typing-effect");
     if (!typingElement) return;
@@ -156,7 +152,6 @@ document.addEventListener("DOMContentLoaded", () => {
     type();
   };
 
-  // ============= CODE WINDOW ANIMATION =============
   const initCodeAnimation = () => {
     const codeLines = document.querySelectorAll(".window-body pre");
 
@@ -177,7 +172,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  // ============= CONTACT FORM =============
   const initContactForm = () => {
     const form = document.getElementById("contactForm");
     if (!form) return;
@@ -188,7 +182,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const submitBtn = form.querySelector('button[type="submit"]');
       const originalText = submitBtn.innerHTML;
 
-      // Validação simples
       const name = document.getElementById("name").value.trim();
       const email = document.getElementById("email").value.trim();
       const message = document.getElementById("message").value.trim();
@@ -203,12 +196,10 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      // Envio real com EmailJS
       submitBtn.disabled = true;
       submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> ' + i18n[CURRENT_LANG].sending;
 
       try {
-        // Configurar os parâmetros do template
         const templateParams = {
           from_name: name,
           from_email: email,
@@ -216,21 +207,13 @@ document.addEventListener("DOMContentLoaded", () => {
           to_name: "Marcelo"
         };
 
-        // Enviar email usando EmailJS
-        // Usando service_id e template_id do EmailJS configurados
-        await emailjs.send(
-          "service_qsezf8s", // Service ID do EmailJS
-          "template_mflvfbo", // Template ID do EmailJS
-          templateParams
-        );
+        await emailjs.send("service_qsezf8s", "template_mflvfbo", templateParams);
 
         submitBtn.innerHTML = '<i class="fas fa-check"></i> ' + i18n[CURRENT_LANG].sent;
         showNotification(i18n[CURRENT_LANG].success(name), "success");
 
-        // Reseta formulário
         form.reset();
 
-        // Restaura botão
         setTimeout(() => {
           submitBtn.disabled = false;
           submitBtn.innerHTML = originalText;
@@ -240,7 +223,6 @@ document.addEventListener("DOMContentLoaded", () => {
         submitBtn.innerHTML = '<i class="fas fa-times"></i> Erro';
         showNotification(i18n[CURRENT_LANG].send_error, "error");
 
-        // Restaura botão
         setTimeout(() => {
           submitBtn.disabled = false;
           submitBtn.innerHTML = originalText;
@@ -249,7 +231,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-  // ============= RESPONSIVE HEADER TAGS (compact +x) =============
   const initHeaderTagsResponsive = () => {
     const headers = document.querySelectorAll(".timeline-header .header-tags");
     if (!headers.length) return;
@@ -263,16 +244,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
       headers.forEach((container) => {
         const tags = Array.from(container.querySelectorAll(".tag"));
-        // Remove existing more button if present
         const existingBtn = container.querySelector(".tags-more-btn");
         if (existingBtn) existingBtn.remove();
 
-        // Reset all
         tags.forEach((t) => t.classList.remove("hidden-by-js"));
 
         if (tags.length > showCount) {
           const overflow = tags.length - showCount;
-          // hide beyond showCount
           tags.forEach((t, idx) => {
             if (idx >= showCount) t.classList.add("hidden-by-js");
           });
@@ -309,14 +287,12 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     };
 
-    // Usar ResizeObserver para melhor performance
     if (window.ResizeObserver) {
       const resizeObserver = new ResizeObserver(() => {
         compute();
       });
       resizeObserver.observe(document.body);
     } else {
-      // Fallback para navegadores antigos
       let resizeTimer;
       window.addEventListener(
         "resize",
@@ -330,14 +306,12 @@ document.addEventListener("DOMContentLoaded", () => {
     compute();
   };
 
-  // ============= UTILITIES =============
   const isValidEmail = (email) => {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email);
   };
 
   const showNotification = (message, type = "info") => {
-    // Cria elemento de notificação
     const notification = document.createElement("div");
     notification.className = `notification notification-${type}`;
     notification.style.cssText = `
@@ -360,18 +334,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.body.appendChild(notification);
 
-    // Remove após 4 segundos
     setTimeout(() => {
       notification.style.animation = "slideOutRight 0.3s ease";
       setTimeout(() => notification.remove(), 300);
     }, 4000);
   };
 
-  // ============= LANGUAGE (small localized messages for JS) =============
-  // We removed the previous dynamic page-wide i18n in favor of two static pages
-  // (index.html = pt-BR, index-en.html = en). Here we keep only the small set of
-  // strings used by JS (form validation, notifications, UI bits) and pick the
-  // appropriate language based on the document <html lang="..."> attribute.
   const i18n = {
     pt: {
       form_fill: "Por favor, preencha todos os campos",
@@ -403,7 +371,6 @@ document.addEventListener("DOMContentLoaded", () => {
     ? "pt"
     : "en";
 
-  // ============= PARTICLES EFFECT =============
   const initParticles = () => {
     const particlesBg = document.getElementById("particles-bg");
     if (!particlesBg) return;
@@ -426,7 +393,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  // ============= PROJECT HOVER EFFECTS =============
   const initProjectCards = () => {
     const projectCards = document.querySelectorAll(".project-card");
 
@@ -441,7 +407,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-  // ============= ACTIVE SECTION HIGHLIGHT =============
   const initActiveSection = () => {
     const sections = document.querySelectorAll("section[id]");
     const navLinks = document.querySelectorAll(".nav-list a");
@@ -475,10 +440,9 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     window.addEventListener("scroll", highlightNav, { passive: true });
-    highlightNav(); // Executa uma vez no carregamento
+    highlightNav();
   };
 
-  // ============= TIMELINE ANIMATION =============
   const initTimeline = () => {
     const timelineItems = document.querySelectorAll(".timeline-item");
 
@@ -502,9 +466,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-  // ============= SCROLL TO TOP BUTTON =============
   const initScrollToTop = () => {
-    // Usar o botão existente no HTML ao invés de criar um novo
     const scrollBtn = document.getElementById("scrollToTop");
     if (!scrollBtn) return;
 
@@ -524,7 +486,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll(); // Verifica estado inicial
+    handleScroll();
 
     scrollBtn.addEventListener("click", () => {
       window.scrollTo({
@@ -534,82 +496,42 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-  // ============= LAZY LOAD IMAGES =============
   const initLazyLoad = () => {
-    // Lazy load para imagens com data-src
     const lazyImages = document.querySelectorAll("img[data-src]");
+    if (!lazyImages.length) return;
 
     const imageObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const img = entry.target;
-            img.src = img.dataset.src;
-            img.removeAttribute("data-src");
-            img.classList.add("loaded");
+            requestAnimationFrame(() => {
+              img.src = img.dataset.src;
+              img.removeAttribute("data-src");
+              img.classList.add("loaded");
+            });
             imageObserver.unobserve(img);
           }
         });
       },
       {
-        rootMargin: "50px" // Carrega 50px antes de entrar na viewport
+        rootMargin: "50px"
       }
     );
 
     lazyImages.forEach((img) => imageObserver.observe(img));
 
-    // Otimização para imagens com loading="lazy" nativo
     const nativeImages = document.querySelectorAll('img[loading="lazy"]');
     nativeImages.forEach((img) => {
-      // Fallback para navegadores sem suporte
       if (!("loading" in HTMLImageElement.prototype)) {
         imageObserver.observe(img);
       }
     });
   };
 
-  // ============= CURSOR EFFECT (OPCIONAL) =============
-  const initCustomCursor = () => {
-    if (window.innerWidth < 768) return; // Apenas desktop
-
-    const cursor = document.createElement("div");
-    cursor.className = "custom-cursor";
-    cursor.style.cssText = `
-      position: fixed;
-      width: 20px;
-      height: 20px;
-      border: 2px solid rgba(0, 212, 255, 0.5);
-      border-radius: 50%;
-      pointer-events: none;
-      z-index: 9999;
-      transition: transform 0.2s ease, background 0.2s ease;
-      display: none;
-    `;
-    document.body.appendChild(cursor);
-
-    document.addEventListener("mousemove", (e) => {
-      cursor.style.display = "block";
-      cursor.style.left = e.clientX - 10 + "px";
-      cursor.style.top = e.clientY - 10 + "px";
-    });
-
-    document.querySelectorAll("a, button").forEach((el) => {
-      el.addEventListener("mouseenter", () => {
-        cursor.style.transform = "scale(1.5)";
-        cursor.style.background = "rgba(0, 212, 255, 0.2)";
-      });
-      el.addEventListener("mouseleave", () => {
-        cursor.style.transform = "scale(1)";
-        cursor.style.background = "transparent";
-      });
-    });
-  };
-
-  // ============= INITIALIZE ALL =============
   const init = () => {
     initMobileNav();
     initHeaderScroll();
-    // initSmoothScroll(); // Função não definida, causando erro
     initScrollAnimations();
     initTypingEffect();
     initCodeAnimation();
@@ -623,20 +545,11 @@ document.addEventListener("DOMContentLoaded", () => {
     initHeaderTagsResponsive();
     initScrollToTop();
     initLazyLoad();
-    // initCustomCursor(); // Descomente se quiser cursor customizado
   };
 
-  // Executa inicialização
   init();
-
-  // Log de carregamento (comentado para produção — útil apenas em desenvolvimento)
-  // console.log(
-  //   "%c🚀 Portfolio Loaded Successfully! ",
-  //   "background: linear-gradient(135deg, #00d4ff, #7000ff); color: white; font-size: 16px; padding: 10px; border-radius: 5px;"
-  // );
 });
 
-// ============= CSS ANIMATIONS (ADICIONADAS VIA JS) =============
 const style = document.createElement("style");
 style.textContent = `
   @keyframes slideIn {
@@ -680,7 +593,6 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// ============= TIMELINE TOGGLE =============
 window.toggleTimeline = function (header) {
   const timelineItem = header.closest(".timeline-item");
   const details = timelineItem.querySelector(".timeline-details");
@@ -697,7 +609,6 @@ window.toggleTimeline = function (header) {
   }
 };
 
-// ============= INITIALIZE TIMELINE COLLAPSED STATE =============
 const initTimelineCollapsed = () => {
   const allDetails = document.querySelectorAll(".timeline-details");
   allDetails.forEach((details) => {
@@ -710,5 +621,3 @@ const initTimelineCollapsed = () => {
     toggle.classList.add("fa-chevron-down");
   });
 };
-
-// Fim do arquivo JS
