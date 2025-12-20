@@ -94,28 +94,24 @@ document.addEventListener("DOMContentLoaded", () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             requestAnimationFrame(() => {
-              if (prefersReducedMotion) {
-                entry.target.classList.add("in-view");
-              } else {
-                entry.target.classList.add("in-view");
-                if (entry.target.classList.contains("skill-category")) {
-                  const bars = entry.target.querySelectorAll(".skill-progress");
-                  bars.forEach((bar, i) => {
-                    const progress = bar.getAttribute("data-progress") || "0%";
-                    requestAnimationFrame(() => {
-                      setTimeout(() => {
-                        bar.style.setProperty("--progress", progress);
-                      }, i * 100);
-                    });
+              entry.target.classList.add("in-view");
+              if (!prefersReducedMotion && entry.target.classList.contains("skill-category")) {
+                const bars = entry.target.querySelectorAll(".skill-progress");
+                bars.forEach((bar, i) => {
+                  const progress = bar.getAttribute("data-progress") || "0%";
+                  requestAnimationFrame(() => {
+                    setTimeout(() => {
+                      bar.style.setProperty("--progress", progress);
+                    }, i * 120);
                   });
-                }
+                });
               }
             });
             obs.unobserve(entry.target);
           }
         });
       },
-      { threshold: 0.1, rootMargin: prefersReducedMotion ? "0px" : "0px 0px -8% 0px" }
+      { threshold: 0.08, rootMargin: prefersReducedMotion ? "0px" : "0px 0px -10% 0px" }
     );
     elements.forEach((el) => observer.observe(el));
   };
