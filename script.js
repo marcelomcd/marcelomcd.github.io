@@ -158,16 +158,18 @@ document.addEventListener("DOMContentLoaded", () => {
     if (codeLines.length > 0) {
       codeLines.forEach((line, index) => {
         line.style.opacity = "0";
-        line.style.transform = "translateX(-20px)";
+        line.style.transform = "translateX(-15px)";
 
-        setTimeout(
-          () => {
-            line.style.transition = "all 0.5s ease";
-            line.style.opacity = "1";
-            line.style.transform = "translateX(0)";
-          },
-          index * 200 + 500
-        );
+        requestAnimationFrame(() => {
+          setTimeout(
+            () => {
+              line.style.transition = "all 0.6s cubic-bezier(0.16, 1, 0.3, 1)";
+              line.style.opacity = "1";
+              line.style.transform = "translateX(0)";
+            },
+            index * 150 + 600
+          );
+        });
       });
     }
   };
