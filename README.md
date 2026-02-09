@@ -1,310 +1,449 @@
-# 💼 Marcelo Macedo - Portfolio Profissional
+# 🚀 Marcelo Macedo - Portfólio Profissional
 
 <div align="center">
 
-![Portfolio Banner](https://img.shields.io/badge/Portfolio-Live-00d4ff?style=for-the-badge&logo=github&logoColor=white)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
+![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)
+![Status](https://img.shields.io/badge/status-active-success.svg)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
-**Portfolio pessoal moderno e responsivo com design exclusivo**
+**Portfólio moderno e profissional desenvolvido com HTML5, CSS3 e JavaScript puro**
 
-[🌐 Ver Portfolio](https://marcelomcd.github.io) | [📧 Email](mailto:marcelo.macedo.business@gmail.com) | [💼 LinkedIn](https://www.linkedin.com/in/marcelo-macedo-jr/) | [💬 WhatsApp](https://wa.me/5521979208480)
+[🌐 Ver Demo](#) | [📖 Documentação](#funcionalidades) | [🐛 Reportar Bug](https://github.com/marcelomcd/marcelomcd.github.io/issues)
 
 </div>
 
 ---
 
-## 📋 Sobre
+## 📋 Índice
 
-Portfolio profissional desenvolvido com **HTML5**, **CSS3** e **JavaScript puro** (sem frameworks), apresentando minha experiência como **Solution Engineer** com foco em automação de processos, RPA, BI e soluções em nuvem.
+- [Sobre o Projeto](#-sobre-o-projeto)
+- [Funcionalidades](#-funcionalidades)
+- [Tecnologias](#-tecnologias)
+- [Estrutura do Projeto](#-estrutura-do-projeto)
+- [Como Usar](#-como-usar)
+- [Personalização](#-personalização)
+- [Deploy](#-deploy)
+- [Roadmap](#-roadmap)
+- [Contribuindo](#-contribuindo)
+- [Licença](#-licença)
+- [Contato](#-contato)
 
-### 🎯 Destaques
+---
 
-- ✨ **Design Moderno**: Tema dark com efeitos glassmorphism e gradientes cyan/roxo
+## 🎯 Sobre o Projeto
+
+Portfólio profissional desenvolvido para **Marcelo Macedo - Solution Engineer**, com foco em apresentar experiência em automação de processos, RPA, Business Intelligence, desenvolvimento de APIs e soluções em nuvem.
+
+### ✨ Destaques
+
+- ✅ **Design Moderno**: Interface elegante com glassmorphism e gradientes cyan/roxo
+- 🌓 **Temas Dark/Light**: Alternância entre temas com persistência
+- 🌍 **Bilíngue**: Suporte completo para Português e Inglês
 - 📱 **100% Responsivo**: Adaptado para mobile, tablet e desktop
-- ⚡ **Performance**: Animações suaves com CSS e Intersection Observer
-- 🎨 **UI/UX Exclusiva**: Design único, não copiado de templates
-- 🤖 **Deploy Automático**: GitHub Actions para CI/CD
-- 🔍 **SEO Otimizado**: Meta tags completas, robots.txt e sitemap.xml
+- ⚡ **Performance Otimizada**: Carregamento rápido sem frameworks pesados
+- 🎨 **Animações Suaves**: Efeitos visuais elegantes com CSS e Intersection Observer
+- ♿ **Acessível**: Seguindo boas práticas de acessibilidade web
 
 ---
 
-## 🚀 Tecnologias
+## 🎨 Funcionalidades
 
-### Frontend
+### 🔥 Principais Features
 
-- **HTML5** - Estrutura semântica
-- **CSS3** - Design system com custom properties
-- **JavaScript ES6+** - Interatividade sem frameworks
+#### 1. **Sistema de Temas (Dark/Light Mode)**
+- Toggle intuitivo no header
+- Persistência com `localStorage`
+- Transições suaves entre temas
+- Paleta de cores otimizada para cada modo
 
-### Recursos CSS
+#### 2. **Internacionalização (i18n)**
+- Suporte completo para Português e Inglês
+- Toggle no header para alternar idiomas
+- Persistência de preferência
+- Todas as seções traduzidas
 
-- Glassmorphism & backdrop-filter
-- CSS Grid & Flexbox
-- Custom properties (variáveis CSS)
-- Keyframe animations
-- Media queries responsivas
+#### 3. **Navegação Inteligente**
+- Menu sticky com efeito blur
+- Highlight automático da seção ativa
+- Smooth scroll para todas as âncoras
+- Menu mobile responsivo com hamburger
 
-### JavaScript Features
+#### 4. **Seções do Portfólio**
 
-- Intersection Observer API
-- Smooth scroll
-- Form validation
-- Typing effect
-- Mobile navigation
-- Scroll animations
-
-### DevOps
-
-- **GitHub Actions** - Deploy automático
-- **GitHub Pages** - Hospedagem
-- Git workflow
-
----
-
-## 📂 Estrutura do Projeto
-
-```
-marcelomcd.github.io/
-├── .github/
-│   └── workflows/
-│       └── deploy.yml          # GitHub Actions workflow
-├── assets/
-│   ├── profile.jpg             # Foto de perfil
-│   ├── profile.svg             # Avatar SVG
-│   ├── project1.svg            # Thumbnails de projetos
-│   ├── project2.svg
-│   └── project3.svg
-├── index.html                  # Página principal
-├── style.css                   # Estilos completos
-├── script.js                   # JavaScript interativo
-├── robots.txt                  # SEO - crawlers
-├── sitemap.xml                 # SEO - mapa do site
-├── .gitignore                  # Arquivos ignorados
-├── README.md                   # Este arquivo
-└── CONFIGURACAO.md             # Guia de configuração
-```
-
----
-
-## 🎨 Seções do Portfolio
-
-### 🏠 Hero
-
-- Título com efeito de digitação
+##### 🏠 Hero Section
+- Efeito de digitação animado
 - Code window com syntax highlighting
 - Links para redes sociais (GitHub, LinkedIn, Email, WhatsApp)
-- CTA buttons
+- CTAs destacados
 
-### 👤 Sobre
-
+##### 👤 Sobre Mim
 - Foto de perfil profissional
-- Estatísticas (6+ anos, 50+ projetos, 2 certificações)
-- Informações (localização, disponibilidade, idiomas)
-- Biografia profissional
+- Cards de estatísticas (6+ anos, 15+ habilidades, 2 certificações)
+- Informações de localização e disponibilidade
+- Biografia detalhada
 
-### 💼 Experiência
-
-- Timeline vertical animada
+##### 💼 Experiência Profissional
+- Timeline vertical interativa
 - 4 posições profissionais com achievements
 - Tags de tecnologias utilizadas
-- Seção de certificações (UiPath, BLIP)
+- Seção de certificações em grid
 
-### 💻 Habilidades
-
-- 6 categorias de skills
+##### 💪 Habilidades Técnicas
+- 6 categorias de skills organizadas
 - Barras de progresso animadas
-- Ícones personalizados
-- Glassmorphism cards
+- Ícones personalizados para cada categoria
+- Cards com efeito glassmorphism
 
-### 🚀 Projetos
-
-- 6 cards de projetos
-- Hover effects
+##### 🚀 Projetos em Destaque
+- 6 cards de projetos com hover effects
+- Imagens ilustrativas (SVG)
 - Categorização por tipo
 - Tags de tecnologias
 
-### 📧 Contato
-
-- 4 cards de contato (email, telefone, LinkedIn, localização)
+##### 📬 Contato
+- 4 cards informativos (Email, LinkedIn, GitHub, Localização)
 - Formulário funcional com validação
-- Links para redes sociais
+- Toast notifications para feedback
+- Links diretos para redes sociais
+
+#### 5. **Animações e Interatividade**
+- Fade-in on scroll com Intersection Observer
+- Hover effects elegantes em cards
+- Particle effects no background do hero
+- Gradient orbs flutuantes
+- Skill bars animadas ao aparecer na tela
+- Scroll to top button com smooth scroll
+
+#### 6. **Performance e SEO**
+- CSS otimizado com custom properties
+- JavaScript vanilla (sem frameworks)
+- Meta tags completas (Open Graph, Twitter Cards)
+- HTML semântico para melhor SEO
+- Lazy loading de animações
+- Debounce em scroll events
 
 ---
 
-## ⚙️ Como Usar
+## 🛠️ Tecnologias
 
-### 1️⃣ **Clonar Repositório**
+### Frontend
+- **HTML5** - Estrutura semântica
+- **CSS3** - Design system moderno
+  - CSS Grid & Flexbox
+  - CSS Custom Properties (variáveis)
+  - Glassmorphism & Backdrop Filter
+  - Keyframe Animations
+  - Media Queries (Mobile-first)
+- **JavaScript ES6+** - Interatividade
+  - Intersection Observer API
+  - LocalStorage API
+  - Smooth Scroll
+  - Event Delegation
+  - Module Pattern
+
+### Bibliotecas CDN
+- **Google Fonts** - Inter (tipografia moderna)
+- **Font Awesome 6.5.1** - Ícones profissionais
+
+### Ferramentas de Desenvolvimento
+- Git & GitHub
+- VS Code
+- Chrome DevTools
+
+---
+
+## 📁 Estrutura do Projeto
+
+```
+marcelomcd.github.io/
+│
+├── index.html              # Página principal
+├── style.css               # Estilos completos com design system
+├── script.js               # JavaScript com todas as funcionalidades
+├── README.md               # Este arquivo
+│
+└── assets/                 # Assets do projeto
+    ├── profile.svg         # Imagem de perfil (SVG)
+    ├── project1.svg        # Thumbnail projeto 1 (RPA)
+    ├── project2.svg        # Thumbnail projeto 2 (Dashboard)
+    └── project3.svg        # Thumbnail projeto 3 (API)
+```
+
+---
+
+## 🚀 Como Usar
+
+### 1. **Clone o Repositório**
 
 ```bash
 git clone https://github.com/marcelomcd/marcelomcd.github.io.git
 cd marcelomcd.github.io
 ```
 
-### 2️⃣ **Abrir Localmente**
+### 2. **Abrir Localmente**
 
+#### Opção A: Abrir diretamente no navegador
 ```bash
-# Opção 1: Abrir diretamente no navegador
-start index.html  # Windows
-open index.html   # macOS
-xdg-open index.html  # Linux
+# Windows
+start index.html
 
-# Opção 2: Usar Live Server (VS Code)
-# Instale a extensão "Live Server" e clique em "Go Live"
+# macOS
+open index.html
+
+# Linux
+xdg-open index.html
 ```
 
-### 3️⃣ **Fazer Alterações**
+#### Opção B: Usar Live Server (Recomendado)
+1. Instale a extensão **Live Server** no VS Code
+2. Clique com botão direito no `index.html`
+3. Selecione "Open with Live Server"
+
+### 3. **Fazer Alterações**
 
 ```bash
 # Edite os arquivos HTML, CSS ou JS
-# Faça commit e push
+# Faça commit das alterações
 git add .
-git commit -m "Descrição das alterações"
+git commit -m "feat: descrição da alteração"
 git push origin main
-
-# GitHub Actions fará deploy automático!
 ```
 
 ---
 
 ## 🎨 Personalização
 
-### **Trocar Cores**
+### **1. Trocar Paleta de Cores**
 
 Edite as variáveis CSS em `style.css`:
 
 ```css
 :root {
-  --accent-primary: #00d4ff; /* Cyan */
-  --accent-secondary: #7000ff; /* Roxo */
-  --accent-tertiary: #ff006e; /* Rosa */
+  /* Cores principais */
+  --accent-primary: #00d4ff;      /* Cyan */
+  --accent-secondary: #7000ff;    /* Roxo */
+  --accent-tertiary: #ff006e;     /* Rosa */
+  
+  /* Backgrounds */
+  --bg-primary: #0a0e1a;
+  --bg-secondary: #111827;
+  --bg-tertiary: #1a202e;
 }
 ```
 
-### **Adicionar/Editar Projetos**
+### **2. Adicionar/Editar Projetos**
 
-Edite a seção `<section id="projects">` em `index.html`
+Em `index.html`, localize a seção `<section id="projects">` e adicione:
 
-### **Atualizar Experiências**
+```html
+<div class="project-card">
+  <div class="project-image">
+    <img src="assets/seu-projeto.svg" alt="Seu Projeto">
+    <div class="project-overlay">
+      <a href="link-do-projeto" class="project-link">
+        <i class="fas fa-external-link-alt"></i>
+      </a>
+    </div>
+  </div>
+  <div class="project-content">
+    <div class="project-category" data-i18n="seu-projeto-category">Categoria</div>
+    <h3 class="project-title" data-i18n="seu-projeto-title">Nome do Projeto</h3>
+    <p class="project-description" data-i18n="seu-projeto-description">
+      Descrição do projeto...
+    </p>
+    <div class="project-tags">
+      <span class="tag">Tech1</span>
+      <span class="tag">Tech2</span>
+    </div>
+  </div>
+</div>
+```
 
-Edite a seção `<section id="experience">` em `index.html`
+**Não esqueça de adicionar as traduções em `script.js`!**
 
-### **Modificar Skills**
+### **3. Atualizar Experiências**
 
-Edite a seção `<section id="skills">` em `index.html`
+Em `index.html`, localize `<section id="experience">` e edite os itens da timeline:
 
-### **Trocar Foto de Perfil**
+```html
+<div class="timeline-item">
+  <div class="timeline-marker"></div>
+  <div class="timeline-content">
+    <span class="timeline-year">2025</span>
+    <h3 class="timeline-title">Seu Cargo</h3>
+    <p class="timeline-company">Sua Empresa</p>
+    <ul class="timeline-list">
+      <li>Conquista 1</li>
+      <li>Conquista 2</li>
+    </ul>
+    <div class="timeline-tags">
+      <span class="tag">Tech</span>
+    </div>
+  </div>
+</div>
+```
 
-Substitua `assets/profile.jpg` pela sua foto
+### **4. Modificar Habilidades**
+
+Em `index.html`, seção `<section id="skills">`:
+
+```html
+<div class="skill-item">
+  <div class="skill-info">
+    <span class="skill-name">Nome da Skill</span>
+    <span class="skill-percent">95%</span>
+  </div>
+  <div class="skill-bar">
+    <div class="skill-progress" style="width: 95%"></div>
+  </div>
+</div>
+```
+
+### **5. Adicionar Novas Traduções**
+
+Em `script.js`, no objeto `translations`:
+
+```javascript
+const translations = {
+  pt: {
+    'sua-chave': 'Texto em Português',
+    // ...
+  },
+  en: {
+    'sua-chave': 'Text in English',
+    // ...
+  }
+};
+```
+
+E no HTML:
+
+```html
+<span data-i18n="sua-chave">Texto padrão</span>
+```
 
 ---
 
-## 🔄 Deploy Automático
+## 🌐 Deploy
 
-O projeto usa **GitHub Actions** para deploy automático:
+### **GitHub Pages (Recomendado)**
 
-1. Todo `git push` para `main` dispara o workflow
-2. GitHub Actions executa `.github/workflows/deploy.yml`
-3. Site é atualizado em https://marcelomcd.github.io
-4. Processo leva 2-5 minutos
+1. **Faça push para o repositório**
+```bash
+git push origin main
+```
 
-### Acompanhar Deploy
+2. **Ative GitHub Pages**
+   - Vá em **Settings** > **Pages**
+   - Source: `main` branch
+   - Clique em **Save**
 
-https://github.com/marcelomcd/marcelomcd.github.io/actions
+3. **Acesse seu site**
+   - URL: `https://marcelomcd.github.io`
+   - Tempo de deploy: 2-5 minutos
 
----
+### **Netlify**
 
-## 📊 SEO & Performance
+1. Faça login em [Netlify](https://netlify.com)
+2. Clique em "New site from Git"
+3. Conecte seu repositório GitHub
+4. Deploy automático!
 
-### Meta Tags Implementadas
+### **Vercel**
 
-- ✅ Open Graph (Facebook, LinkedIn)
-- ✅ Twitter Cards
-- ✅ Meta description otimizada
-- ✅ Keywords relevantes
-- ✅ Favicon personalizado
-- ✅ Theme color para mobile
-
-### Arquivos SEO
-
-- ✅ `robots.txt` - Diretrizes para crawlers
-- ✅ `sitemap.xml` - Mapa do site para Google
-
-### Performance
-
-- ✅ CSS inline crítico
-- ✅ Lazy loading de imagens
-- ✅ Minificação manual
-- ✅ Sem frameworks pesados
-- ✅ Código otimizado
+1. Faça login em [Vercel](https://vercel.com)
+2. Importe o repositório
+3. Deploy em segundos!
 
 ---
 
-## 📱 Responsividade
+## 🗺️ Roadmap
 
-### Breakpoints
+### ✅ Versão 2.0 (Atual)
+- [x] Sistema de temas Dark/Light
+- [x] Internacionalização PT/EN
+- [x] Design moderno com glassmorphism
+- [x] Animações suaves
+- [x] Responsividade completa
+- [x] SEO otimizado
 
-- 📱 **Mobile**: < 768px
-- 📲 **Tablet**: 768px - 1024px
-- 💻 **Desktop**: > 1024px
-
-### Recursos Mobile
-
-- Menu hamburguer
-- Layout adaptativo
-- Touch-friendly
-- Scroll suave
+### 🔮 Próximas Features
+- [ ] Blog integrado
+- [ ] Modo de contraste alto (acessibilidade)
+- [ ] Integração com CMS (Netlify CMS)
+- [ ] Sistema de comentários
+- [ ] Analytics integrado
+- [ ] PWA (Progressive Web App)
+- [ ] Dark mode automático baseado em horário
+- [ ] Mais idiomas (Espanhol, Francês)
 
 ---
 
-## 🛠️ Funcionalidades JavaScript
+## 🤝 Contribuindo
 
-- ✅ **Scroll Animations** - Intersection Observer
-- ✅ **Typing Effect** - Animação de digitação
-- ✅ **Smooth Scroll** - Navegação suave
-- ✅ **Form Validation** - Validação de formulário
-- ✅ **Mobile Menu** - Menu responsivo
-- ✅ **Active Section** - Highlight da seção ativa
-- ✅ **Skill Bars** - Barras animadas
-- ✅ **Timeline** - Timeline animada
-- ✅ **Toast Notifications** - Notificações
-- ✅ **Scroll to Top** - Botão voltar ao topo
-- ✅ **Particles** - Efeito de partículas
+Contribuições são sempre bem-vindas! Siga estes passos:
+
+1. **Fork o projeto**
+2. **Crie uma branch para sua feature**
+   ```bash
+   git checkout -b feature/MinhaFeature
+   ```
+3. **Commit suas mudanças**
+   ```bash
+   git commit -m 'feat: Adiciona MinhaFeature'
+   ```
+4. **Push para a branch**
+   ```bash
+   git push origin feature/MinhaFeature
+   ```
+5. **Abra um Pull Request**
+
+### Padrão de Commits
+Utilizamos [Conventional Commits](https://www.conventionalcommits.org/):
+
+- `feat:` Nova funcionalidade
+- `fix:` Correção de bug
+- `docs:` Documentação
+- `style:` Formatação, missing semi colons, etc
+- `refactor:` Refatoração de código
+- `test:` Adição de testes
+- `chore:` Tarefas de manutenção
 
 ---
 
 ## 📄 Licença
 
-© 2025 Marcelo Macedo. Todos os direitos reservados.
-
-Este é um projeto de portfolio pessoal. Você pode usar como referência, mas não copie diretamente.
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 ---
 
 ## 📞 Contato
 
-<div align="center">
+**Marcelo Macedo** - Solution Engineer
 
-**Marcelo Macedo**  
-Solution Engineer | RPA Developer | Data Analyst
+- 💼 LinkedIn: [linkedin.com/in/marcelomcd](https://linkedin.com/in/marcelomcd)
+- 🐙 GitHub: [github.com/marcelomcd](https://github.com/marcelomcd)
+- 📧 Email: marcelomcd@example.com
+- 💬 WhatsApp: [+55 21 99999-9999](https://wa.me/5521999999999)
+- 📍 Localização: Rio de Janeiro, RJ - Brasil
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/marcelo-macedo-jr/)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/marcelomcd)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:marcelo.macedo.business@gmail.com)
-[![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/5521979208480)
+---
 
-📍 Rio de Janeiro, Brasil | 🌐 https://marcelomcd.github.io
+## 🙏 Agradecimentos
 
-</div>
+- [Google Fonts](https://fonts.google.com/) - Tipografia Inter
+- [Font Awesome](https://fontawesome.com/) - Ícones profissionais
+- [GitHub Pages](https://pages.github.com/) - Hospedagem gratuita
+- [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) - Animações on scroll
 
 ---
 
 <div align="center">
 
-**Feito com ❤️ e ☕**
+**⭐ Se gostou do projeto, deixe uma estrela!**
 
-⭐ Se gostou, deixe uma estrela!
+Desenvolvido com ❤️ por [Marcelo Macedo](https://github.com/marcelomcd)
+
+© 2025 Marcelo Macedo. Todos os direitos reservados.
 
 </div>

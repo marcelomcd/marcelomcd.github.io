@@ -1,343 +1,146 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes"
-  />
-
-  <!-- Meta Tags Básicas -->
-  <meta
-    name="description"
-    content="Marcelo Macedo - Solution Engineer com 6+ anos de experiência em automação de processos, RPA, Python, Power BI, Azure e soluções em nuvem. Especialista em transformação digital e otimização de processos."
-  />
-  <meta
-    name="keywords"
-    content="Solution Engineer, Python, Power BI, Automação, RPA, UiPath, DevOps, Azure, BI, Data Analytics, ETL, ChatBot, FastAPI, SSIS, SQL Server, PostgreSQL"
-  />
-  <meta
-    name="author"
-    content="Marcelo Macedo"
-  />
-  <title>Marcelo Macedo | Solution Engineer & Automation Specialist</title>
-
-  <!-- Open Graph / Facebook -->
-  <meta
-    property="og:type"
-    content="website"
-  />
-  <meta
-    property="og:url"
-    content="https://marcelomcd.github.io/"
-  />
-  <meta
-    property="og:title"
-    content="Marcelo Macedo | Solution Engineer & Automation Specialist"
-  />
-  <meta
-    property="og:description"
-    content="Solution Engineer com 6+ anos de experiência em automação de processos, RPA, Python, Power BI e soluções em nuvem."
-  />
-  <meta
-    property="og:image"
-    content="https://marcelomcd.github.io/assets/profile.jpg"
-  />
-
-  <!-- Twitter -->
-  <meta
-    property="twitter:card"
-    content="summary_large_image"
-  />
-  <meta
-    property="twitter:url"
-    content="https://marcelomcd.github.io/"
-  />
-  <meta
-    property="twitter:title"
-    content="Marcelo Macedo | Solution Engineer & Automation Specialist"
-  />
-  <meta
-    property="twitter:description"
-    content="Solution Engineer com 6+ anos de experiência em automação de processos, RPA, Python, Power BI e soluções em nuvem."
-  />
-  <meta
-    property="twitter:image"
-    content="https://marcelomcd.github.io/assets/profile.jpg"
-  />
-
-  <!-- Favicon -->
-  <link
-    rel="icon"
-    type="image/svg+xml"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💼</text></svg>"
-  />
-
-  <!-- Theme Color -->
-  <meta
-    name="theme-color"
-    content="#0a0e27"
-  />
-  <link
-    rel="preconnect"
-    href="https://fonts.googleapis.com"
-  />
-  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
-  />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
-    rel="stylesheet"
-  />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-  />
-  <link
-    rel="stylesheet"
-    href="style.css"
-  />
-
-  <!-- EmailJS SDK -->
-  <script
-    type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
-  ></script>
-  <script type="text/javascript">
-    (function () {
-      emailjs.init({
-        publicKey: "OWmA8jTqnsdICdiii", // Chave pública do EmailJS
-      });
-    })();
-  </script>
-
-  <!-- Google Analytics -->
-  <script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
-  ></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-    gtag("config", "G-XXXXXXXXXX"); // Substituir pelo seu ID do Google Analytics
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Marcelo Macedo - Solution Engineer especializado em automação, RPA, Python, Power BI, Azure e DevOps. Transformando processos em soluções inteligentes.">
+    <meta name="keywords" content="Solution Engineer, RPA, Python, Power BI, Azure, DevOps, Automação, UiPath, Marcelo Macedo">
+    <meta name="author" content="Marcelo Macedo">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://marcelomcd.github.io/">
+    <meta property="og:title" content="Marcelo Macedo - Solution Engineer">
+    <meta property="og:description" content="Especialista em automação, dados e cloud. Python | Power BI | Azure | RPA | DevOps">
+    <meta property="og:image" content="https://marcelomcd.github.io/assets/profile.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://marcelomcd.github.io/">
+    <meta property="twitter:title" content="Marcelo Macedo - Solution Engineer">
+    <meta property="twitter:description" content="Especialista em automação, dados e cloud. Python | Power BI | Azure | RPA | DevOps">
+    <meta property="twitter:image" content="https://marcelomcd.github.io/assets/profile.jpg">
+    
+    <title>Marcelo Macedo - Solution Engineer | Automação & Cloud</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <!-- Particles Background -->
-  <div id="particles-bg"></div>
-
-  <!-- HEADER / Navegação principal -->
-  <!-- Comentário: Cabeçalho fixo com logo, navegação e controles de ação (tema, idioma) -->
-  <header class="site-header">
-    <nav class="nav">
-      <a
-        href="#home"
-        class="logo"
-      >
-        <i class="fas fa-code"></i>
-        <span>MM</span>
-      </a>
-      <ul class="nav-list">
-        <li><a
-            href="#home"
-            data-i18n="nav.home"
-          >Início</a></li>
-        <li><a
-            href="#about"
-            data-i18n="nav.about"
-          >Sobre</a></li>
-        <li><a
-            href="#experience"
-            data-i18n="nav.experience"
-          >Experiência</a></li>
-        <li><a
-            href="#skills"
-            data-i18n="nav.skills"
-          >Habilidades</a></li>
-        <li><a
-            href="#projects"
-            data-i18n="nav.projects"
-          >Projetos</a></li>
-        <li><a
-            href="#contact"
-            data-i18n="nav.contact"
-          >Contato</a></li>
-      </ul>
-      <div class="header-actions">
-        <button
-          class="nav-toggle"
-          aria-label="Abrir menu"
-          data-tooltip="Abrir menu"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        <button
-          class="theme-toggle"
-          aria-label="Alternar tema"
-          data-tooltip="Alternar tema"
-        >
-          <i class="fas fa-moon"></i>
-        </button>
-        <div
-          class="language-switch"
-          aria-label="Seleção de idioma"
-        >
-          <a
-            href="index.html"
-            class="lang-flag-link"
-            aria-label="Português (BR)"
-            data-tooltip="Português"
-          >
-            <img
-              src="assets/flag-br.svg"
-              alt="PT"
-              class="lang-flag-img"
-            />
-          </a>
-          <a
-            href="index-en.html"
-            class="lang-flag-link"
-            aria-label="English (US)"
-            data-tooltip="English"
-          >
-            <img
-              src="assets/flag-us.svg"
-              alt="EN"
-              class="lang-flag-img"
-            />
-          </a>
-        </div>
-      </div>
-    </nav>
-  </header>
-
-  <!-- CONTEÚDO PRINCIPAL -->
-  <main>
-    <!-- HERO SECTION -->
-    <section
-      id="home"
-      class="hero"
-    >
-      <div class="container hero-container">
-        <div class="hero-content">
-          <div class="hero-label">
-            <i class="fas fa-code"></i>
-            <span data-i18n="hero.label">Solution Engineer</span>
-          </div>
-          <h1 class="hero-title">
-            <span data-i18n="hero.greeting">Olá, eu sou</span><br />
-            <span
-              class="gradient-text"
-              data-i18n="hero.name"
-            >Marcelo Macedo</span>
-          </h1>
-          <p
-            class="hero-subtitle"
-            data-i18n="hero.subtitle"
-          >
-            Solution Engineer | Automação, Dados & Cloud
-          </p>
-          <p
-            class="hero-description"
-            data-i18n="hero.description"
-          >
-            Especialista em transformar processos, integrar sistemas e criar
-            soluções digitais que geram valor real para empresas. Experiência
-            sólida com Python, Power BI, Azure, RPA e DevOps.
-          </p>
-          <div class="hero-buttons">
-            <a
-              href="#contact"
-              class="btn btn-primary"
-              data-i18n="hero.cta_contact"
-            >
-              <i class="fas fa-envelope"></i>
-              Entre em Contato
-            </a>
-            <a
-              href="#projects"
-              class="btn btn-outline"
-              data-i18n="hero.cta_projects"
-            >
-              <i class="fas fa-folder-open"></i>
-              Ver Projetos
-            </a>
-          </div>
-          <div class="hero-social">
-            <a
-              href="https://github.com/marcelomcd"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub"
-              class="social-link"
-            >
-              <i class="fab fa-github"></i>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/marcelo-macedo-jr/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-              class="social-link"
-            >
-              <i class="fab fa-linkedin"></i>
-            </a>
-            <a
-              href="mailto:marcelo.macedo.business@gmail.com"
-              aria-label="Email"
-              class="social-link"
-            >
-              <i class="fas fa-envelope"></i>
-            </a>
-            <a
-              href="https://wa.me/5521979208480"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="WhatsApp"
-              class="social-link"
-            >
-              <i class="fab fa-whatsapp"></i>
-            </a>
-          </div>
-        </div>
-        <div class="hero-visual">
-          <div class="hero-avatar-wrap">
-            <picture
-              class="hero-avatar"
-              aria-hidden="false"
-            >
-              <source
-                srcset="assets/profile.webp"
-                type="image/webp"
-              >
-              <source
-                srcset="assets/profile.opt.jpg"
-                type="image/jpeg"
-              >
-              <img
-                src="assets/profile.jpg"
-                alt="Foto de Marcelo Macedo"
-                loading="lazy"
-              >
-            </picture>
-          </div>
-          <div class="code-window">
-            <div class="window-header">
-              <span class="dot dot-red"></span>
-              <span class="dot dot-yellow"></span>
-              <span class="dot dot-green"></span>
+    
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="#home" class="nav-logo">
+                    <span class="logo-bracket">&lt;</span>
+                    <span class="logo-text">MM</span>
+                    <span class="logo-bracket">/&gt;</span>
+                </a>
+                
+                <div class="nav-menu" id="navMenu">
+                    <a href="#home" class="nav-link" data-i18n="nav-home">Início</a>
+                    <a href="#about" class="nav-link" data-i18n="nav-about">Sobre</a>
+                    <a href="#experience" class="nav-link" data-i18n="nav-experience">Experiência</a>
+                    <a href="#skills" class="nav-link" data-i18n="nav-skills">Habilidades</a>
+                    <a href="#projects" class="nav-link" data-i18n="nav-projects">Projetos</a>
+                    <a href="#contact" class="nav-link" data-i18n="nav-contact">Contato</a>
+                </div>
+                
+                <div class="nav-controls">
+                    <!-- Language Toggle -->
+                    <button class="control-btn" id="langToggle" title="Trocar idioma">
+                        <i class="fas fa-language"></i>
+                        <span class="control-label" id="currentLang">PT</span>
+                    </button>
+                    
+                    <!-- Theme Toggle -->
+                    <button class="control-btn" id="themeToggle" title="Trocar tema">
+                        <i class="fas fa-moon" id="themeIcon"></i>
+                    </button>
+                    
+                    <!-- Mobile Menu Toggle -->
+                    <button class="mobile-toggle" id="mobileToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
             </div>
-            <div class="window-body">
-              <pre><code><span class="code-keyword">class</span> <span class="code-class">SolutionEngineer</span>:
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-label">
+                        <span class="label-icon">👨‍💻</span>
+                        <span data-i18n="hero-label">Solution Engineer</span>
+                    </div>
+                    
+                    <h1 class="hero-title">
+                        <span data-i18n="hero-greeting">Olá, eu sou</span><br>
+                        <span class="gradient-text">Marcelo Macedo</span>
+                    </h1>
+                    
+                    <div class="hero-subtitle">
+                        <span class="typing-text" id="typingText"></span>
+                        <span class="cursor">|</span>
+                    </div>
+                    
+                    <p class="hero-description" data-i18n="hero-description">
+                        Especialista em transformar processos, integrar sistemas e criar soluções digitais que geram valor real para empresas. Experiência sólida com Python, Power BI, Azure, RPA e DevOps.
+                    </p>
+                    
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            <i class="fas fa-rocket"></i>
+                            <span data-i18n="hero-btn-projects">Ver Projetos</span>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <i class="fas fa-paper-plane"></i>
+                            <span data-i18n="hero-btn-contact">Entrar em Contato</span>
+                        </a>
+                    </div>
+                    
+                    <div class="hero-socials">
+                        <a href="https://github.com/marcelomcd" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/marcelomcd" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:marcelomcd@example.com" class="social-link" title="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://wa.me/5521999999999" target="_blank" rel="noopener noreferrer" class="social-link" title="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hero-code">
+                    <div class="code-window">
+                        <div class="code-header">
+                            <div class="code-dots">
+                                <span class="dot dot-red"></span>
+                                <span class="dot dot-yellow"></span>
+                                <span class="dot dot-green"></span>
+                            </div>
+                            <span class="code-title">solution_engineer.py</span>
+                        </div>
+                        <div class="code-content">
+<pre><code><span class="code-keyword">class</span> <span class="code-class">SolutionEngineer</span>:
     <span class="code-keyword">def</span> <span class="code-function">__init__</span>(<span class="code-param">self</span>):
         <span class="code-param">self</span>.name = <span class="code-string">"Marcelo Macedo"</span>
         <span class="code-param">self</span>.role = <span class="code-string">"Solution Engineer"</span>
@@ -350,985 +153,786 @@
     
     <span class="code-keyword">def</span> <span class="code-function">build_solutions</span>(<span class="code-param">self</span>):
         <span class="code-keyword">return</span> <span class="code-string">"Automação Inteligente"</span></code></pre>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </section>
-
-    <!-- ABOUT SECTION -->
-    <!-- Comentário: seção 'Sobre' com descrição, estatísticas rápidas (about-stats-inline) e cartões informativos (info-cards) -->
-    <section
-      id="about"
-      class="about"
-    >
-      <div class="container">
-        <div class="section-header">
-          <h2
-            class="section-title"
-            data-i18n="about.title"
-          >Sobre Mim</h2>
-          <p
-            class="section-subtitle"
-            data-i18n="about.subtitle"
-          >
-            Minha trajetória profissional e expertise
-          </p>
-        </div>
-
-        <div class="about-grid">
-          <div class="glass-card">
-            <p
-              class="about-text"
-              data-i18n="about.p1"
-            >
-              Engenheiro de soluções apaixonado por automação, dados e
-              tecnologia. Atuo há mais de 6 anos desenvolvendo integrações,
-              robôs, dashboards e sistemas inteligentes para empresas de
-              diversos segmentos.
-            </p>
-            <p
-              class="about-text"
-              data-i18n="about.p2"
-            >
-              Meu foco é criar soluções que simplificam rotinas, aumentam a
-              produtividade e trazem resultados mensuráveis. Domino
-              <strong>Python, Power BI, Azure, UiPath, SQL e práticas
-                DevOps</strong>.
-            </p>
-            <p
-              class="about-text"
-              data-i18n="about.p3"
-            >
-              Já liderei projetos de automação financeira, integração de APIs,
-              análise de dados e implantação de pipelines CI/CD. Busco sempre
-              unir visão técnica e estratégica para entregar valor ao negócio.
-            </p>
-
-            <!-- Estatísticas rápidas: anos, habilidades, certificações -->
-            <div class="about-stats-inline">
-              <div class="stat-item">
-                <i class="fas fa-briefcase"></i>
-                <div class="stat-content">
-                  <h4>6+</h4>
-                  <p data-i18n="stats.years">Anos de Experiência</p>
-                </div>
-              </div>
-              <div class="stat-item">
-                <i class="fas fa-book"></i>
-                <div class="stat-content">
-                  <h4>15+</h4>
-                  <p data-i18n="stats.skills">Habilidades</p>
-                </div>
-              </div>
-              <div class="stat-item">
-                <i class="fas fa-award"></i>
-                <div class="stat-content">
-                  <h4>2</h4>
-                  <p data-i18n="stats.certs">Certificações</p>
-                </div>
-              </div>
-
-              <!-- Cartões de informação: localização, disponibilidade, idiomas (dispostos em linha no desktop) -->
-              <div class="info-cards">
-                <div class="info-card glass-card">
-                  <i class="fas fa-map-marker-alt"></i>
-                  <div>
-                    <strong data-i18n="info.location.title">Localização</strong>
-                    <span data-i18n="info.location.value">Rio de Janeiro, RJ</span>
-                  </div>
-                </div>
-                <div class="info-card glass-card">
-                  <i class="fas fa-globe"></i>
-                  <div>
-                    <strong data-i18n="info.availability.title">Disponibilidade</strong>
-                    <span data-i18n="info.availability.value">Remoto | Realocação</span>
-                  </div>
-                </div>
-                <div class="info-card glass-card">
-                  <i class="fas fa-language"></i>
-                  <div>
-                    <strong data-i18n="info.languages.title">Idiomas</strong>
-                    <span data-i18n="info.languages.value">Português | Inglês (Intermediário)</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        
+        <!-- Animated Background -->
+        <div class="hero-bg">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
         </div>
     </section>
-
-    <!-- EXPERIENCE SECTION -->
-    <section
-      id="experience"
-      class="experience"
-    >
-      <div class="container">
-        <div class="section-header">
-          <h2
-            class="section-title"
-            data-i18n="experience.title"
-          >Experiência Profissional</h2>
-          <p
-            class="section-subtitle"
-            data-i18n="experience.subtitle"
-          >
-            Minha trajetória na área de tecnologia
-          </p>
+    
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label" data-i18n="about-label">Conheça-me</span>
+                <h2 class="section-title" data-i18n="about-title">Sobre Mim</h2>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-wrapper">
+                        <img src="assets/profile.svg" alt="Marcelo Macedo" class="profile-img">
+                        <div class="image-border"></div>
+                    </div>
+                </div>
+                
+                <div class="about-info">
+                    <p class="about-text" data-i18n="about-text-1">
+                        Engenheiro de soluções apaixonado por automação, dados e tecnologia. Atuo há mais de 6 anos desenvolvendo integrações, robôs, dashboards e sistemas inteligentes para empresas de diversos segmentos.
+                    </p>
+                    
+                    <p class="about-text" data-i18n="about-text-2">
+                        Meu foco é criar soluções que simplificam rotinas, aumentam a produtividade e trazem resultados mensuráveis. Domino <strong>Python, Power BI, Azure, UiPath, SQL e práticas DevOps</strong>.
+                    </p>
+                    
+                    <p class="about-text" data-i18n="about-text-3">
+                        Já liderei projetos de automação financeira, integração de APIs, análise de dados e implantação de pipelines CI/CD. Busco sempre unir visão técnica e estratégica para entregar valor ao negócio.
+                    </p>
+                    
+                    <div class="about-stats">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3 class="stat-number">6+</h3>
+                                <p class="stat-label" data-i18n="stat-experience">Anos de Experiência</p>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3 class="stat-number">15+</h3>
+                                <p class="stat-label" data-i18n="stat-skills">Habilidades</p>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3 class="stat-number">2</h3>
+                                <p class="stat-label" data-i18n="stat-certifications">Certificações</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span><strong data-i18n="detail-location">Localização</strong> Rio de Janeiro, RJ</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-laptop-house"></i>
+                            <span><strong data-i18n="detail-availability">Disponibilidade</strong> <span data-i18n="detail-availability-value">Remoto | Realocação</span></span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-globe"></i>
+                            <span><strong data-i18n="detail-languages">Idiomas</strong> <span data-i18n="detail-languages-value">Português | Inglês (Intermediário)</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="timeline">
-          <!-- Experience Item 1 - Atual -->
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-year">2024</div>
-            <div class="timeline-content glass-card">
-              <div
-                class="timeline-header"
-                onclick="toggleTimeline(this)"
-              >
-                <div>
-                  <h3>Líder Técnico em Automação de Processos</h3>
-                  <h4>Quali IT</h4>
-                  <div class="timeline-tags header-tags">
-                    <span class="tag">Python</span>
-                    <span class="tag">Azure DevOps</span>
-                    <span class="tag">RPA</span>
-                    <span class="tag">DevOps</span>
-                    <span class="tag">SQL Server</span>
-                    <span class="tag">PostgreSQL</span>
-                    <span class="tag">CI/CD</span>
-                  </div>
-                </div>
-                <div class="timeline-header-right">
-                  <span class="timeline-date">
-                    <i class="fas fa-calendar-alt"></i>
-                    Out 2024 - Atual
-                  </span>
-                  <button
-                    class="timeline-toggle"
-                    aria-label="Expandir detalhes"
-                  >
-                    <i class="fas fa-chevron-down"></i>
-                  </button>
-                </div>
-              </div>
-              <div class="timeline-details">
-                <ul class="timeline-achievements">
-                  <li>
-                    <i class="fas fa-check-circle"></i> Liderança técnica em
-                    soluções de automação e integrações backend/frontend
-                  </li>
-                  <li>
-                    <i class="fas fa-check-circle"></i> Aplicação de padrões
-                    arquiteturais (camadas, modularização e APIs) para garantir
-                    manutenibilidade
-                  </li>
-                  <li>
-                    <i class="fas fa-check-circle"></i> Participação em práticas
-                    de DevOps e versionamento de código integrado ao Azure
-                    DevOps
-                  </li>
-                  <li>
-                    <i class="fas fa-check-circle"></i> Desenvolvimento de
-                    automações inteligentes integradas a bancos relacionais (SQL
-                    Server, PostgreSQL)
-                  </li>
-                  <li>
-                    <i class="fas fa-check-circle"></i> Colaboração com áreas
-                    de negócio e times de desenvolvimento para assegurar
-                    qualidade de software desde a concepção até a entrega.
-                  </li>
-                </ul>
-                <!-- tags visible in header for collapsed view -->
-              </div>
-            </div>
-          </div>
-
-          <!-- Experience Item 2 - ONS -->
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-year">2023</div>
-            <div class="timeline-content glass-card">
-              <div
-                class="timeline-header"
-                onclick="toggleTimeline(this)"
-              >
-                <div>
-                  <h3>Dev Full-Stack Python</h3>
-                  <h4>ONS - Operador Nacional do Sistema Elétrico</h4>
-                  <div class="timeline-tags header-tags">
-                    <span class="tag">Python</span>
-                    <span class="tag">Power Automate</span>
-                    <span class="tag">RPA</span>
-                    <span class="tag">CI/CD</span>
-                    <span class="tag">Git</span>
-                    <span class="tag">SQL</span>
-                  </div>
-                </div>
-                <div class="timeline-header-right">
-                  <span class="timeline-date">
-                    <i class="fas fa-calendar-alt"></i>
-                    Dez 2023 - Out 2024
-                  </span>
-                  <button
-                    class="timeline-toggle"
-                    aria-label="Expandir detalhes"
-                  >
-                    <i class="fas fa-chevron-down"></i>
-                  </button>
-                </div>
-              </div>
-              <div class="timeline-details">
-                <ul class="timeline-achievements">
-                  <li>
-                    <i class="fas fa-check-circle"></i> Desenvolvimento de
-                    scripts e APIs em Python com integração a bancos relacionais
-                  </li>
-                  <li>
-                    <i class="fas fa-check-circle"></i> Criação de soluções com
-                    Power Automate e RPA, integrando dados entre sistemas
-                    internos
-                  </li>
-                  <li>
-                    <i class="fas fa-check-circle"></i> Participação em rotinas
-                    de deploy contínuo (CI/CD) e versionamento com Git
-                  </li>
-                  <li>
-                    <i class="fas fa-check-circle"></i> Implementação de boas
-                    práticas de código limpo e testes unitários
-                  </li>
-                  <li>
-                    <i class="fas fa-check-circle"></i> Apoio na definição de
-                    arquitetura e documentação técnica das soluções
-                    desenvolvidas.
-                  </li>
-                </ul>
-                <div class="timeline-tags">
-                  <span class="tag">Python</span>
-                  <span class="tag">Power Automate</span>
-                  <span class="tag">RPA</span>
-                  <span class="tag">CI/CD</span>
-                  <span class="tag">Git</span>
-                  <span class="tag">SQL</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Experience Item 3 - Tata (Desenvolvedor) -->
-        <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-year">2022</div>
-          <div class="timeline-content glass-card">
-            <div
-              class="timeline-header"
-              onclick="toggleTimeline(this)"
-            >
-              <div>
-                <h3>Analista Desenvolvedor</h3>
-                <h4>Infosys Consulting</h4>
-                <div class="timeline-tags header-tags">
-                  <span class="tag">RPA</span>
-                  <span class="tag">UiPath</span>
-                  <span class="tag">Automation Anywhere</span>
-                  <span class="tag">Python</span>
-                  <span class="tag">.NET (C#)</span>
-                  <span class="tag">Power BI</span>
-                </div>
-              </div>
-              <div class="timeline-header-right">
-                <span class="timeline-date">
-                  <i class="fas fa-calendar-alt"></i>
-                  Abr 2022 - Mai 2023
-                </span>
-                <button
-                  class="timeline-toggle"
-                  aria-label="Expandir detalhes"
-                >
-                  <i class="fas fa-chevron-down"></i>
-                </button>
-              </div>
-            </div>
-            <div class="timeline-details">
-              <ul class="timeline-achievements">
-                <li>
-                  <i class="fas fa-check-circle"></i> Criação e suporte a
-                  soluções RPA utilizando UiPath e Automation Anywhere,
-                  integrando com APIs REST, bancos de dados e sistemas
-                  corporativos.
-                </li>
-                <li>
-                  <i class="fas fa-check-circle"></i> Desenvolvimento de
-                  scripts em Python e .NET (C#) para automação de processos,
-                  manipulação de dados e construção de serviços backend.
-                </li>
-                <li>
-                  <i class="fas fa-check-circle"></i> Implementação de
-                  dashboards internos para monitoramento de bots e
-                  indicadores de desempenho, usando HTML, CSS, JavaScript e
-                  Power BI Embedded.
-                </li>
-                <li>
-                  <i class="fas fa-check-circle"></i> Participação em
-                  projetos de modernização de sistemas legados, com foco em
-                  integração entre aplicações via serviços web e filas de
-                  mensagens.
-                </li>
-                <li>
-                  <i class="fas fa-check-circle"></i> Colaboração com
-                  times multidisciplinares (negócios, QA e infraestrutura) em
-                  um ambiente ágil (Scrum).
-                </li>
-                <li>
-                  <i class="fas fa-check-circle"></i> Contribuição para
-                  melhoria contínua e redução de falhas em processos
-                  automatizados, ampliando a eficiência operacional e o
-                  tempo de resposta a incidentes.
-                </li>
-              </ul>
-              <div class="timeline-tags">
-                <span class="tag">RPA</span>
-                <span class="tag">DevOps</span>
-                <span class="tag">CI/CD</span>
-                <span class="tag">UiPath</span>
-                <span class="tag">Automation Anywhere</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Experience Item 4 - Tata (Jr) -->
-        <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-year">2019</div>
-          <div class="timeline-content glass-card">
-            <div
-              class="timeline-header"
-              onclick="toggleTimeline(this)"
-            >
-              <div>
-                <h3>Analista Desenvolvedor Jr.</h3>
-                <h4>Infosys Consulting</h4>
-              </div>
-              <div class="timeline-header-right">
-                <span class="timeline-date">
-                  <i class="fas fa-calendar-alt"></i>
-                  Nov 2019 - Fev 2022
-                </span>
-                <button
-                  class="timeline-toggle"
-                  aria-label="Expandir detalhes"
-                >
-                  <i class="fas fa-chevron-down"></i>
-                </button>
-              </div>
-            </div>
-            <div class="timeline-details">
-              <ul class="timeline-achievements">
-                <li>
-                  <i class="fas fa-check-circle"></i> Criação e suporte a
-                  soluções RPA com UiPath e Automation Anywhere
-                </li>
-                <li>
-                  <i class="fas fa-check-circle"></i> Foco na eficiência
-                  operacional e suporte a clientes em demandas de automação
-                </li>
-                <li>
-                  <i class="fas fa-check-circle"></i> Integração de sistemas
-                  via API
-                </li>
-              </ul>
-              <div class="timeline-tags">
-                <span class="tag">UiPath</span>
-                <span class="tag">Automation Anywhere</span>
-                <span class="tag">APIs</span>
-                <span class="tag">Automação</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      </div>
     </section>
-
-
-
-    <!-- SKILLS SECTION -->
-    <section
-      id="skills"
-      class="skills"
-    >
-      <div class="container">
-        <div class="section-header">
-          <h2
-            class="section-title"
-            data-i18n="skills.title"
-          >Habilidades Técnicas</h2>
-          <p
-            class="section-subtitle"
-            data-i18n="skills.subtitle"
-          >Tecnologias e ferramentas que domino</p>
+    
+    <!-- Experience Section -->
+    <section id="experience" class="experience section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label" data-i18n="experience-label">Minha Jornada</span>
+                <h2 class="section-title" data-i18n="experience-title">Experiência Profissional</h2>
+            </div>
+            
+            <div class="timeline">
+                <!-- Experience 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2024</span>
+                        <h3 class="timeline-title">Solution Engineer</h3>
+                        <p class="timeline-company">Stefanini</p>
+                        <ul class="timeline-list">
+                            <li data-i18n="exp1-item1">Liderança técnica em soluções de automação e integrações backend/frontend</li>
+                            <li data-i18n="exp1-item2">Aplicação de padrões arquiteturais (camadas, modularização e APIs) para garantir manutenibilidade</li>
+                            <li data-i18n="exp1-item3">Participação em práticas de DevOps e versionamento de código integrado ao Azure DevOps</li>
+                            <li data-i18n="exp1-item4">Desenvolvimento de automações inteligentes integradas a bancos relacionais (SQL Server, PostgreSQL)</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Azure DevOps</span>
+                            <span class="tag">SQL</span>
+                            <span class="tag">APIs</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Experience 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2023</span>
+                        <h3 class="timeline-title">RPA Developer</h3>
+                        <p class="timeline-company">Cogna Educação</p>
+                        <ul class="timeline-list">
+                            <li data-i18n="exp2-item1">Desenvolvimento de scripts e APIs em Python com integração a bancos relacionais</li>
+                            <li data-i18n="exp2-item2">Criação de soluções com Power Automate e RPA, integrando dados entre sistemas internos</li>
+                            <li data-i18n="exp2-item3">Participação em rotinas de deploy contínuo (CI/CD) e versionamento com Git</li>
+                            <li data-i18n="exp2-item4">Implementação de boas práticas de código limpo e testes unitários</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Power Automate</span>
+                            <span class="tag">RPA</span>
+                            <span class="tag">CI/CD</span>
+                            <span class="tag">Git</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Experience 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2022</span>
+                        <h3 class="timeline-title">RPA Developer</h3>
+                        <p class="timeline-company">BIP</p>
+                        <ul class="timeline-list">
+                            <li data-i18n="exp3-item1">Criação e suporte a soluções RPA utilizando UiPath e Automation Anywhere</li>
+                            <li data-i18n="exp3-item2">Desenvolvimento de scripts em Python e .NET (C#) para automação de processos</li>
+                            <li data-i18n="exp3-item3">Implementação de dashboards internos para monitoramento de bots e indicadores de desempenho</li>
+                            <li data-i18n="exp3-item4">Participação em projetos de modernização de sistemas legados</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="tag">UiPath</span>
+                            <span class="tag">Automation Anywhere</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">C#</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Experience 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2019</span>
+                        <h3 class="timeline-title">RPA Developer Junior</h3>
+                        <p class="timeline-company">Accenture</p>
+                        <ul class="timeline-list">
+                            <li data-i18n="exp4-item1">Criação e suporte a soluções RPA com UiPath e Automation Anywhere</li>
+                            <li data-i18n="exp4-item2">Foco na eficiência operacional e suporte a clientes em demandas de automação</li>
+                            <li data-i18n="exp4-item3">Integração de sistemas via API</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="tag">UiPath</span>
+                            <span class="tag">Automation Anywhere</span>
+                            <span class="tag">APIs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Certifications -->
+            <div class="certifications">
+                <h3 class="certifications-title" data-i18n="certifications-title">Certificações</h3>
+                <div class="certifications-grid">
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h4 class="cert-name">UiPath Advanced RPA Developer</h4>
+                        <p class="cert-year">2020</p>
+                    </div>
+                    
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h4 class="cert-name">ChatBot Developer - BLIP</h4>
+                        <p class="cert-year">2025</p>
+                    </div>
+                    
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h4 class="cert-name">Microsoft Power Platform</h4>
+                        <p class="cert-year">2021</p>
+                    </div>
+                    
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <h4 class="cert-name">Python for Data Science</h4>
+                        <p class="cert-year">2019</p>
+                    </div>
+                    
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h4 class="cert-name">Power BI Data Analyst</h4>
+                        <p class="cert-year">2023</p>
+                    </div>
+                    
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h4 class="cert-name">Azure Fundamentals (AZ-900)</h4>
+                        <p class="cert-year">2024</p>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <!-- Certificações / Qualificações movidas para Habilidades -->
-        <div
-          class="certs-grid"
-          aria-label="Certificações e qualificações"
-        >
-          <div class="cert-card glass-card">
-            <div class="cert-icon"><i class="fas fa-robot"></i></div>
-            <h3>UiPath Advanced RPA Developer Certified</h3>
-            <p>Desenvolvimento avançado de automações com UiPath</p>
-            <span class="cert-year">2020</span>
-          </div>
-          <div class="cert-card glass-card">
-            <div class="cert-icon"><i class="fab fa-microsoft"></i></div>
-            <h3>Microsoft Power Platform</h3>
-            <p>Power Automate e Power Apps</p>
-            <span class="cert-year">2021</span>
-          </div>
-          <div class="cert-card glass-card">
-            <div class="cert-icon"><i class="fab fa-python"></i></div>
-            <h3>Python for Data Science</h3>
-            <p>Análise de dados e automação com Python</p>
-            <span class="cert-year">2019</span>
-          </div>
-          <div class="cert-card glass-card">
-            <div class="cert-icon"><i class="fas fa-chart-line"></i></div>
-            <h3>Power BI Data Analyst</h3>
-            <p>Visualização e análise de dados</p>
-            <span class="cert-year">2023</span>
-          </div>
-          <div class="cert-card glass-card">
-            <div class="cert-icon"><i class="fas fa-cloud"></i></div>
-            <h3>Azure Fundamentals (AZ-900)</h3>
-            <p>Fundamentos de computação em nuvem</p>
-            <span class="cert-year">2024</span>
-          </div>
-          <div class="cert-card glass-card">
-            <div class="cert-icon"><i class="fas fa-code-branch"></i></div>
-            <h3>Git & GitHub Essentials</h3>
-            <p>Controle de versão e colaboração</p>
-            <span class="cert-year">2019</span>
-          </div>
-          <div class="cert-card glass-card">
-            <div class="cert-icon"><i class="fas fa-database"></i></div>
-            <h3>SQL Server Administration</h3>
-            <p>Gerenciamento de bancos de dados</p>
-            <span class="cert-year">2019</span>
-          </div>
-          <div class="cert-card glass-card">
-            <div class="cert-icon"><i class="fas fa-infinity"></i></div>
-            <h3>DevOps Essentials</h3>
-            <p>CI/CD e práticas ágeis</p>
-            <span class="cert-year">2021</span>
-          </div>
-          <div class="cert-card glass-card">
-            <div class="cert-icon"><i class="fas fa-shield-alt"></i></div>
-            <h3>OWASP Security Principles</h3>
-            <p>Segurança em aplicações web</p>
-            <span class="cert-year">2023</span>
-          </div>
-          <div class="cert-card glass-card">
-            <div class="cert-icon"><i class="fas fa-robot"></i></div>
-            <h3>Automation Anywhere</h3>
-            <p>Desenvolvimento de bots RPA</p>
-            <span class="cert-year">2022</span>
-          </div>
-        </div>
-
-        <div class="skills-grid">
-          <!-- Linguagens -->
-          <div class="skill-category glass-card">
-            <div class="category-header"><i class="fas fa-code"></i>
-              <h3>Linguagens</h3>
-            </div>
-            <div class="skill-list">
-              <div class="skill-item">
-                <div class="skill-info"><i class="fab fa-python"></i><span> Python</span></div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-info"><i class="fab fa-js"></i><span> JavaScript</span></div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-info"><i class="fab fa-html5"></i><span> HTML</span></div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-info"><i class="fab fa-css3-alt"></i><span> CSS</span></div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-info"><i class="fab fa-microsoft"></i><span> C#</span></div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Arquitetura & DevOps -->
-          <div class="skill-category glass-card">
-            <div class="category-header">
-              <i class="fas fa-project-diagram"></i>
-              <h3>Arquitetura & DevOps</h3>
-            </div>
-            <div class="skill-list">
-              <div class="skill-item">
-                <div class="skill-info"><i class="fas fa-sitemap"></i><span> Padrões arquiteturais (MVC,
-                    camadas)</span></div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-info"><i class="fab fa-git-alt"></i><span> Git</span></div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-info"><i class="fab fa-microsoft"></i><span> Azure DevOps</span></div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-info"><i class="fas fa-infinity"></i><span> CI/CD</span></div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Bancos de Dados -->
-          <div class="skill-category glass-card">
-            <div class="category-header">
-              <i class="fas fa-server"></i>
-              <h3>Bancos de Dados</h3>
-            </div>
-            <div class="skill-list">
-              <div class="skill-item">
-                <div class="skill-info"><i class="fas fa-database"></i><span> SQL Server</span></div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-info"><i class="fas fa-database"></i><span> PostgreSQL</span></div>
-              </div>
-            </div>
-          </div>
-
-          <!-- RPA & Automação -->
-          <div class="skill-category glass-card">
-            <div class="category-header">
-              <i class="fas fa-robot"></i>
-              <h3>RPA & Automação</h3>
-            </div>
-            <div class="skill-list">
-              <div class="skill-item">
-                <div class="skill-info"><i class="fas fa-robot"></i><span> UiPath</span></div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-info"><i class="fab fa-microsoft"></i><span> Power Automate</span></div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-info"><i class="fas fa-cog"></i><span> Automation Anywhere</span></div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-info"><i class="fas fa-comments"></i><span> Copilot Studio</span></div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Qualidade & Segurança -->
-          <div class="skill-category glass-card">
-            <div class="category-header">
-              <i class="fas fa-shield-alt"></i>
-              <h3>Qualidade & Segurança</h3>
-            </div>
-            <div class="skill-list">
-              <div class="skill-item">
-                <div class="skill-info"><i class="fas fa-vial"></i><span> Testes unitários</span></div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-info"><i class="fas fa-check-double"></i><span> Boas práticas de código</span></div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-info"><i class="fas fa-shield-alt"></i><span> Princípios OWASP básicos</span></div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Dados & BI -->
-          <div class="skill-category glass-card">
-            <div class="category-header">
-              <i class="fas fa-chart-line"></i>
-              <h3>Dados & BI</h3>
-            </div>
-            <div class="skill-list">
-              <div class="skill-item">
-                <div class="skill-info"><i class="fas fa-chart-bar"></i><span> Power BI</span></div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-info"><i class="fas fa-file-excel"></i><span> Excel (VBA)</span></div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Ferramentas -->
-          <div class="skill-category glass-card">
-            <div class="category-header">
-              <i class="fas fa-tools"></i>
-              <h3>Ferramentas</h3>
-            </div>
-            <div class="skill-list">
-              <div class="skill-item">
-                <div class="skill-info"><i class="fab fa-microsoft"></i><span> Microsoft 365</span></div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-info"><i class="fab fa-microsoft"></i><span> Teams (Bots)</span></div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-info"><i class="fas fa-cogs"></i><span> AssistEdge</span></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
-
-    <!-- ========== PROJETOS EM DESTAQUE (COMENTADO TEMPORARIAMENTE) ========== -->
-    <!--
-    <section
-      id="projects"
-      class="projects"
-    >
-      <div class="container">
-        <div class="section-header">
-          <h2
-            class="section-title"
-            data-i18n="projects.title"
-          >Projetos em Destaque</h2>
-          <p
-            class="section-subtitle"
-            data-i18n="projects.subtitle"
-          >Alguns dos meus trabalhos recentes</p>
+    
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label" data-i18n="skills-label">Minhas Competências</span>
+                <h2 class="section-title" data-i18n="skills-title">Habilidades Técnicas</h2>
+            </div>
+            
+            <div class="skills-grid">
+                <!-- Category 1: Languages -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-code"></i>
+                        <h3 data-i18n="skill-cat-languages">Linguagens</h3>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Python</span>
+                                <span class="skill-percent">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">HTML/CSS</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">C#</span>
+                                <span class="skill-percent">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Category 2: Architecture -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-project-diagram"></i>
+                        <h3 data-i18n="skill-cat-architecture">Arquitetura</h3>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name" data-i18n="skill-patterns">Padrões MVC</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Git</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Azure DevOps</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">CI/CD</span>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Category 3: Databases -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-database"></i>
+                        <h3 data-i18n="skill-cat-databases">Bancos de Dados</h3>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">SQL Server</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">PostgreSQL</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Category 4: RPA & Automation -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-robot"></i>
+                        <h3 data-i18n="skill-cat-rpa">RPA & Automação</h3>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">UiPath</span>
+                                <span class="skill-percent">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Power Automate</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Automation Anywhere</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Copilot Studio</span>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Category 5: Quality -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-check-circle"></i>
+                        <h3 data-i18n="skill-cat-quality">Qualidade</h3>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name" data-i18n="skill-testing">Testes Unitários</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name" data-i18n="skill-practices">Boas Práticas</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">OWASP</span>
+                                <span class="skill-percent">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Category 6: BI & Productivity -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-chart-line"></i>
+                        <h3 data-i18n="skill-cat-bi">BI & Produtividade</h3>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Power BI</span>
+                                <span class="skill-percent">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Excel (VBA)</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Microsoft 365</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="projects-grid">
-          <article
-            class="project-card glass-card"
-            data-i18n="project.1"
-          >
-            <div class="project-image">
-              <img
-                src="assets/project1.svg"
-                alt="Dashboard Vendas"
-              />
-            </div>
-            <div class="project-body">
-              <h3 data-i18n="project.1.title">Dashboard Vendas</h3>
-              <p data-i18n="project.1.desc">
-                Painel em Power BI integrado com Python para ETL e automação
-                de relatórios.
-              </p>
-              <div class="project-tags">
-                <span class="tag">Power BI</span>
-                <span class="tag">Python</span>
-                <span class="tag">ETL</span>
-              </div>
-              <a
-                href="https://github.com/marcelomcd"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn-outline"
-              >
-                <i class="fab fa-github"></i> Ver no GitHub
-              </a>
-            </div>
-          </article>
-
-          <article
-            class="project-card glass-card"
-            data-i18n="project.2"
-          >
-            <div class="project-image">
-              <img
-                src="assets/project2.svg"
-                alt="API Analytics"
-              />
-            </div>
-            <div class="project-body">
-              <h3 data-i18n="project.2.title">API Analytics</h3>
-              <p data-i18n="project.2.desc">
-                API em Python para processamento de dados e integração com
-                dashboards.
-              </p>
-              <div class="project-tags">
-                <span class="tag">Python</span>
-                <span class="tag">FastAPI</span>
-                <span class="tag">REST</span>
-              </div>
-              <a
-                href="https://github.com/marcelomcd"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn-outline"
-              >
-                <i class="fab fa-github"></i> Ver no GitHub
-              </a>
-            </div>
-          </article>
-
-          <article
-            class="project-card glass-card"
-            data-i18n="project.3"
-          >
-            <div class="project-image">
-              <img
-                src="assets/project3.svg"
-                alt="Automação ETL"
-              />
-            </div>
-            <div class="project-body">
-              <h3 data-i18n="project.3.title">Automação ETL</h3>
-              <p data-i18n="project.3.desc">
-                Pipelines de ETL em Python com testes e monitoramento básico.
-              </p>
-              <div class="project-tags">
-                <span class="tag">Python</span>
-                <span class="tag">Pandas</span>
-                <span class="tag">SQL</span>
-              </div>
-              <a
-                href="https://github.com/marcelomcd"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn-outline"
-              >
-                <i class="fab fa-github"></i> Ver no GitHub
-              </a>
-            </div>
-          </article>
-        </div>
-      </div>
     </section>
-    -->
-
-    <!-- CERTIFICAÇÕES (Final) -->
-    <section
-      class="certifications"
-      aria-label="Certificações"
-    >
-      <div class="container">
-        <div class="section-header">
-          <h2
-            class="section-title"
-            data-i18n="certs.title"
-          >Certificações</h2>
-          <p
-            class="section-subtitle"
-            data-i18n="certs.subtitle"
-          >Conquistas profissionais</p>
+    
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label" data-i18n="projects-label">Meu Trabalho</span>
+                <h2 class="section-title" data-i18n="projects-title">Projetos em Destaque</h2>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/project1.svg" alt="Automação Financeira RPA">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category" data-i18n="project1-category">Automação</div>
+                        <h3 class="project-title" data-i18n="project1-title">Automação Financeira RPA</h3>
+                        <p class="project-description" data-i18n="project1-description">
+                            Robô de automação para conciliação bancária e processamento de faturas. Redução de 80% no tempo de processamento.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">UiPath</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">SQL</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/project2.svg" alt="Dashboard Power BI">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category" data-i18n="project2-category">Business Intelligence</div>
+                        <h3 class="project-title" data-i18n="project2-title">Dashboard Power BI Embedded</h3>
+                        <p class="project-description" data-i18n="project2-description">
+                            Dashboard executivo com indicadores de performance em tempo real integrado a aplicações web.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Power BI</span>
+                            <span class="tag">Azure</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/project3.svg" alt="API REST Python">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category" data-i18n="project3-category">Backend</div>
+                        <h3 class="project-title" data-i18n="project3-title">API REST Python + SQL</h3>
+                        <p class="project-description" data-i18n="project3-description">
+                            API RESTful para integração de sistemas legados com arquitetura moderna e documentação Swagger.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">FastAPI</span>
+                            <span class="tag">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/project1.svg" alt="ChatBot BLIP">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category" data-i18n="project4-category">Conversacional</div>
+                        <h3 class="project-title" data-i18n="project4-title">Bot Conversacional BLIP</h3>
+                        <p class="project-description" data-i18n="project4-description">
+                            Chatbot inteligente para atendimento ao cliente com integração WhatsApp e análise de sentimentos.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">BLIP</span>
+                            <span class="tag">NLP</span>
+                            <span class="tag">WhatsApp</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/project2.svg" alt="Pipeline CI/CD">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">DevOps</div>
+                        <h3 class="project-title" data-i18n="project5-title">Pipeline CI/CD Azure</h3>
+                        <p class="project-description" data-i18n="project5-description">
+                            Implementação de pipeline de integração e deploy contínuo com testes automatizados e monitoramento.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Azure DevOps</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">Git</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 6 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/project3.svg" alt="Integração Multi-sistemas">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category" data-i18n="project6-category">Integração</div>
+                        <h3 class="project-title" data-i18n="project6-title">Integração Multi-sistemas</h3>
+                        <p class="project-description" data-i18n="project6-description">
+                            Orquestração de dados entre ERP, CRM e sistemas internos com tratamento de erros e logs centralizados.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">APIs</span>
+                            <span class="tag">RPA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="cert-grid">
-          <div class="cert-card glass-card">
-            <div class="cert-icon"><i class="fas fa-robot"></i></div>
-            <h4>RPA Developer Advanced</h4>
-            <p>UiPath</p>
-            <span class="cert-year">2020</span>
-          </div>
-          <div class="cert-card glass-card">
-            <div class="cert-icon"><i class="fas fa-comments"></i></div>
-            <h4>ChatBot Developer</h4>
-            <p>BLIP</p>
-            <span class="cert-year">2025</span>
-          </div>
-        </div>
-      </div>
     </section>
-
-    <!-- CONTACT SECTION -->
-    <section
-      id="contact"
-      class="contact"
-    >
-      <div class="container">
-        <div class="section-header">
-          <h2
-            class="section-title"
-            data-i18n="contact.title"
-          >Entre em Contato</h2>
-          <p
-            class="section-subtitle"
-            data-i18n="contact.subtitle"
-          >
-            Vamos conversar sobre seu próximo projeto
-          </p>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label" data-i18n="contact-label">Entre em Contato</span>
+                <h2 class="section-title" data-i18n="contact-title">Vamos Conversar?</h2>
+                <p class="section-description" data-i18n="contact-description">
+                    Estou disponível para novos projetos e oportunidades. Entre em contato comigo através dos canais abaixo ou envie uma mensagem!
+                </p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-cards">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h4 class="contact-card-title">Email</h4>
+                            <a href="mailto:marcelomcd@example.com" class="contact-link">marcelomcd@example.com</a>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <h4 class="contact-card-title">LinkedIn</h4>
+                            <a href="https://linkedin.com/in/marcelomcd" target="_blank" class="contact-link">linkedin.com/in/marcelomcd</a>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <h4 class="contact-card-title">GitHub</h4>
+                            <a href="https://github.com/marcelomcd" target="_blank" class="contact-link">github.com/marcelomcd</a>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <h4 class="contact-card-title" data-i18n="contact-location-title">Localização</h4>
+                            <p class="contact-text">Rio de Janeiro, RJ</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-wrapper">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name" data-i18n="form-name">Nome</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" data-i18n="form-email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject" data-i18n="form-subject">Assunto</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" data-i18n="form-message">Mensagem</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <i class="fas fa-paper-plane"></i>
+                            <span data-i18n="form-submit">Enviar Mensagem</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
         </div>
-
-        <div class="contact-grid">
-          <div class="glass-card contact-form-wrapper">
-            <h2>Envie uma mensagem</h2>
-            <form
-              id="contactForm"
-              class="contact-form"
-            >
-              <div class="form-group">
-                <label
-                  for="name"
-                  data-i18n="form.label.name"
-                >Nome</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  required
-                  placeholder="Seu nome completo"
-                />
-              </div>
-
-              <div class="form-group">
-                <label
-                  for="email"
-                  data-i18n="form.label.email"
-                >E-mail</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  required
-                  placeholder="seu@email.com"
-                />
-              </div>
-
-              <div class="form-group">
-                <label
-                  for="message"
-                  data-i18n="form.label.message"
-                >Mensagem</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="5"
-                  required
-                  placeholder="Como posso ajudar?"
-                ></textarea>
-              </div>
-
-              <button
-                type="submit"
-                class="btn btn-primary"
-                data-i18n="form.submit"
-              >
-                <i class="fas fa-paper-plane"></i>
-                Enviar Mensagem
-              </button>
-            </form>
-          </div>
-
-          <div class="glass-card contact-info">
-            <h2>Informações de Contato</h2>
-
-            <div class="contact-item">
-              <i class="fas fa-envelope"></i>
-              <div class="contact-details">
-                <h3>Email</h3>
-                <p>marcelo.macedo.business@gmail.com</p>
-              </div>
-            </div>
-
-            <div class="contact-item">
-              <i class="fab fa-whatsapp"></i>
-              <div class="contact-details">
-                <h3>Whatsapp</h3>
-                <p>+55 (21) 9 7920-8480</p>
-              </div>
-            </div>
-
-            <div class="contact-item">
-              <i class="fab fa-linkedin"></i>
-              <div class="contact-details">
-                <h3>LinkedIn</h3>
-                <p>linkedin.com/in/marcelo-macedo-jr</p>
-              </div>
-            </div>
-
-            <div class="contact-item">
-              <i class="fab fa-github"></i>
-              <div class="contact-details">
-                <h3>GitHub</h3>
-                <p>github.com/marcelomcd</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
-  </main>
-
-
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-brand">
-          <h3><i class="fas fa-code"></i> Marcelo Macedo</h3>
-          <p>Solution Engineer | Automação, Dados & Cloud</p>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">
+                    &copy; 2025 Marcelo Macedo. <span data-i18n="footer-rights">Todos os direitos reservados.</span>
+                </p>
+                <div class="footer-socials">
+                    <a href="https://github.com/marcelomcd" target="_blank" class="social-link" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/marcelomcd" target="_blank" class="social-link" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:marcelomcd@example.com" class="social-link" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://wa.me/5521999999999" target="_blank" class="social-link" title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
         </div>
-
-        <div class="footer-links">
-          <h4>Links Rápidos</h4>
-          <a href="#about">Sobre</a>
-          <a href="#experience">Experiência</a>
-          <a href="#skills">Habilidades</a>
-          <a href="#projects">Projetos</a>
-          <a href="#contact">Contato</a>
-        </div>
-
-        <div class="footer-social">
-          <h4>Redes Sociais</h4>
-          <div class="social-links">
-            <a
-              href="https://github.com/marcelomcd"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub"
-            >
-              <i class="fab fa-github"></i>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/marcelo-macedo-jr/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-            >
-              <i class="fab fa-linkedin"></i>
-            </a>
-            <a
-              href="https://wa.me/5521979208480"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="WhatsApp"
-            >
-              <i class="fab fa-whatsapp"></i>
-            </a>
-            <a
-              href="mailto:marcelo.macedo.business@gmail.com"
-              aria-label="Email"
-            >
-              <i class="fas fa-envelope"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>© 2025 Marcelo Macedo. Todos os direitos reservados.</p>
-        <p>
-          Desenvolvido com <i class="fas fa-heart"></i> e
-          <i class="fas fa-coffee"></i>
-        </p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Scroll to Top Button -->
-  <button
-    id="scrollToTop"
-    class="scroll-to-top"
-    aria-label="Voltar ao topo"
-  >
-    <i class="fas fa-arrow-up"></i>
-  </button>
-
-  <script src="script.js"></script>
+    </footer>
+    
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" class="scroll-top" title="Voltar ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- Scripts -->
+    <script src="script.js"></script>
 </body>
-
 </html>

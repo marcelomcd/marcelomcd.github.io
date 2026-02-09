@@ -1,6 +1,81 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300" role="img" aria-label="Project illustration">
-  <rect width="100%" height="100%" fill="#071018" rx="8"/>
-  <path d="M30 200 Q150 100 270 200 T510 200" fill="none" stroke="#06b6d4" stroke-width="6" stroke-linecap="round" opacity="0.12"/>
-  <rect x="40" y="30" width="180" height="130" rx="6" fill="#06242a" stroke="#0b2b2f"/>
-  <rect x="240" y="40" width="320" height="20" rx="6" fill="#071018" stroke="#0b1a1e"/>
+<svg width="600" height="400" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="600" height="400" fill="#1a202e"/>
+  
+  <!-- Gradient Definitions -->
+  <defs>
+    <linearGradient id="proj3-gradient" x1="0" y1="0" x2="600" y2="400">
+      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#7000ff;stop-opacity:0.8" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Code Window -->
+  <rect x="80" y="60" width="440" height="280" rx="15" fill="#0a0e1a" stroke="url(#proj3-gradient)" stroke-width="3"/>
+  
+  <!-- Window Header -->
+  <rect x="80" y="60" width="440" height="35" rx="15" fill="rgba(0, 212, 255, 0.1)"/>
+  <circle cx="100" cy="77" r="6" fill="#ff5f57"/>
+  <circle cx="120" cy="77" r="6" fill="#ffbd2e"/>
+  <circle cx="140" cy="77" r="6" fill="#28ca42"/>
+  <text x="160" y="82" font-size="12" fill="#ffffff" opacity="0.7">api.py</text>
+  
+  <!-- Code Lines -->
+  <g transform="translate(100, 110)">
+    <!-- Python code simulation -->
+    <text x="0" y="0" font-family="monospace" font-size="14" fill="#ff79c6">from</text>
+    <text x="50" y="0" font-family="monospace" font-size="14" fill="#f1fa8c">fastapi</text>
+    <text x="130" y="0" font-family="monospace" font-size="14" fill="#ff79c6">import</text>
+    <text x="190" y="0" font-family="monospace" font-size="14" fill="#50fa7b">FastAPI</text>
+    
+    <text x="0" y="25" font-family="monospace" font-size="14" fill="#ff79c6">from</text>
+    <text x="50" y="25" font-family="monospace" font-size="14" fill="#f1fa8c">sqlalchemy</text>
+    <text x="150" y="25" font-family="monospace" font-size="14" fill="#ff79c6">import</text>
+    <text x="210" y="25" font-family="monospace" font-size="14" fill="#50fa7b">create_engine</text>
+    
+    <text x="0" y="60" font-family="monospace" font-size="14" fill="#f8f8f2">app</text>
+    <text x="40" y="60" font-family="monospace" font-size="14" fill="#ff79c6">=</text>
+    <text x="60" y="60" font-family="monospace" font-size="14" fill="#50fa7b">FastAPI</text>
+    <text x="130" y="60" font-family="monospace" font-size="14" fill="#f8f8f2">()</text>
+    
+    <text x="0" y="95" font-family="monospace" font-size="14" fill="#8be9fd">@app.get</text>
+    <text x="80" y="95" font-family="monospace" font-size="14" fill="#f8f8f2">(</text>
+    <text x="90" y="95" font-family="monospace" font-size="14" fill="#f1fa8c">"/api/data"</text>
+    <text x="180" y="95" font-family="monospace" font-size="14" fill="#f8f8f2">)</text>
+    
+    <text x="0" y="120" font-family="monospace" font-size="14" fill="#ff79c6">async</text>
+    <text x="55" y="120" font-family="monospace" font-size="14" fill="#ff79c6">def</text>
+    <text x="90" y="120" font-family="monospace" font-size="14" fill="#8be9fd">get_data</text>
+    <text x="160" y="120" font-family="monospace" font-size="14" fill="#f8f8f2">():</text>
+    
+    <text x="20" y="145" font-family="monospace" font-size="14" fill="#ff79c6">return</text>
+    <text x="80" y="145" font-family="monospace" font-size="14" fill="#f8f8f2">{</text>
+    <text x="95" y="145" font-family="monospace" font-size="14" fill="#f1fa8c">"status"</text>
+    <text x="165" y="145" font-family="monospace" font-size="14" fill="#f8f8f2">:</text>
+    <text x="180" y="145" font-family="monospace" font-size="14" fill="#f1fa8c">"ok"</text>
+    <text x="215" y="145" font-family="monospace" font-size="14" fill="#f8f8f2">}</text>
+  </g>
+  
+  <!-- API Endpoints Diagram -->
+  <g transform="translate(100, 260)">
+    <rect x="0" y="0" width="80" height="30" rx="5" fill="#00d4ff" opacity="0.3"/>
+    <text x="40" y="20" font-size="12" font-weight="bold" fill="#00d4ff" text-anchor="middle">GET</text>
+    
+    <rect x="100" y="0" width="80" height="30" rx="5" fill="#7000ff" opacity="0.3"/>
+    <text x="140" y="20" font-size="12" font-weight="bold" fill="#7000ff" text-anchor="middle">POST</text>
+    
+    <rect x="200" y="0" width="80" height="30" rx="5" fill="#ff006e" opacity="0.3"/>
+    <text x="240" y="20" font-size="12" font-weight="bold" fill="#ff006e" text-anchor="middle">PUT</text>
+    
+    <rect x="300" y="0" width="80" height="30" rx="5" fill="#50fa7b" opacity="0.3"/>
+    <text x="340" y="20" font-size="12" font-weight="bold" fill="#50fa7b" text-anchor="middle">DELETE</text>
+  </g>
+  
+  <!-- Decorative Database Icon -->
+  <g transform="translate(450, 120)">
+    <ellipse cx="25" cy="0" rx="25" ry="10" fill="none" stroke="#00d4ff" stroke-width="2" opacity="0.5"/>
+    <line x1="0" y1="0" x2="0" y2="40" stroke="#00d4ff" stroke-width="2" opacity="0.5"/>
+    <line x1="50" y1="0" x2="50" y2="40" stroke="#00d4ff" stroke-width="2" opacity="0.5"/>
+    <ellipse cx="25" cy="40" rx="25" ry="10" fill="none" stroke="#00d4ff" stroke-width="2" opacity="0.5"/>
+  </g>
 </svg>
