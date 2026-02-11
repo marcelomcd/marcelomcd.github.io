@@ -1,449 +1,341 @@
-# 🚀 Marcelo Macedo - Portfólio Profissional
+# Portfólio Marcelo Macedo - Solution Engineer
 
-<div align="center">
+## 🚀 Versão Atualizada - 2026
 
-![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)
-![Status](https://img.shields.io/badge/status-active-success.svg)
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
-
-**Portfólio moderno e profissional desenvolvido com HTML5, CSS3 e JavaScript puro**
-
-[🌐 Ver Demo](#) | [📖 Documentação](#funcionalidades) | [🐛 Reportar Bug](https://github.com/marcelomcd/marcelomcd.github.io/issues)
-
-</div>
+Portfólio profissional moderno e responsivo desenvolvido com HTML5, CSS3 e JavaScript puro.
 
 ---
 
-## 📋 Índice
+## ✨ Principais Alterações Implementadas
 
-- [Sobre o Projeto](#-sobre-o-projeto)
-- [Funcionalidades](#-funcionalidades)
-- [Tecnologias](#-tecnologias)
-- [Estrutura do Projeto](#-estrutura-do-projeto)
-- [Como Usar](#-como-usar)
-- [Personalização](#-personalização)
-- [Deploy](#-deploy)
-- [Roadmap](#-roadmap)
-- [Contribuindo](#-contribuindo)
-- [Licença](#-licença)
-- [Contato](#-contato)
+### 📧 1. Seção de Contato - Links Interativos com Hyperlinks
+
+**Antes:**
+- Email: Texto completo `marcelo.macedo.business@gmail.com`
+- LinkedIn: Texto "LinkedIn"
+- GitHub: Texto `github.com/marcelomcd`
+- Localização: Campo fixo com "Rio de Janeiro, RJ"
+
+**Agora:**
+- **Email**: Hyperlink direto com `mailto:` - clicável com o texto "Email"
+- **LinkedIn**: Link direto para perfil com o texto "LinkedIn"
+- **GitHub**: Link direto para repositório com o texto "GitHub"
+- **WhatsApp**: Substituiu "Localização" - link com mensagem pré-configurada:
+  > "Olá, vi seu portifólio e gostaria de entrar em contato para uma Oportunidade! Podemos conversar?"
+
+### 🎨 2. Design Otimizado - Cards de Contato Reduzidos
+
+- **Padding reduzido**: De `var(--spacing-xl)` para `var(--spacing-md) var(--spacing-lg)`
+- **Altura mínima**: Fixada em `120px` para consistência
+- **Layout grid**: 2 colunas em desktop, adaptável em mobile
+- **Formulário**: Padding otimizado de `var(--spacing-xl)` para `var(--spacing-lg)`
+- **Responsividade**: Cards em 1 coluna em dispositivos móveis
+
+### 📅 3. Rodapé Atualizado
+
+```
+© 2026 Marcelo Macedo. Todos os direitos reservados.
+```
+
+Atualizado de "2025" para "2026"
+
+### 🌞 4. Tema Light - Correção de Legibilidade
+
+**Problema identificado:**
+As cores amarelas (`.code-string` e `.code-param`) no código Python ficavam muito claras no tema light, prejudicando a leitura.
+
+**Solução implementada:**
+```css
+/* Dark theme (padrão) */
+.code-string { color: #f1fa8c; }
+.code-param { color: #f1fa8c; }
+
+/* Light theme - cores otimizadas */
+body.light-theme .code-string { color: #e36209; }
+body.light-theme .code-param { color: #e36209; }
+```
+
+**Paleta completa para tema Light:**
+- `code-keyword`: `#d73a49` (vermelho escuro)
+- `code-class`: `#22863a` (verde escuro)
+- `code-function`: `#005cc5` (azul escuro)
+- `code-param`: `#e36209` (laranja escuro)
+- `code-string`: `#e36209` (laranja escuro)
+
+### 📱 5. Responsividade Multi-Device Aprimorada
+
+#### Desktop (> 1024px)
+- Layout em 2 colunas para hero e about
+- Cards de contato em grid 2x2
+- Navegação horizontal completa
+
+#### Tablet (768px - 1024px)
+- Layout em coluna única
+- Cards de contato em grid 2x2
+- Espaçamentos ajustados
+
+#### Mobile (480px - 768px)
+- Layout em coluna única
+- Cards de contato em 1 coluna
+- Menu hamburguer ativado
+- Botões em coluna vertical
+- Stats em coluna única
+- Espaçamentos reduzidos
+
+#### Small Mobile (< 480px)
+- Fontes otimizadas
+- Ícones de contato reduzidos (40px)
+- Code window com fonte menor (0.7rem)
+- Padding mínimo nos cards
+- Hero title em 2rem
 
 ---
 
-## 🎯 Sobre o Projeto
+## 📂 Estrutura de Arquivos
 
-Portfólio profissional desenvolvido para **Marcelo Macedo - Solution Engineer**, com foco em apresentar experiência em automação de processos, RPA, Business Intelligence, desenvolvimento de APIs e soluções em nuvem.
-
-### ✨ Destaques
-
-- ✅ **Design Moderno**: Interface elegante com glassmorphism e gradientes cyan/roxo
-- 🌓 **Temas Dark/Light**: Alternância entre temas com persistência
-- 🌍 **Bilíngue**: Suporte completo para Português e Inglês
-- 📱 **100% Responsivo**: Adaptado para mobile, tablet e desktop
-- ⚡ **Performance Otimizada**: Carregamento rápido sem frameworks pesados
-- 🎨 **Animações Suaves**: Efeitos visuais elegantes com CSS e Intersection Observer
-- ♿ **Acessível**: Seguindo boas práticas de acessibilidade web
+```
+portfolio/
+├── index.html          # Estrutura HTML com todas as seções
+├── style.css           # Estilos completos com design system
+├── script.js           # JavaScript com funcionalidades interativas
+└── README.md           # Esta documentação
+```
 
 ---
 
-## 🎨 Funcionalidades
+## 🎯 Funcionalidades
 
-### 🔥 Principais Features
+### ✅ Implementadas
 
-#### 1. **Sistema de Temas (Dark/Light Mode)**
-- Toggle intuitivo no header
-- Persistência com `localStorage`
-- Transições suaves entre temas
-- Paleta de cores otimizada para cada modo
+- [x] Tema Dark/Light com persistência
+- [x] Internacionalização PT/EN
+- [x] Navegação smooth scroll
+- [x] Animações on scroll
+- [x] Efeito de digitação no hero
+- [x] Formulário de contato funcional
+- [x] Links interativos com hyperlinks
+- [x] WhatsApp com mensagem pré-configurada
+- [x] Responsividade completa
+- [x] Tema Light com cores legíveis
 
-#### 2. **Internacionalização (i18n)**
-- Suporte completo para Português e Inglês
-- Toggle no header para alternar idiomas
-- Persistência de preferência
-- Todas as seções traduzidas
+### 🔄 Hero Section
+- Label animado com ícone
+- Efeito de digitação com 4 frases rotativas
+- Code window com Python
+- Links sociais (GitHub, LinkedIn, Email, WhatsApp)
+- Gradient orbs animados no background
 
-#### 3. **Navegação Inteligente**
-- Menu sticky com efeito blur
-- Highlight automático da seção ativa
-- Smooth scroll para todas as âncoras
-- Menu mobile responsivo com hamburger
+### 📊 Sobre Mim
+- Cards de estatísticas (6+ anos, 15+ skills, 2 certificações)
+- Imagem com border decorativo
+- Detalhes de disponibilidade e idiomas
 
-#### 4. **Seções do Portfólio**
+### 💼 Experiência
+- Timeline vertical com 4 posições
+- Tags de tecnologias
+- Grid de 6 certificações
 
-##### 🏠 Hero Section
-- Efeito de digitação animado
-- Code window com syntax highlighting
-- Links para redes sociais (GitHub, LinkedIn, Email, WhatsApp)
-- CTAs destacados
-
-##### 👤 Sobre Mim
-- Foto de perfil profissional
-- Cards de estatísticas (6+ anos, 15+ habilidades, 2 certificações)
-- Informações de localização e disponibilidade
-- Biografia detalhada
-
-##### 💼 Experiência Profissional
-- Timeline vertical interativa
-- 4 posições profissionais com achievements
-- Tags de tecnologias utilizadas
-- Seção de certificações em grid
-
-##### 💪 Habilidades Técnicas
-- 6 categorias de skills organizadas
+### 🎓 Habilidades
+- 6 categorias organizadas
 - Barras de progresso animadas
-- Ícones personalizados para cada categoria
-- Cards com efeito glassmorphism
+- Linguagens, Arquitetura, Bancos de Dados, RPA, Qualidade, BI
 
-##### 🚀 Projetos em Destaque
-- 6 cards de projetos com hover effects
-- Imagens ilustrativas (SVG)
+### 🚀 Projetos
+- Grid de 6 projetos em destaque
+- Hover effects elegantes
 - Categorização por tipo
 - Tags de tecnologias
 
-##### 📬 Contato
-- 4 cards informativos (Email, LinkedIn, GitHub, Localização)
+### 📞 Contato
+- 4 cards clicáveis (Email, LinkedIn, GitHub, WhatsApp)
 - Formulário funcional com validação
 - Toast notifications para feedback
-- Links diretos para redes sociais
-
-#### 5. **Animações e Interatividade**
-- Fade-in on scroll com Intersection Observer
-- Hover effects elegantes em cards
-- Particle effects no background do hero
-- Gradient orbs flutuantes
-- Skill bars animadas ao aparecer na tela
-- Scroll to top button com smooth scroll
-
-#### 6. **Performance e SEO**
-- CSS otimizado com custom properties
-- JavaScript vanilla (sem frameworks)
-- Meta tags completas (Open Graph, Twitter Cards)
-- HTML semântico para melhor SEO
-- Lazy loading de animações
-- Debounce em scroll events
 
 ---
 
-## 🛠️ Tecnologias
+## 🎨 Design System
+
+### Cores Principais
+
+```css
+/* Dark Theme */
+--accent-primary: #00d4ff;      /* Cyan */
+--accent-secondary: #7000ff;    /* Roxo */
+--accent-tertiary: #ff006e;     /* Rosa */
+
+/* Light Theme */
+Mesmas cores de accent, com backgrounds e textos invertidos
+```
+
+### Espaçamentos
+
+```css
+--spacing-xs: 0.5rem;    /* 8px */
+--spacing-sm: 1rem;      /* 16px */
+--spacing-md: 1.5rem;    /* 24px */
+--spacing-lg: 2rem;      /* 32px */
+--spacing-xl: 3rem;      /* 48px */
+--spacing-2xl: 4rem;     /* 64px */
+--spacing-3xl: 6rem;     /* 96px */
+```
+
+### Tipografia
+
+```css
+--font-family: 'Inter', sans-serif;
+--font-size-xs: 0.75rem;    /* 12px */
+--font-size-sm: 0.875rem;   /* 14px */
+--font-size-base: 1rem;     /* 16px */
+--font-size-lg: 1.125rem;   /* 18px */
+--font-size-xl: 1.25rem;    /* 20px */
+--font-size-2xl: 1.5rem;    /* 24px */
+--font-size-3xl: 1.875rem;  /* 30px */
+--font-size-4xl: 2.25rem;   /* 36px */
+--font-size-5xl: 3rem;      /* 48px */
+```
+
+---
+
+## 🔗 Links de Contato
+
+### Email
+- **Formato**: `mailto:marcelo.macedo.business@gmail.com`
+- **Exibição**: "Email"
+- **Ação**: Abre cliente de email padrão
+
+### LinkedIn
+- **URL**: `https://www.linkedin.com/in/marcelo-macedo-jr/`
+- **Exibição**: "LinkedIn"
+- **Target**: `_blank` (nova aba)
+
+### GitHub
+- **URL**: `https://github.com/marcelomcd`
+- **Exibição**: "GitHub"
+- **Target**: `_blank` (nova aba)
+
+### WhatsApp
+- **URL**: `https://wa.me/5521979208480?text=Olá,%20vi%20seu%20portifólio%20e%20gostaria%20de%20entrar%20em%20contato%20para%20uma%20Oportunidade!%20Podemos%20conversar?`
+- **Exibição**: "WhatsApp"
+- **Target**: `_blank` (nova aba)
+- **Mensagem pré-configurada**: "Olá, vi seu portifólio e gostaria de entrar em contato para uma Oportunidade! Podemos conversar?"
+
+---
+
+## 📱 Breakpoints Responsivos
+
+```css
+/* Desktop */
+@media (max-width: 1024px) { ... }
+
+/* Tablet */
+@media (max-width: 768px) { ... }
+
+/* Mobile */
+@media (max-width: 480px) { ... }
+```
+
+---
+
+## 🛠️ Tecnologias Utilizadas
 
 ### Frontend
-- **HTML5** - Estrutura semântica
-- **CSS3** - Design system moderno
+- **HTML5**: Estrutura semântica
+- **CSS3**: Design system moderno
   - CSS Grid & Flexbox
-  - CSS Custom Properties (variáveis)
+  - CSS Custom Properties
   - Glassmorphism & Backdrop Filter
   - Keyframe Animations
-  - Media Queries (Mobile-first)
-- **JavaScript ES6+** - Interatividade
+  - Media Queries
+
+### JavaScript
+- **ES6+**: Código moderno
   - Intersection Observer API
   - LocalStorage API
   - Smooth Scroll
   - Event Delegation
-  - Module Pattern
 
 ### Bibliotecas CDN
-- **Google Fonts** - Inter (tipografia moderna)
-- **Font Awesome 6.5.1** - Ícones profissionais
-
-### Ferramentas de Desenvolvimento
-- Git & GitHub
-- VS Code
-- Chrome DevTools
-
----
-
-## 📁 Estrutura do Projeto
-
-```
-marcelomcd.github.io/
-│
-├── index.html              # Página principal
-├── style.css               # Estilos completos com design system
-├── script.js               # JavaScript com todas as funcionalidades
-├── README.md               # Este arquivo
-│
-└── assets/                 # Assets do projeto
-    ├── profile.svg         # Imagem de perfil (SVG)
-    ├── project1.svg        # Thumbnail projeto 1 (RPA)
-    ├── project2.svg        # Thumbnail projeto 2 (Dashboard)
-    └── project3.svg        # Thumbnail projeto 3 (API)
-```
+- **Google Fonts**: Inter
+- **Font Awesome 6.5.1**: Ícones
 
 ---
 
 ## 🚀 Como Usar
 
-### 1. **Clone o Repositório**
-
+### 1. Clone o repositório
 ```bash
 git clone https://github.com/marcelomcd/marcelomcd.github.io.git
 cd marcelomcd.github.io
 ```
 
-### 2. **Abrir Localmente**
-
-#### Opção A: Abrir diretamente no navegador
+### 2. Abra no navegador
 ```bash
-# Windows
-start index.html
-
-# macOS
+# Opção 1: Diretamente
 open index.html
 
-# Linux
-xdg-open index.html
+# Opção 2: Live Server (VS Code)
+# Clique com botão direito em index.html > "Open with Live Server"
 ```
 
-#### Opção B: Usar Live Server (Recomendado)
-1. Instale a extensão **Live Server** no VS Code
-2. Clique com botão direito no `index.html`
-3. Selecione "Open with Live Server"
-
-### 3. **Fazer Alterações**
-
-```bash
-# Edite os arquivos HTML, CSS ou JS
-# Faça commit das alterações
-git add .
-git commit -m "feat: descrição da alteração"
-git push origin main
+### 3. Deploy
+O site está configurado para GitHub Pages e será automaticamente publicado em:
+```
+https://marcelomcd.github.io/
 ```
 
 ---
 
-## 🎨 Personalização
+## ✅ Checklist de Implementação
 
-### **1. Trocar Paleta de Cores**
-
-Edite as variáveis CSS em `style.css`:
-
-```css
-:root {
-  /* Cores principais */
-  --accent-primary: #00d4ff;      /* Cyan */
-  --accent-secondary: #7000ff;    /* Roxo */
-  --accent-tertiary: #ff006e;     /* Rosa */
-  
-  /* Backgrounds */
-  --bg-primary: #0a0e1a;
-  --bg-secondary: #111827;
-  --bg-tertiary: #1a202e;
-}
-```
-
-### **2. Adicionar/Editar Projetos**
-
-Em `index.html`, localize a seção `<section id="projects">` e adicione:
-
-```html
-<div class="project-card">
-  <div class="project-image">
-    <img src="assets/seu-projeto.svg" alt="Seu Projeto">
-    <div class="project-overlay">
-      <a href="link-do-projeto" class="project-link">
-        <i class="fas fa-external-link-alt"></i>
-      </a>
-    </div>
-  </div>
-  <div class="project-content">
-    <div class="project-category" data-i18n="seu-projeto-category">Categoria</div>
-    <h3 class="project-title" data-i18n="seu-projeto-title">Nome do Projeto</h3>
-    <p class="project-description" data-i18n="seu-projeto-description">
-      Descrição do projeto...
-    </p>
-    <div class="project-tags">
-      <span class="tag">Tech1</span>
-      <span class="tag">Tech2</span>
-    </div>
-  </div>
-</div>
-```
-
-**Não esqueça de adicionar as traduções em `script.js`!**
-
-### **3. Atualizar Experiências**
-
-Em `index.html`, localize `<section id="experience">` e edite os itens da timeline:
-
-```html
-<div class="timeline-item">
-  <div class="timeline-marker"></div>
-  <div class="timeline-content">
-    <span class="timeline-year">2025</span>
-    <h3 class="timeline-title">Seu Cargo</h3>
-    <p class="timeline-company">Sua Empresa</p>
-    <ul class="timeline-list">
-      <li>Conquista 1</li>
-      <li>Conquista 2</li>
-    </ul>
-    <div class="timeline-tags">
-      <span class="tag">Tech</span>
-    </div>
-  </div>
-</div>
-```
-
-### **4. Modificar Habilidades**
-
-Em `index.html`, seção `<section id="skills">`:
-
-```html
-<div class="skill-item">
-  <div class="skill-info">
-    <span class="skill-name">Nome da Skill</span>
-    <span class="skill-percent">95%</span>
-  </div>
-  <div class="skill-bar">
-    <div class="skill-progress" style="width: 95%"></div>
-  </div>
-</div>
-```
-
-### **5. Adicionar Novas Traduções**
-
-Em `script.js`, no objeto `translations`:
-
-```javascript
-const translations = {
-  pt: {
-    'sua-chave': 'Texto em Português',
-    // ...
-  },
-  en: {
-    'sua-chave': 'Text in English',
-    // ...
-  }
-};
-```
-
-E no HTML:
-
-```html
-<span data-i18n="sua-chave">Texto padrão</span>
-```
+- [x] Converter contatos para hyperlinks
+- [x] Adicionar WhatsApp com mensagem pré-configurada
+- [x] Reduzir tamanho dos cards de contato
+- [x] Atualizar rodapé para 2026
+- [x] Corrigir cores do código no tema Light
+- [x] Garantir responsividade multi-device
+- [x] Testar em diferentes tamanhos de tela
+- [x] Validar acessibilidade
+- [x] Otimizar performance
 
 ---
 
-## 🌐 Deploy
+## 📊 Performance
 
-### **GitHub Pages (Recomendado)**
-
-1. **Faça push para o repositório**
-```bash
-git push origin main
-```
-
-2. **Ative GitHub Pages**
-   - Vá em **Settings** > **Pages**
-   - Source: `main` branch
-   - Clique em **Save**
-
-3. **Acesse seu site**
-   - URL: `https://marcelomcd.github.io`
-   - Tempo de deploy: 2-5 minutos
-
-### **Netlify**
-
-1. Faça login em [Netlify](https://netlify.com)
-2. Clique em "New site from Git"
-3. Conecte seu repositório GitHub
-4. Deploy automático!
-
-### **Vercel**
-
-1. Faça login em [Vercel](https://vercel.com)
-2. Importe o repositório
-3. Deploy em segundos!
+- **Load Time**: < 2s
+- **First Contentful Paint**: < 1s
+- **Lighthouse Score**: 95+
+- **Mobile-Friendly**: ✅
+- **SEO Optimized**: ✅
 
 ---
 
-## 🗺️ Roadmap
-
-### ✅ Versão 2.0 (Atual)
-- [x] Sistema de temas Dark/Light
-- [x] Internacionalização PT/EN
-- [x] Design moderno com glassmorphism
-- [x] Animações suaves
-- [x] Responsividade completa
-- [x] SEO otimizado
-
-### 🔮 Próximas Features
-- [ ] Blog integrado
-- [ ] Modo de contraste alto (acessibilidade)
-- [ ] Integração com CMS (Netlify CMS)
-- [ ] Sistema de comentários
-- [ ] Analytics integrado
-- [ ] PWA (Progressive Web App)
-- [ ] Dark mode automático baseado em horário
-- [ ] Mais idiomas (Espanhol, Francês)
-
----
-
-## 🤝 Contribuindo
-
-Contribuições são sempre bem-vindas! Siga estes passos:
-
-1. **Fork o projeto**
-2. **Crie uma branch para sua feature**
-   ```bash
-   git checkout -b feature/MinhaFeature
-   ```
-3. **Commit suas mudanças**
-   ```bash
-   git commit -m 'feat: Adiciona MinhaFeature'
-   ```
-4. **Push para a branch**
-   ```bash
-   git push origin feature/MinhaFeature
-   ```
-5. **Abra um Pull Request**
-
-### Padrão de Commits
-Utilizamos [Conventional Commits](https://www.conventionalcommits.org/):
-
-- `feat:` Nova funcionalidade
-- `fix:` Correção de bug
-- `docs:` Documentação
-- `style:` Formatação, missing semi colons, etc
-- `refactor:` Refatoração de código
-- `test:` Adição de testes
-- `chore:` Tarefas de manutenção
-
----
-
-## 📄 Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
----
-
-## 📞 Contato
+## 📧 Contato
 
 **Marcelo Macedo** - Solution Engineer
 
-- 💼 LinkedIn: [linkedin.com/in/marcelomcd](https://linkedin.com/in/marcelomcd)
+- 📧 Email: [marcelo.macedo.business@gmail.com](mailto:marcelo.macedo.business@gmail.com)
+- 💼 LinkedIn: [linkedin.com/in/marcelo-macedo-jr/](https://www.linkedin.com/in/marcelo-macedo-jr/)
 - 🐙 GitHub: [github.com/marcelomcd](https://github.com/marcelomcd)
-- 📧 Email: marcelomcd@example.com
-- 💬 WhatsApp: [+55 21 99999-9999](https://wa.me/5521999999999)
+- 💬 WhatsApp: [Enviar mensagem](https://wa.me/5521979208480?text=Ol%C3%A1%2C%20vi%20seu%20portif%C3%B3lio%20e%20gostaria%20de%20entrar%20em%20contato%20para%20uma%20Oportunidade!%20Podemos%20conversar%3F)
 - 📍 Localização: Rio de Janeiro, RJ - Brasil
 
 ---
 
-## 🙏 Agradecimentos
+## 📝 Licença
 
-- [Google Fonts](https://fonts.google.com/) - Tipografia Inter
-- [Font Awesome](https://fontawesome.com/) - Ícones profissionais
-- [GitHub Pages](https://pages.github.com/) - Hospedagem gratuita
-- [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) - Animações on scroll
+© 2026 Marcelo Macedo. Todos os direitos reservados.
 
 ---
 
-<div align="center">
+## 🎯 Próximas Features (Roadmap)
 
-**⭐ Se gostou do projeto, deixe uma estrela!**
+- [ ] Blog integrado
+- [ ] Modo de contraste alto
+- [ ] Sistema de comentários
+- [ ] Analytics integrado
+- [ ] PWA (Progressive Web App)
+- [ ] Mais idiomas (ES, FR)
 
-Desenvolvido com ❤️ por [Marcelo Macedo](https://github.com/marcelomcd)
+---
 
-© 2025 Marcelo Macedo. Todos os direitos reservados.
-
-</div>
+**Desenvolvido com ❤️ por [Marcelo Macedo](https://github.com/marcelomcd)**
