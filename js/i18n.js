@@ -79,19 +79,19 @@ const translations = {
     // Timeline
     timeline: {
       2024: {
-        title: 'Solution Engineer - Stefanini',
+        title: 'Solution Engineer - Quali IT',
         description: 'Liderança técnica em soluções de automação e integrações backend/frontend'
       },
       2023: {
-        title: 'RPA Developer - Cogna Educação',
-        description: 'Desenvolvimento de scripts e APIs em Python com integração a bancos relacionais'
+        title: 'RPA Developer - Operador Nacional do Sistema Elétrico (ONS)',
+        description: 'Desenvolvimento e manutenção de automações RPA para processos do setor elétrico'
       },
       2022: {
-        title: 'RPA Developer - BIP',
+        title: 'RPA Developer - Tata Consultancy Services (TCS)',
         description: 'Criação e suporte a soluções RPA utilizando UiPath e Automation Anywhere'
       },
       2019: {
-        title: 'RPA Developer Junior - Accenture',
+        title: 'RPA Developer Junior - Infosys',
         description: 'Criação e suporte a soluções RPA com foco em eficiência operacional'
       }
     },
@@ -101,29 +101,33 @@ const translations = {
       tag: 'Minha trajetória',
       title: 'Experiência Profissional',
       items: {
-        stefanini: {
+        qualiit: {
           title: 'Solution Engineer',
+          company: 'Quali IT',
           item1: 'Liderança técnica em soluções de automação e integrações backend/frontend',
           item2: 'Aplicação de padrões arquiteturais (camadas, modularização e APIs)',
           item3: 'Práticas de DevOps e versionamento de código com Azure DevOps',
           item4: 'Desenvolvimento de automações integradas a bancos relacionais'
         },
-        cogna: {
+        ons: {
           title: 'RPA Developer',
-          item1: 'Desenvolvimento de scripts e APIs em Python com integração a bancos relacionais',
-          item2: 'Criação de soluções com Power Automate e RPA',
-          item3: 'Participação em rotinas de deploy contínuo (CI/CD) e versionamento com Git',
-          item4: 'Implementação de boas práticas de código limpo e testes unitários'
+          company: 'ONS',
+          item1: 'Desenvolvimento e manutenção de automações RPA para processos do setor elétrico',
+          item2: 'Integração de sistemas e dados com UiPath e Python',
+          item3: 'Participação em projetos de automação de processos críticos',
+          item4: ''
         },
-        bip: {
+        tcs: {
           title: 'RPA Developer',
+          company: 'TCS',
           item1: 'Criação e suporte a soluções RPA utilizando UiPath e Automation Anywhere',
           item2: 'Desenvolvimento de scripts em Python e .NET (C#)',
           item3: 'Implementação de dashboards para monitoramento de bots',
           item4: 'Participação em projetos de modernização de sistemas legados'
         },
-        accenture: {
+        infosys: {
           title: 'RPA Developer Junior',
+          company: 'Infosys',
           item1: 'Criação e suporte a soluções RPA com UiPath e Automation Anywhere',
           item2: 'Foco na eficiência operacional e suporte a clientes',
           item3: 'Integração de sistemas via API'
@@ -227,17 +231,11 @@ const translations = {
         subject: 'Assunto',
         message: 'Mensagem',
         submit: 'Enviar Mensagem',
-        name: {
-          placeholder: 'Seu nome'
-        },
-        email: {
-          placeholder: 'seu@email.com'
-        },
-        subject: {
-          placeholder: 'Assunto da mensagem'
-        },
-        message: {
-          placeholder: 'Escreva sua mensagem aqui...'
+        placeholders: {
+          name: 'Seu nome',
+          email: 'seu@email.com',
+          subject: 'Assunto da mensagem',
+          message: 'Escreva sua mensagem aqui...'
         }
       }
     },
@@ -327,19 +325,19 @@ const translations = {
     // Timeline
     timeline: {
       2024: {
-        title: 'Solution Engineer - Stefanini',
+        title: 'Solution Engineer - Quali IT',
         description: 'Technical leadership in automation solutions and backend/frontend integrations'
       },
       2023: {
-        title: 'RPA Developer - Cogna Educação',
-        description: 'Development of scripts and APIs in Python with integration to relational databases'
+        title: 'RPA Developer - ONS (National Electric System Operator)',
+        description: 'Development and maintenance of RPA automations for the electric sector'
       },
       2022: {
-        title: 'RPA Developer - BIP',
+        title: 'RPA Developer - Tata Consultancy Services (TCS)',
         description: 'Creation and support of RPA solutions using UiPath and Automation Anywhere'
       },
       2019: {
-        title: 'RPA Developer Junior - Accenture',
+        title: 'RPA Developer Junior - Infosys',
         description: 'Creation and support of RPA solutions focused on operational efficiency'
       }
     },
@@ -349,29 +347,33 @@ const translations = {
       tag: 'My journey',
       title: 'Professional Experience',
       items: {
-        stefanini: {
+        qualiit: {
           title: 'Solution Engineer',
+          company: 'Quali IT',
           item1: 'Technical leadership in automation solutions and backend/frontend integrations',
           item2: 'Application of architectural patterns (layers, modularization and APIs)',
           item3: 'DevOps practices and code versioning with Azure DevOps',
           item4: 'Development of automations integrated with relational databases'
         },
-        cogna: {
+        ons: {
           title: 'RPA Developer',
-          item1: 'Development of scripts and APIs in Python with integration to relational databases',
-          item2: 'Creation of solutions with Power Automate and RPA',
-          item3: 'Participation in continuous deployment (CI/CD) routines and versioning with Git',
-          item4: 'Implementation of clean code best practices and unit tests'
+          company: 'ONS',
+          item1: 'Development and maintenance of RPA automations for the electric sector',
+          item2: 'System and data integration with UiPath and Python',
+          item3: 'Participation in critical process automation projects',
+          item4: ''
         },
-        bip: {
+        tcs: {
           title: 'RPA Developer',
+          company: 'TCS',
           item1: 'Creation and support of RPA solutions using UiPath and Automation Anywhere',
           item2: 'Development of scripts in Python and .NET (C#)',
           item3: 'Implementation of dashboards for bot monitoring',
           item4: 'Participation in legacy system modernization projects'
         },
-        accenture: {
+        infosys: {
           title: 'RPA Developer Junior',
+          company: 'Infosys',
           item1: 'Creation and support of RPA solutions with UiPath and Automation Anywhere',
           item2: 'Focus on operational efficiency and customer support',
           item3: 'System integration via API'
@@ -475,17 +477,11 @@ const translations = {
         subject: 'Subject',
         message: 'Message',
         submit: 'Send Message',
-        name: {
-          placeholder: 'Your name'
-        },
-        email: {
-          placeholder: 'your@email.com'
-        },
-        subject: {
-          placeholder: 'Message subject'
-        },
-        message: {
-          placeholder: 'Write your message here...'
+        placeholders: {
+          name: 'Your name',
+          email: 'your@email.com',
+          subject: 'Message subject',
+          message: 'Write your message here...'
         }
       }
     },

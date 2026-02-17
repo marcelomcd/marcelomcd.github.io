@@ -92,25 +92,25 @@ Ele também tem certificações em:
       question: ['experiência', 'trabalhou', 'carreira', 'trajetória', 'histórico'],
       answer: `O Marcelo tem mais de 6 anos de experiência em tecnologia:
 
-**2024 - Stefanini** (Atual) 🏢
+**2024 - Quali IT** (Atual) 🏢
 Solution Engineer
 - Liderança técnica em automação e integrações
 - Padrões arquiteturais e APIs
 - DevOps com Azure DevOps
 
-**2023 - Cogna Educação** 📚
+**2023 - ONS (Operador Nacional do Sistema Elétrico)** 📚
 RPA Developer
 - Scripts e APIs em Python
 - Power Automate e RPA
 - CI/CD e Git
 
-**2022 - BIP** 💼
+**2022 - TCS (Tata Consultancy Services)** 💼
 RPA Developer
 - UiPath e Automation Anywhere
 - Python e C#
 - Dashboards de monitoramento
 
-**2019 - Accenture** 🌐
+**2019 - Infosys** 🌐
 RPA Developer Junior
 - Início da carreira em RPA
 - UiPath e Automation Anywhere
@@ -147,8 +147,8 @@ Principais conquistas:
 - DevOps
 
 Para entrar em contato:
-📧 Email: marcelo.macedo@example.com
-💼 LinkedIn: linkedin.com/in/marcelomacedo
+📧 Email: marcelo.macedo.business@gmail.com
+💼 LinkedIn: linkedin.com/in/marcelo-macedo-jr
 🐙 GitHub: github.com/marcelomcd`
     },
     
@@ -157,10 +157,10 @@ Para entrar em contato:
       answer: `Você pode entrar em contato com o Marcelo através de:
 
 **Email:** 📧
-marcelo.macedo@example.com
+marcelo.macedo.business@gmail.com
 
 **LinkedIn:** 💼
-linkedin.com/in/marcelomacedo
+linkedin.com/in/marcelo-macedo-jr
 
 **GitHub:** 🐙
 github.com/marcelomcd
@@ -413,19 +413,19 @@ Solution Engineer
 - Architectural patterns and APIs
 - DevOps with Azure DevOps
 
-**2023 - Cogna Educação** 📚
+**2023 - ONS (Operador Nacional do Sistema Elétrico)** 📚
 RPA Developer
 - Scripts and APIs in Python
 - Power Automate and RPA
 - CI/CD and Git
 
-**2022 - BIP** 💼
+**2022 - TCS (Tata Consultancy Services)** 💼
 RPA Developer
 - UiPath and Automation Anywhere
 - Python and C#
 - Monitoring dashboards
 
-**2019 - Accenture** 🌐
+**2019 - Infosys** 🌐
 RPA Developer Junior
 - Career start in RPA
 - UiPath and Automation Anywhere
@@ -462,8 +462,8 @@ Main achievements:
 - DevOps
 
 To get in touch:
-📧 Email: marcelo.macedo@example.com
-💼 LinkedIn: linkedin.com/in/marcelomacedo
+📧 Email: marcelo.macedo.business@gmail.com
+💼 LinkedIn: linkedin.com/in/marcelo-macedo-jr
 🐙 GitHub: github.com/marcelomcd`
     },
     
@@ -472,10 +472,10 @@ To get in touch:
       answer: `You can contact Marcelo through:
 
 **Email:** 📧
-marcelo.macedo@example.com
+marcelo.macedo.business@gmail.com
 
 **LinkedIn:** 💼
-linkedin.com/in/marcelomacedo
+linkedin.com/in/marcelo-macedo-jr
 
 **GitHub:** 🐙
 github.com/marcelomcd
