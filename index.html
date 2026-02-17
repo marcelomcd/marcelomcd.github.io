@@ -164,26 +164,8 @@
                         </div>
                     </div>
                     
-                    <!-- Stats Card (moved to horizontal position) -->
-                    <div class="bento-card bento-card--stats glass-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="stats__grid">
-                            <div class="stat-item">
-                                <div class="stat-number" data-count="6">0</div>
-                                <div class="stat-label" data-i18n="hero.stats.years">Anos de Experiência</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-number" data-count="50">0</div>
-                                <div class="stat-label" data-i18n="hero.stats.automations">Automações Criadas</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-number" data-count="15">0</div>
-                                <div class="stat-label" data-i18n="hero.stats.companies">Empresas Atendidas</div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Code Card (improved layout) -->
-                    <div class="bento-card bento-card--code glass-card" data-aos="fade-up" data-aos-delay="300">
+                    <!-- Code Card (logo abaixo do card principal, ao lado do stats) -->
+                    <div class="bento-card bento-card--code glass-card" data-aos="fade-up" data-aos-delay="200">
                         <div class="code-snippet">
                             <div class="code-header">
                                 <div class="code-dots">
@@ -204,6 +186,24 @@
     
     <span class="keyword">def</span> <span class="function">build_solutions</span>(self):
         <span class="keyword">return</span> <span class="string">"Automação Inteligente"</span></code></pre>
+                        </div>
+                    </div>
+                    
+                    <!-- Stats Card (ao lado do card do código) -->
+                    <div class="bento-card bento-card--stats glass-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="stats__grid">
+                            <div class="stat-item">
+                                <div class="stat-number" data-count="6">0</div>
+                                <div class="stat-label" data-i18n="hero.stats.years">Anos de Experiência</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number" data-count="50">0</div>
+                                <div class="stat-label" data-i18n="hero.stats.automations">Automações Criadas</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number" data-count="15">0</div>
+                                <div class="stat-label" data-i18n="hero.stats.companies">Empresas Atendidas</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -835,16 +835,24 @@
                     <h3 class="companies__title" data-i18n="recognition.companies.title">Empresas Onde Trabalhei</h3>
                     <div class="companies__grid glass-card">
                         <div class="company__logo">
-                            <span class="company__name">Quali IT</span>
+                            <a href="https://qualiit.com.br/" target="_blank" rel="noopener noreferrer" aria-label="Quali IT - site oficial">
+                                <img src="assets/quali-it.png" alt="Quali IT" width="120" height="48">
+                            </a>
+                        </div>
+                        <div class="company__logo company__logo--blend">
+                            <a href="https://www.ons.org.br/" target="_blank" rel="noopener noreferrer" aria-label="ONS - Operador Nacional do Sistema Elétrico">
+                                <img src="assets/ons.png" alt="Operador Nacional do Sistema Elétrico - ONS" width="120" height="48">
+                            </a>
                         </div>
                         <div class="company__logo">
-                            <span class="company__name">ONS</span>
+                            <a href="https://www.tcs.com/" target="_blank" rel="noopener noreferrer" aria-label="Tata Consultancy Services - TCS">
+                                <img src="assets/tcs.png" alt="Tata Consultancy Services - TCS" width="120" height="48">
+                            </a>
                         </div>
                         <div class="company__logo">
-                            <span class="company__name">Tata Consultancy Services</span>
-                        </div>
-                        <div class="company__logo">
-                            <span class="company__name">Infosys</span>
+                            <a href="https://www.infosys.com/br/" target="_blank" rel="noopener noreferrer" aria-label="Infosys Brasil">
+                                <img src="assets/infosys.png" alt="Infosys" width="120" height="48">
+                            </a>
                         </div>
                     </div>
                 </div>

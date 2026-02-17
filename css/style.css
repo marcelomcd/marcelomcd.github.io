@@ -442,23 +442,28 @@ img {
 }
 
 .bento-card--main {
-  grid-column: span 7;
-  grid-row: span 2;
+  grid-column: 1 / span 7;
+  grid-row: 1 / span 2;
 }
 
 .bento-card--photo {
-  grid-column: span 5;
+  grid-column: 8 / span 5;
+  grid-row: 1;
   overflow: hidden;
 }
 
-.bento-card--stats {
-  grid-column: span 5;
-}
-
+/* Card do código: logo abaixo do principal, à esquerda */
 .bento-card--code {
-  grid-column: span 7;
+  grid-column: 1 / span 7;
+  grid-row: 2;
   padding: 0;
   overflow: hidden;
+}
+
+/* Stats: ao lado do card do código, à direita */
+.bento-card--stats {
+  grid-column: 8 / span 5;
+  grid-row: 2;
 }
 
 /* Hero Content */
@@ -1084,19 +1089,39 @@ img {
   opacity: 1;
 }
 
+.company__logo a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
 .company__logo img {
   max-width: 100%;
+  max-height: 72px;
+  width: auto;
   height: auto;
+  object-fit: contain;
   filter: grayscale(100%);
   transition: filter var(--transition-fast);
 }
 
+/* Sem brightness(0) para evitar "tarja" preta em logos com fundo opaco (ONS/TCS) */
 [data-theme="light"] .company__logo img {
-  filter: grayscale(100%) brightness(0);
+  filter: grayscale(100%);
 }
 
 .company__logo:hover img {
   filter: none;
+}
+
+/* Logo ONS: fundo branco da imagem some ao fundir com o card (mantém o verde) */
+.company__logo--blend img {
+  mix-blend-mode: multiply;
+}
+
+[data-theme="light"] .company__logo--blend img {
+  mix-blend-mode: multiply;
 }
 
 /* Impact Stats */
@@ -1463,10 +1488,10 @@ img {
 
 /* ===== Responsive ===== */
 @media screen and (max-width: 1024px) {
-  .bento-card--main { grid-column: span 12; }
-  .bento-card--photo { grid-column: span 6; }
-  .bento-card--stats { grid-column: span 6; }
-  .bento-card--code { grid-column: span 12; }
+  .bento-card--main { grid-column: 1 / span 12; grid-row: auto; }
+  .bento-card--photo { grid-column: 1 / span 12; grid-row: auto; }
+  .bento-card--code { grid-column: 1 / span 12; grid-row: auto; }
+  .bento-card--stats { grid-column: 1 / span 12; grid-row: auto; }
   
   .about__container,
   .contact__container {
