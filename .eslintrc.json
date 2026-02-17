@@ -25,6 +25,7 @@
     "max-lines-per-function": ["warn", { "max": 50, "skipComments": true }]
   },
   "globals": {
-    "emailjs": "readonly"
+    "emailjs": "readonly",
+    "process": "readonly"
   }
 }

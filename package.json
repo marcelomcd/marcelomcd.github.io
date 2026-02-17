@@ -4,7 +4,8 @@
   "description": "Portfolio profissional moderno com design Liquid Glass",
   "main": "script.js",
   "scripts": {
-    "lint:js": "eslint script.js --fix",
+    "build": "node build.js",
+    "lint:js": "eslint src/**/*.js script.js --fix",
     "lint:css": "stylelint style.css --fix",
     "lint:html": "htmlhint index.html index-en.html",
     "lint": "npm run lint:js && npm run lint:css && npm run lint:html",
@@ -14,7 +15,8 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "validate": "npm run lint && npm run format:check && npm run test",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "dev": "npm run build && npm run validate"
   },
   "repository": {
     "type": "git",

@@ -148,17 +148,25 @@ Meta de cobertura: **50% mínimo**
 
 ```
 .
+├── src/             # Código-fonte modular
+│   ├── config.js    # Configurações centralizadas
+│   ├── main.js      # Ponto de entrada
+│   ├── modules/      # Módulos por funcionalidade
+│   └── utils/       # Utilitários reutilizáveis
 ├── assets/          # Imagens, SVGs, fontes
 ├── docs/            # Documentação técnica
 ├── tests/           # Testes unitários
 ├── .github/         # GitHub Actions workflows
 ├── .husky/          # Git hooks
+├── build.js         # Script de build
 ├── index.html       # Página principal (PT)
 ├── index-en.html    # Página principal (EN)
-├── script.js        # JavaScript principal
+├── script.js        # JavaScript gerado (build)
 ├── style.css        # Estilos CSS
 └── package.json     # Dependências e scripts
 ```
+
+**IMPORTANTE**: Edite arquivos em `src/`, não em `script.js` diretamente. Execute `npm run build` após alterações.
 
 ## 🎨 Design System
 
@@ -181,26 +189,56 @@ Meta de cobertura: **50% mínimo**
 ### Desenvolvimento Local
 
 ```bash
-# Servir localmente (com Python)
+# 1. Build do projeto
+npm run build
+
+# 2. Servir localmente (com Python)
 python -m http.server 8000
 
 # Ou com Live Server (VS Code extension)
 # Clicar em "Go Live"
 ```
 
-### Logs e Console
+### Sistema de Logging
 
-- Evite `console.log` em produção
-- Use `console.warn` ou `console.error` quando necessário
-- Logs de desenvolvimento devem estar comentados
+O projeto usa um sistema de logging estruturado (`src/utils/logger.js`):
+
+```javascript
+import { logger } from "./utils/logger.js";
+
+logger.debug("Mensagem de debug", { context: "valor" });
+logger.info("Informação", { data: "valor" });
+logger.warn("Aviso", { warning: "valor" });
+logger.error("Erro", error, { context: "valor" });
+```
+
+- **Debug**: Apenas em desenvolvimento
+- **Info**: Logs informativos
+- **Warn**: Avisos importantes
+- **Error**: Erros com stack trace (apenas em dev)
+
+Logs são formatados em JSON para facilitar análise.
 
 ## 🔒 Segurança
 
-- ✅ Validação de formulários no frontend e backend
-- ✅ Sanitização de inputs do usuário
+- ✅ Validação de formulários no frontend
+- ✅ Sanitização de inputs do usuário (`src/utils/validation.js`)
+- ✅ Configurações sensíveis centralizadas (`src/config.js`)
 - ✅ HTTPS obrigatório (GitHub Pages)
+- ⚠️ **IMPORTANTE**: Chave EmailJS está em `src/config.js` - mover para variáveis de ambiente em produção
 - ✅ Tokens e secrets nunca commitados
 - ✅ Content Security Policy (a considerar)
+
+### Configurações Sensíveis
+
+Chaves e configurações sensíveis devem ser movidas para variáveis de ambiente:
+
+```javascript
+// src/config.js
+export const EMAILJS_CONFIG = {
+  publicKey: process.env.EMAILJS_PUBLIC_KEY || "fallback-key"
+};
+```
 
 ## 📈 Performance
 

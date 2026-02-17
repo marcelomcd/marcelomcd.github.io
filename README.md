@@ -27,6 +27,9 @@ Portfolio profissional desenvolvido com **HTML5**, **CSS3** e **JavaScript puro*
 - 📱 **100% Responsivo**: Adaptado para mobile, tablet e desktop
 - ⚡ **Performance**: Animações suaves com CSS e Intersection Observer
 - 🎨 **UI/UX Exclusiva**: Design único, não copiado de templates
+- 🏗️ **Arquitetura Modular**: Código organizado em módulos reutilizáveis
+- 🔒 **Segurança**: Validação e sanitização de inputs, configurações centralizadas
+- 📊 **Observabilidade**: Sistema de logging estruturado para debugging
 - 🤖 **Deploy Automático**: GitHub Actions para CI/CD
 - 🔍 **SEO Otimizado**: Meta tags completas, robots.txt e sitemap.xml
 - ✅ **Qualidade de Código**: ESLint, Prettier, Stylelint, HTMLHint
@@ -71,19 +74,36 @@ marcelomcd.github.io/
 │       └── auto-commit.yml         # Commits automáticos
 ├── .husky/
 │   └── pre-commit                  # Pre-commit hooks
+├── src/                            # Código-fonte modular
+│   ├── config.js                   # Configurações centralizadas
+│   ├── main.js                     # Ponto de entrada
+│   ├── modules/                    # Módulos por funcionalidade
+│   │   ├── navigation.js          # Navegação e scroll
+│   │   ├── theme.js               # Gerenciamento de tema
+│   │   ├── animations.js          # Animações e efeitos
+│   │   ├── contact.js             # Formulário de contato
+│   │   ├── notifications.js       # Sistema de notificações
+│   │   └── ui.js                  # Componentes de UI
+│   └── utils/                      # Utilitários reutilizáveis
+│       ├── dom.js                 # Helpers DOM
+│       ├── validation.js          # Validações
+│       ├── performance.js        # Otimizações
+│       └── logger.js             # Sistema de logging
 ├── assets/
 │   ├── profile.jpg                 # Foto de perfil
 │   ├── project*.png                # Screenshots de projetos
 │   └── ...
 ├── docs/
 │   ├── DEVELOPMENT.md              # Guia de desenvolvimento
-│   └── ARCHITECTURE.md             # Decisões arquiteturais
+│   ├── ARCHITECTURE.md             # Decisões arquiteturais
+│   └── STRUCTURE.md                # Estrutura do projeto
 ├── tests/
 │   ├── setup.js                    # Configuração de testes
 │   └── script.test.js              # Testes unitários
+├── build.js                        # Script de build
 ├── index.html                      # Página principal (PT)
 ├── index-en.html                   # Página principal (EN)
-├── script.js                       # JavaScript principal
+├── script.js                       # JavaScript gerado (build)
 ├── style.css                       # Estilos completos
 ├── package.json                    # Dependências e scripts
 └── README.md                       # Este arquivo
@@ -137,8 +157,17 @@ xdg-open index.html  # Linux
 ### 5️⃣ **Fazer Alterações**
 
 ```bash
-# Edite os arquivos HTML, CSS ou JS
-# Faça commit e push
+# IMPORTANTE: Edite arquivos em src/, não em script.js diretamente
+# script.js é gerado automaticamente pelo build
+
+# 1. Edite arquivos em src/
+# 2. Execute build
+npm run build
+
+# 3. Valide código
+npm run validate
+
+# 4. Commit e push
 git add .
 git commit -m "feat: descrição das alterações"
 git push origin main
@@ -151,8 +180,11 @@ git push origin main
 ## 🛠️ Scripts Disponíveis
 
 ```bash
+# Build
+npm run build        # Gerar script.js a partir de src/
+
 # Linting
-npm run lint:js      # Lint JavaScript
+npm run lint:js      # Lint JavaScript (src/ e script.js)
 npm run lint:css     # Lint CSS
 npm run lint:html    # Lint HTML
 npm run lint         # Lint tudo
@@ -168,6 +200,9 @@ npm run test:coverage # Cobertura de testes
 
 # Validação
 npm run validate     # Lint + Format + Testes
+
+# Desenvolvimento
+npm run dev          # Build + Validação completa
 ```
 
 ---

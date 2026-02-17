@@ -1,13 +1,27 @@
-# Editor e IDE
-.vscode/*
-!.vscode/settings.json
+# Dependencies
+node_modules/
+package-lock.json
+
+# Build outputs
+dist/
+build/
+script.js
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
 .idea/
-.cursor/
+*.swp
+*.swo
+*~
 
 # OS
 .DS_Store
 Thumbs.db
-desktop.ini
 
 # Logs
 *.log
@@ -15,43 +29,10 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Temporary files
-*.tmp
-*.temp
-*~
-
-# Backup files
-*.backup
-*.bak
-*.old
-
-# Environment variables (NUNCA commitar tokens!)
-.env
-.env.local
-.env.*.local
-
-# Dependencies
-node_modules/
-package-lock.json
-yarn.lock
-pnpm-lock.yaml
-
-# Test coverage
+# Coverage
 coverage/
 .nyc_output/
 
-# Arquivos pessoais que não devem estar no repo
-*.pdf
-!README.pdf
-Curriculo*.pdf
-Carta*.pdf
-
-# Configurações específicas do editor/IDE
-.github/copilot-instructions.md
-.github/mcp.json
-
-# Build outputs (se houver)
-dist/
-build/
-*.min.js
-*.min.css
+# Temporary files
+*.tmp
+*.temp
