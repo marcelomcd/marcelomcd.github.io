@@ -165,7 +165,7 @@ function initProjectModal() {
         'Economia anual de R$ 250.000'
       ],
       tech: ['UiPath', 'Python', 'SQL Server', 'APIs Bancárias', 'SAP'],
-      link: '#'
+      link: 'https://github.com/marcelomcd/AutomacaoApontamentos'
     },
     2: {
       title: 'Dashboard Power BI Embedded',
@@ -180,7 +180,7 @@ function initProjectModal() {
         'Integração com 5 fontes de dados'
       ],
       tech: ['Power BI', 'Azure', 'JavaScript', 'REST API', 'DAX'],
-      link: '#'
+      link: 'https://github.com/marcelomcd/NewFarol'
     },
     3: {
       title: 'API REST Python + SQL',
@@ -195,7 +195,7 @@ function initProjectModal() {
         'Documentação completa e testes automatizados'
       ],
       tech: ['Python', 'FastAPI', 'PostgreSQL', 'Docker', 'Swagger', 'JWT'],
-      link: '#'
+      link: 'https://github.com/marcelomcd/ConvrterAll-In-One'
     },
     4: {
       title: 'Bot Conversacional BLIP',
@@ -210,7 +210,7 @@ function initProjectModal() {
         '92% de satisfação dos usuários'
       ],
       tech: ['BLIP', 'NLP', 'WhatsApp API', 'Node.js', 'Azure Bot Service'],
-      link: '#'
+      link: 'https://github.com/marcelomcd/ChatBotQualiex'
     },
     5: {
       title: 'Pipeline CI/CD Azure',
@@ -225,7 +225,7 @@ function initProjectModal() {
         '20+ deploys por semana'
       ],
       tech: ['Azure DevOps', 'Docker', 'Kubernetes', 'Git', 'SonarQube', 'Terraform'],
-      link: '#'
+      link: 'https://github.com/marcelomcd/Microsoft-Project-to-Azure-DevOps'
     },
     6: {
       title: 'Integração Multi-sistemas',
@@ -240,7 +240,7 @@ function initProjectModal() {
         'Visibilidade completa com logging'
       ],
       tech: ['Python', 'RabbitMQ', 'REST APIs', 'ELK Stack', 'Redis', 'Airflow'],
-      link: '#'
+      link: 'https://github.com/marcelomcd/CriarPastaNovaFeature'
     }
   };
   
@@ -308,6 +308,11 @@ function initProjectModal() {
             ${project.tech.map(tech => `<span class="tech-badge">${tech}</span>`).join('')}
           </div>
         </div>
+        ${project.link && project.link !== '#' ? `
+        <a href="${project.link}" target="_blank" rel="noopener noreferrer" class="project-detail__github-btn">
+          <i class="fab fa-github"></i> Ver no GitHub
+        </a>
+        ` : ''}
       </div>
     `;
   }
@@ -457,6 +462,25 @@ function addProjectDetailStyles() {
       .project-detail__image {
         height: 200px;
       }
+    }
+    
+    .project-detail__github-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: var(--spacing-lg);
+      padding: var(--spacing-md) var(--spacing-xl);
+      background: var(--accent-gradient);
+      color: #FFFFFF;
+      border-radius: var(--radius-md);
+      font-weight: 600;
+      text-decoration: none;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    
+    .project-detail__github-btn:hover {
+      opacity: 0.9;
+      transform: translateY(-2px);
     }
   `;
   document.head.appendChild(style);
