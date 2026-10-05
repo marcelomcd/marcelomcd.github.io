@@ -241,7 +241,43 @@ function initProjectModal() {
       ],
       tech: ['Python', 'RabbitMQ', 'REST APIs', 'ELK Stack', 'Redis', 'Airflow'],
       link: 'https://github.com/marcelomcd/CriarPastaNovaFeature'
+    },
+    7: {
+      title: 'Agentes de IA, skills e MCP',
+      category: 'Inteligência artificial',
+      image: '',
+      challenge: 'Processos de negócio ainda dependiam de pessoas para tarefas repetitivas que um agente, com acesso controlado aos sistemas, poderia executar.',
+      solution: 'Desenho de agentes de IA com skills reutilizáveis e servidores MCP, conectados a APIs e rotinas internas, com trilha de documentação e revisão humana nos pontos críticos.',
+      results: [
+        'Tarefas operacionais executadas por agentes com skills reutilizáveis',
+        'Integração com sistemas internos via MCP',
+        'Automação com IA combinada a RPA (UiPath e BotCity)',
+        'Padrão reaproveitável para novos fluxos'
+      ],
+      tech: ['Python', 'AI Agents', 'MCP', 'UiPath', 'BotCity'],
+      link: ''
+    },
+    8: {
+      title: 'Métricas de automação',
+      category: 'Fintech',
+      image: '',
+      challenge: 'Robôs em produção precisavam de visibilidade de performance e SLA para a operação decidir com dados, e não só com alertas pontuais.',
+      solution: 'Evolução de uma plataforma interna de métricas de automação, acompanhando execução, falhas e SLA, com dados em SQL e serviços em AWS.',
+      results: [
+        'Acompanhamento de performance e SLA dos robôs',
+        'Base para decisão operacional orientada a dados',
+        'Sustentação de produção com monitoramento contínuo',
+        'Integração com APIs, SQL e AWS'
+      ],
+      tech: ['Python', 'SQL', 'AWS Lambda', 'API Gateway', 'RDS'],
+      link: ''
     }
+  };
+
+  const modalLabels = {
+    pt: { challenge: 'Desafio', solution: 'Solução', results: 'Resultados', tech: 'Tecnologias', github: 'Ver no GitHub' },
+    en: { challenge: 'Challenge', solution: 'Solution', results: 'Results', tech: 'Technologies', github: 'View on GitHub' },
+    es: { challenge: 'Reto', solution: 'Solución', results: 'Resultados', tech: 'Tecnologías', github: 'Ver en GitHub' }
   };
   
   projectCards.forEach(card => {
@@ -279,38 +315,42 @@ function initProjectModal() {
   }
   
   function generateProjectHTML(project) {
+    const labels = modalLabels[typeof currentLang === 'string' ? currentLang : 'pt'] || modalLabels.pt;
+    const image = project.image
+      ? `<img src="${project.image}" alt="${project.title}" class="project-detail__image">`
+      : '';
     return `
       <div class="project-detail">
-        <img src="${project.image}" alt="${project.title}" class="project-detail__image">
+        ${image}
         <span class="project-detail__category">${project.category}</span>
         <h2 class="project-detail__title">${project.title}</h2>
         
         <div class="project-detail__section">
-          <h3><i class="fas fa-exclamation-circle"></i> Desafio</h3>
+          <h3><i class="fas fa-exclamation-circle"></i> ${labels.challenge}</h3>
           <p>${project.challenge}</p>
         </div>
         
         <div class="project-detail__section">
-          <h3><i class="fas fa-lightbulb"></i> Solução</h3>
+          <h3><i class="fas fa-lightbulb"></i> ${labels.solution}</h3>
           <p>${project.solution}</p>
         </div>
         
         <div class="project-detail__section">
-          <h3><i class="fas fa-chart-line"></i> Resultados</h3>
+          <h3><i class="fas fa-chart-line"></i> ${labels.results}</h3>
           <ul class="results-list">
             ${project.results.map(result => `<li>${result}</li>`).join('')}
           </ul>
         </div>
         
         <div class="project-detail__section">
-          <h3><i class="fas fa-tools"></i> Tecnologias</h3>
+          <h3><i class="fas fa-tools"></i> ${labels.tech}</h3>
           <div class="tech-stack">
             ${project.tech.map(tech => `<span class="tech-badge">${tech}</span>`).join('')}
           </div>
         </div>
         ${project.link && project.link !== '#' ? `
         <a href="${project.link}" target="_blank" rel="noopener noreferrer" class="project-detail__github-btn">
-          <i class="fab fa-github"></i> Ver no GitHub
+          <i class="fab fa-github"></i> ${labels.github}
         </a>
         ` : ''}
       </div>

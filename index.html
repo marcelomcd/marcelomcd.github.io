@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Marcelo Macedo - Solution Engineer | Especialista em Python, RPA, Power BI, Azure e Automação Inteligente">
-    <meta name="keywords" content="Solution Engineer, Python, RPA, Power BI, Azure, Automação, DevOps">
+    <meta name="description" content="Marcelo Macedo - Software Engineer na PicPay. Automação, RPA, agentes de IA, Python, UiPath, BotCity e AWS. Aberto a oportunidades internacionais.">
+    <meta name="keywords" content="Software Engineer, PicPay, Python, RPA, UiPath, BotCity, AWS, AI Agents, MCP, Power BI, Azure, Automação">
     <meta name="author" content="Marcelo Macedo">
-    <title>Marcelo Macedo | Solution Engineer</title>
+    <title>Marcelo Macedo | Software Engineer</title>
     
     <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/chat.css">
+    <link rel="stylesheet" href="css/refresh.css">
 </head>
 <body>
     <!-- Particles Background -->
@@ -96,6 +97,7 @@
                     <div class="language-dropdown" id="language-dropdown">
                         <button class="language-option" data-lang="pt">🇧🇷 Português</button>
                         <button class="language-option" data-lang="en">🇺🇸 English</button>
+                        <button class="language-option" data-lang="es">🇪🇸 Español</button>
                     </div>
                 </div>
                 
@@ -121,6 +123,10 @@
                     <!-- Main Card -->
                     <div class="bento-card bento-card--main glass-card" data-aos="fade-up">
                         <div class="hero__content">
+                            <div class="hero__status">
+                                <span class="status-dot" aria-hidden="true"></span>
+                                <span data-i18n="hero.status">PicPay · Software Engineer · Remoto</span>
+                            </div>
                             <div class="hero__greeting">
                                 <span class="greeting-emoji">👋</span>
                                 <h1 class="hero__greeting-text">
@@ -129,18 +135,18 @@
                                 </h1>
                             </div>
                             <h2 class="hero__title" data-i18n="hero.title">
-                                Solution Engineer
+                                Software Engineer
                             </h2>
                             <p class="hero__description" data-i18n="hero.description">
-                                Especialista em transformar processos, integrar sistemas e criar soluções digitais que geram valor real para empresas.
+                                Na PicPay, construo automações, robôs e agentes de IA que sustentam operação em escala. Python, UiPath, BotCity, AWS e integrações para ambientes que exigem confiabilidade.
                             </p>
                             
                             <div class="hero__tech-stack">
                                 <span class="tech-tag">Python</span>
-                                <span class="tech-tag">Power BI</span>
-                                <span class="tech-tag">Azure</span>
-                                <span class="tech-tag">RPA</span>
-                                <span class="tech-tag">DevOps</span>
+                                <span class="tech-tag">UiPath</span>
+                                <span class="tech-tag">BotCity</span>
+                                <span class="tech-tag">AWS</span>
+                                <span class="tech-tag">AI Agents</span>
                             </div>
                             
                             <div class="hero__buttons">
@@ -160,7 +166,7 @@
                     <div class="bento-card bento-card--photo glass-card" data-aos="fade-left" data-aos-delay="100">
                         <div class="hero__image-wrapper">
                             <div class="hero__image-bg"></div>
-                            <img src="https://sspark.genspark.ai/cfimages?u1=ZZD56Elf5ATwkKaBSjd95yIMB%2Fs3wqq0RW5QEz89tU%2FZec7VQa7mFVkj4ql3BYhI%2B%2BAnU2HwApDYTFsEWwAO&u2=24Yy2hpG8Xo0NKMi&width=1024" alt="Marcelo Macedo" class="hero__image">
+                            <img src="assets/profile.jpg" alt="Marcelo Macedo" class="hero__image">
                         </div>
                     </div>
                     
@@ -173,19 +179,17 @@
                                     <span class="dot dot--yellow"></span>
                                     <span class="dot dot--green"></span>
                                 </div>
-                                <span class="code-filename">solution_engineer.py</span>
+                                <span class="code-filename">software_engineer.py</span>
                             </div>
-                            <pre class="code-content"><code><span class="keyword">class</span> <span class="class-name">SolutionEngineer</span>:
+                            <pre class="code-content"><code><span class="keyword">class</span> <span class="class-name">SoftwareEngineer</span>:
     <span class="keyword">def</span> <span class="function">__init__</span>(self):
         self.name = <span class="string">"Marcelo Macedo"</span>
-        self.role = <span class="string">"Solution Engineer"</span>
-        self.skills = [
-            <span class="string">"Python"</span>, <span class="string">"Azure"</span>,
-            <span class="string">"RPA"</span>, <span class="string">"Power BI"</span>
-        ]
-    
-    <span class="keyword">def</span> <span class="function">build_solutions</span>(self):
-        <span class="keyword">return</span> <span class="string">"Automação Inteligente"</span></code></pre>
+        self.role = <span class="string">"Software Engineer"</span>
+        self.company = <span class="string">"PicPay"</span>
+        self.focus = [<span class="string">"RPA"</span>, <span class="string">"AI Agents"</span>, <span class="string">"AWS"</span>]
+
+    <span class="keyword">def</span> <span class="function">deliver</span>(self):
+        <span class="keyword">return</span> <span class="string">"Automação em escala"</span></code></pre>
                         </div>
                     </div>
                     
@@ -193,7 +197,7 @@
                     <div class="bento-card bento-card--stats glass-card" data-aos="fade-up" data-aos-delay="300">
                         <div class="stats__grid">
                             <div class="stat-item">
-                                <div class="stat-number" data-count="6">0</div>
+                                <div class="stat-number" data-count="7">0</div>
                                 <div class="stat-label" data-i18n="hero.stats.years">Anos de Experiência</div>
                             </div>
                             <div class="stat-item">
@@ -222,13 +226,13 @@
                     <div class="about__content glass-card" data-aos="fade-right">
                         <div class="about__text">
                             <p class="about__description" data-i18n="about.description.p1">
-                                Engenheiro de soluções apaixonado por automação, dados e tecnologia. Atuo há mais de 6 anos desenvolvendo integrações, robôs, dashboards e sistemas inteligentes para empresas de diversos segmentos.
+                                Software Engineer com mais de 7 anos em automação, integrações e dados. Atuo na PicPay, em remoto, desenvolvendo RPA, métricas operacionais e automações com IA em ambiente de fintech.
                             </p>
                             <p class="about__description" data-i18n="about.description.p2">
-                                Meu foco é criar soluções que simplificam rotinas, aumentam a produtividade e trazem resultados mensuráveis. Domino Python, Power BI, Azure, UiPath, SQL e práticas DevOps.
+                                Uno engenharia e processo: desenho o fluxo antes de automatizar, documento com PDD e SDD e entrego com Python, UiPath, BotCity, SQL, AWS e GitHub.
                             </p>
                             <p class="about__description" data-i18n="about.description.p3">
-                                Já liderei projetos de automação financeira, integração de APIs, análise de dados e implantação de pipelines CI/CD. Busco sempre unir visão técnica e estratégica para entregar valor ao negócio.
+                                Também trago passagem por Quali IT, ONS, TCS e Infosys, com liderança técnica, Power BI, Azure DevOps e integrações. Aberto a oportunidades internacionais e remotas.
                             </p>
                         </div>
                         
@@ -244,7 +248,7 @@
                                 <i class="fas fa-laptop-code info-icon"></i>
                                 <div class="info-text">
                                     <span class="info-label" data-i18n="about.info.work.label">Disponibilidade</span>
-                                    <span class="info-value" data-i18n="about.info.work.value">Remoto | Realocação</span>
+                                    <span class="info-value" data-i18n="about.info.work.value">Remoto · oportunidades internacionais</span>
                                 </div>
                             </div>
                             <div class="info-item">
@@ -259,6 +263,16 @@
                     
                     <!-- Timeline -->
                     <div class="timeline" data-aos="fade-left">
+                        <div class="timeline__item glass-card">
+                            <div class="timeline__year">2026</div>
+                            <div class="timeline__content">
+                                <h3 class="timeline__title" data-i18n="timeline.2026.title">Software Engineer - PicPay</h3>
+                                <p class="timeline__description" data-i18n="timeline.2026.description">
+                                    RPA, agentes de IA e integrações em AWS para uma fintech em escala
+                                </p>
+                            </div>
+                        </div>
+
                         <div class="timeline__item glass-card">
                             <div class="timeline__year">2024</div>
                             <div class="timeline__content">
@@ -312,9 +326,33 @@
                 </div>
                 
                 <div class="experience__grid">
-                    <div class="experience__card glass-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="experience__card experience__card--current glass-card" data-aos="fade-up" data-aos-delay="100">
                         <div class="experience__header">
-                            <span class="experience__year">2024</span>
+                            <span class="experience__year" data-i18n="experience.items.picpay.period">2026 — atual</span>
+                            <div class="experience__company">PicPay</div>
+                        </div>
+                        <p class="experience__meta" data-i18n="experience.items.picpay.meta">Tempo integral · Remoto</p>
+                        <h3 class="experience__title" data-i18n="experience.items.picpay.title">Software Engineer</h3>
+                        <ul class="experience__list">
+                            <li data-i18n="experience.items.picpay.item1">Desenho e desenvolvimento de RPA e automação de processos com Python, UiPath e BotCity, priorizando escala, confiabilidade e desempenho.</li>
+                            <li data-i18n="experience.items.picpay.item2">Sustentação de robôs em produção: estabilidade operacional, resolução de incidentes, monitoramento e melhoria contínua.</li>
+                            <li data-i18n="experience.items.picpay.item3">Evolução de uma plataforma interna de métricas de automação, com performance, SLA e decisão orientada a dados.</li>
+                            <li data-i18n="experience.items.picpay.item4">Análise e redesenho de processos antes da automação, para aumentar ROI e sustentabilidade técnica.</li>
+                            <li data-i18n="experience.items.picpay.item5">Integrações com APIs, SQL e AWS (Lambda, API Gateway, RDS), além de agentes de IA, skills e MCP, em times ágeis com GitHub.</li>
+                        </ul>
+                        <div class="experience__tags">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">UiPath</span>
+                            <span class="tech-badge">BotCity</span>
+                            <span class="tech-badge">AWS</span>
+                            <span class="tech-badge">AI Agents</span>
+                            <span class="tech-badge">MCP</span>
+                        </div>
+                    </div>
+
+                    <div class="experience__card glass-card" data-aos="fade-up" data-aos-delay="150">
+                        <div class="experience__header">
+                            <span class="experience__year">2024 — 2026</span>
                             <div class="experience__company">Quali IT</div>
                         </div>
                         <h3 class="experience__title" data-i18n="experience.items.qualiit.title">Solution Engineer</h3>
@@ -568,11 +606,56 @@
                             </div>
                             <div class="skill__item">
                                 <div class="skill__info">
+                                    <span class="skill__name">BotCity</span>
+                                    <span class="skill__percentage">85%</span>
+                                </div>
+                                <div class="skill__bar">
+                                    <div class="skill__progress" data-progress="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill__item">
+                                <div class="skill__info">
                                     <span class="skill__name">Copilot Studio</span>
                                     <span class="skill__percentage">80%</span>
                                 </div>
                                 <div class="skill__bar">
                                     <div class="skill__progress" data-progress="80"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills__category glass-card" data-aos="fade-up" data-aos-delay="550">
+                        <div class="category__header">
+                            <i class="fas fa-brain category__icon"></i>
+                            <h3 class="category__title" data-i18n="skills.categories.ai">IA & Cloud</h3>
+                        </div>
+                        <div class="skills__list">
+                            <div class="skill__item">
+                                <div class="skill__info">
+                                    <span class="skill__name">AI Agents / MCP</span>
+                                    <span class="skill__percentage">85%</span>
+                                </div>
+                                <div class="skill__bar">
+                                    <div class="skill__progress" data-progress="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill__item">
+                                <div class="skill__info">
+                                    <span class="skill__name">AWS</span>
+                                    <span class="skill__percentage">80%</span>
+                                </div>
+                                <div class="skill__bar">
+                                    <div class="skill__progress" data-progress="80"></div>
+                                </div>
+                            </div>
+                            <div class="skill__item">
+                                <div class="skill__info">
+                                    <span class="skill__name">GitHub</span>
+                                    <span class="skill__percentage">90%</span>
+                                </div>
+                                <div class="skill__bar">
+                                    <div class="skill__progress" data-progress="90"></div>
                                 </div>
                             </div>
                         </div>
@@ -655,6 +738,54 @@
                 </div>
                 
                 <div class="projects__grid">
+                    <div class="project__card glass-card" data-aos="fade-up" data-aos-delay="50" data-project="7">
+                        <div class="project__image project__image--agents">
+                            <div class="project__art" aria-hidden="true"><i class="fas fa-brain"></i></div>
+                            <div class="project__overlay">
+                                <button class="btn btn--view" data-i18n="projects.button.view">Ver Detalhes</button>
+                            </div>
+                        </div>
+                        <div class="project__content">
+                            <div class="project__header">
+                                <span class="project__category" data-i18n="projects.items.project7.category">Inteligência artificial</span>
+                                <div class="project__icon"><i class="fas fa-robot"></i></div>
+                            </div>
+                            <h3 class="project__title" data-i18n="projects.items.project7.title">Agentes de IA, skills e MCP</h3>
+                            <p class="project__description" data-i18n="projects.items.project7.description">
+                                Agentes e automações com IA para executar tarefas de negócio, com skills reutilizáveis e servidores MCP conectados a sistemas internos.
+                            </p>
+                            <div class="project__tags">
+                                <span class="tech-badge">AI Agents</span>
+                                <span class="tech-badge">MCP</span>
+                                <span class="tech-badge">Python</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project__card glass-card" data-aos="fade-up" data-aos-delay="80" data-project="8">
+                        <div class="project__image project__image--metrics">
+                            <div class="project__art" aria-hidden="true"><i class="fas fa-chart-line"></i></div>
+                            <div class="project__overlay">
+                                <button class="btn btn--view" data-i18n="projects.button.view">Ver Detalhes</button>
+                            </div>
+                        </div>
+                        <div class="project__content">
+                            <div class="project__header">
+                                <span class="project__category" data-i18n="projects.items.project8.category">Fintech</span>
+                                <div class="project__icon"><i class="fas fa-gauge-high"></i></div>
+                            </div>
+                            <h3 class="project__title" data-i18n="projects.items.project8.title">Métricas de automação</h3>
+                            <p class="project__description" data-i18n="projects.items.project8.description">
+                                Plataforma interna para acompanhar performance, SLA e saúde dos robôs, apoiando decisão operacional com dados.
+                            </p>
+                            <div class="project__tags">
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">SQL</span>
+                                <span class="tech-badge">AWS</span>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Project 1 -->
                     <div class="project__card glass-card" data-aos="fade-up" data-aos-delay="100" data-project="1">
                         <div class="project__image">
@@ -835,6 +966,9 @@
                     <h3 class="companies__title" data-i18n="recognition.companies.title">Empresas Onde Trabalhei</h3>
                     <div class="companies__grid glass-card">
                         <div class="company__logo">
+                            <a href="https://picpay.com/" target="_blank" rel="noopener noreferrer" aria-label="PicPay" class="company__logo--wordmark">PicPay</a>
+                        </div>
+                        <div class="company__logo">
                             <a href="https://qualiit.com.br/" target="_blank" rel="noopener noreferrer" aria-label="Quali IT - site oficial">
                                 <img src="assets/quali-it.png" alt="Quali IT" width="120" height="48">
                             </a>
@@ -909,7 +1043,7 @@
                     <span class="section__tag" data-i18n="contact.tag">Entre em contato</span>
                     <h2 class="section__title" data-i18n="contact.title">Vamos Trabalhar Juntos</h2>
                     <p class="section__description" data-i18n="contact.description">
-                        Estou disponível para novos projetos e oportunidades. Entre em contato!
+                        Aberto a oportunidades internacionais e remotas. Vamos conversar.
                     </p>
                 </div>
                 
@@ -1015,7 +1149,7 @@
                             <span class="logo-bracket">/&gt;</span>
                         </a>
                         <p class="footer__description" data-i18n="footer.description">
-                            Solution Engineer especializado em automação e transformação digital
+                            Software Engineer especializado em automação, IA e fintech
                         </p>
                     </div>
                     

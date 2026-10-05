@@ -73,7 +73,13 @@ const chatKnowledge = {
 - UiPath (95%) - Advanced
 - Power Automate (90%)
 - Automation Anywhere (85%)
+- BotCity (85%)
 - Copilot Studio (80%)
+
+**IA & Cloud:**
+- Agentes de IA e MCP (85%)
+- AWS Lambda, API Gateway e RDS (80%)
+- GitHub (90%)
 
 **BI & Analytics:**
 - Power BI (95%) - Expert
@@ -90,9 +96,15 @@ Ele também tem certificações em:
     
     experience: {
       question: ['experiência', 'trabalhou', 'carreira', 'trajetória', 'histórico'],
-      answer: `O Marcelo tem mais de 6 anos de experiência em tecnologia:
+      answer: `O Marcelo tem mais de 7 anos de experiência em tecnologia:
 
-**2024 - Quali IT** (Atual) 🏢
+**2026 - PicPay** (Atual) 💚
+Software Engineer · Remoto
+- RPA com Python, UiPath e BotCity
+- Agentes de IA, skills e MCP
+- Plataforma de métricas, SLA e AWS (Lambda, API Gateway, RDS)
+
+**2024 - 2026 - Quali IT** 🏢
 Solution Engineer
 - Liderança técnica em automação e integrações
 - Padrões arquiteturais e APIs
@@ -125,11 +137,11 @@ Principais conquistas:
     
     availability: {
       question: ['disponível', 'disponibilidade', 'contratar', 'freelance', 'vaga', 'trabalho'],
-      answer: `Sim, o Marcelo está disponível para novos projetos! 🎯
+      answer: `O Marcelo está na PicPay como Software Engineer e aberto a oportunidades internacionais e remotas. 🎯
 
 **Modalidades:**
-✅ Remoto (preferencial)
-✅ Realocação (RJ ou outras regiões)
+✅ Remoto
+✅ Oportunidades internacionais
 
 **Localização Atual:**
 📍 Rio de Janeiro, RJ
@@ -139,8 +151,9 @@ Principais conquistas:
 🇺🇸 Inglês (Intermediário)
 
 **Áreas de Interesse:**
-- Solution Engineering
-- Automação de Processos
+- Software Engineering
+- Automação com IA, agentes e MCP
+- RPA (UiPath, BotCity, Power Automate)
 - Integração de Sistemas
 - Desenvolvimento Backend
 - Business Intelligence
@@ -388,7 +401,13 @@ Você também pode rolar a página para ver mais detalhes sobre o Marcelo! 😊`
 - UiPath (95%) - Advanced
 - Power Automate (90%)
 - Automation Anywhere (85%)
+- BotCity (85%)
 - Copilot Studio (80%)
+
+**AI & Cloud:**
+- AI agents and MCP (85%)
+- AWS Lambda, API Gateway and RDS (80%)
+- GitHub (90%)
 
 **BI & Analytics:**
 - Power BI (95%) - Expert
@@ -405,9 +424,15 @@ He also has certifications in:
     
     experience: {
       question: ['experience', 'worked', 'career', 'history', 'background'],
-      answer: `Marcelo has over 6 years of experience in technology:
+      answer: `Marcelo has over 7 years of experience in technology:
 
-**2024 - Stefanini** (Current) 🏢
+**2026 - PicPay** (Current) 💚
+Software Engineer · Remote
+- RPA with Python, UiPath and BotCity
+- AI agents, skills and MCP
+- Automation metrics platform, SLAs and AWS (Lambda, API Gateway, RDS)
+
+**2024 - 2026 - Quali IT** 🏢
 Solution Engineer
 - Technical leadership in automation and integrations
 - Architectural patterns and APIs
@@ -440,11 +465,11 @@ Main achievements:
     
     availability: {
       question: ['available', 'availability', 'hire', 'freelance', 'job', 'work'],
-      answer: `Yes, Marcelo is available for new projects! 🎯
+      answer: `Marcelo is a Software Engineer at PicPay and open to international and remote opportunities. 🎯
 
 **Work Modes:**
-✅ Remote (preferred)
-✅ Relocation (RJ or other regions)
+✅ Remote
+✅ International opportunities
 
 **Current Location:**
 📍 Rio de Janeiro, RJ - Brazil
@@ -454,8 +479,9 @@ Main achievements:
 🇺🇸 English (Intermediate)
 
 **Areas of Interest:**
-- Solution Engineering
-- Process Automation
+- Software Engineering
+- AI automation, agents and MCP
+- RPA (UiPath, BotCity, Power Automate)
 - System Integration
 - Backend Development
 - Business Intelligence
@@ -633,6 +659,53 @@ But I can help you with information about:
 
 You can also scroll down the page to see more details about Marcelo! 😊`
     }
+  },
+
+  es: {
+    greetings: [
+      '¡Hola! 👋 ¿Cómo puedo ayudarte?',
+      '¡Hola! Estoy aquí para hablar de la experiencia de Marcelo.'
+    ],
+    projects: {
+      question: ['proyecto', 'proyectos', 'portfolio', 'portafolio'],
+      answer: `Proyectos destacados de Marcelo:
+
+**1. Agentes de IA, skills y MCP** — automatizaciones con IA conectadas a sistemas internos.
+**2. Métricas de automatización** — plataforma de performance y SLA en fintech.
+**3. Automatización financiera RPA** — 80% menos tiempo de procesamiento.
+**4. Power BI, APIs Python, bots BLIP, CI/CD e integraciones.**`
+    },
+    skills: {
+      question: ['habilidad', 'habilidades', 'tecnolog', 'domina', 'sabe'],
+      answer: `Marcelo trabaja con Python, UiPath, BotCity, AWS (Lambda, API Gateway, RDS), SQL, Power BI, Azure, agentes de IA, skills y MCP. También tiene certificaciones de UiPath, Power Platform, Power BI y AZ-900.`
+    },
+    experience: {
+      question: ['experiencia', 'trabaj', 'carrera', 'trayectoria'],
+      answer: `Marcelo es Software Engineer en PicPay desde marzo de 2026 (remoto). Antes fue Solution Engineer en Quali IT (2024–2026) y RPA Developer en ONS, TCS e Infosys. Lleva más de 7 años en automatización e integraciones.`
+    },
+    availability: {
+      question: ['disponible', 'disponibilidad', 'contratar', 'vacante', 'trabajo', 'oportunidad'],
+      answer: `Marcelo está en PicPay y abierto a oportunidades internacionales y remotas. Email: marcelo.macedo.business@gmail.com · LinkedIn: linkedin.com/in/marcelo-macedo-jr`
+    },
+    contact: {
+      question: ['contacto', 'email', 'correo', 'linkedin', 'github'],
+      answer: `Email: marcelo.macedo.business@gmail.com\nLinkedIn: linkedin.com/in/marcelo-macedo-jr\nGitHub: github.com/marcelomcd\nRío de Janeiro, Brasil`
+    },
+    automation: {
+      question: ['automat', 'rpa', 'robot', 'uipath', 'botcity'],
+      answer: `Marcelo diseña RPA con UiPath, BotCity, Power Automate y Python, además de agentes de IA y MCP. Hoy aplica eso en PicPay, con soporte a producción y métricas de SLA.`
+    },
+    powerbi: {
+      question: ['power bi', 'bi', 'dashboard', 'analítica'],
+      answer: `Marcelo construye dashboards en Power BI, incluido Power BI Embedded, para indicadores en tiempo real.`
+    },
+    python: {
+      question: ['python', 'fastapi', 'api'],
+      answer: `Python es su lenguaje principal: RPA, APIs, SQL, AWS Lambda y automatizaciones con IA.`
+    },
+    unknown: {
+      answer: `No estoy segura de esa pregunta. Puedo hablar de proyectos, habilidades, experiencia, disponibilidad y contacto de Marcelo.`
+    }
   }
 };
 
@@ -808,12 +881,12 @@ function removeTypingIndicator() {
 
 // Get response based on message
 function getResponse(message) {
-  const lang = currentLang || 'pt';
+  const lang = chatKnowledge[currentLang] ? currentLang : 'pt';
   const knowledge = chatKnowledge[lang];
   const lowerMessage = message.toLowerCase();
   
   // Check for greetings
-  const greetings = ['oi', 'olá', 'ola', 'hello', 'hi', 'hey'];
+  const greetings = ['oi', 'olá', 'ola', 'hello', 'hi', 'hey', 'hola'];
   if (greetings.some(g => lowerMessage.includes(g)) && lowerMessage.length < 10) {
     return knowledge.greetings[Math.floor(Math.random() * knowledge.greetings.length)];
   }
