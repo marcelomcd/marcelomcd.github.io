@@ -64,6 +64,7 @@ const chatKnowledge = {
 - Azure DevOps (85%)
 - CI/CD (80%)
 - Git (90%)
+- Scrum / Kanban (85%)
 
 **Database:**
 - SQL Server (90%)
@@ -78,7 +79,11 @@ const chatKnowledge = {
 
 **IA & Cloud:**
 - Agentes de IA e MCP (85%)
+- Dify (80%)
+- Prompt Master (85%)
+- ChatBot / BLIP (85%)
 - AWS Lambda, API Gateway e RDS (80%)
+- Azure (80%)
 - GitHub (90%)
 
 **BI & Analytics:**
@@ -152,8 +157,9 @@ Principais conquistas:
 
 **Áreas de Interesse:**
 - Software Engineering
-- Automação com IA, agentes e MCP
+- Automação com IA, agentes, MCP, Dify e Prompt Master
 - RPA (UiPath, BotCity, Power Automate)
+- ChatBot / BLIP
 - Integração de Sistemas
 - Desenvolvimento Backend
 - Business Intelligence
@@ -392,6 +398,7 @@ Você também pode rolar a página para ver mais detalhes sobre o Marcelo! 😊`
 - Azure DevOps (85%)
 - CI/CD (80%)
 - Git (90%)
+- Scrum / Kanban (85%)
 
 **Database:**
 - SQL Server (90%)
@@ -406,7 +413,11 @@ Você também pode rolar a página para ver mais detalhes sobre o Marcelo! 😊`
 
 **AI & Cloud:**
 - AI agents and MCP (85%)
+- Dify (80%)
+- Prompt Master (85%)
+- ChatBot / BLIP (85%)
 - AWS Lambda, API Gateway and RDS (80%)
+- Azure (80%)
 - GitHub (90%)
 
 **BI & Analytics:**
@@ -480,8 +491,9 @@ Main achievements:
 
 **Areas of Interest:**
 - Software Engineering
-- AI automation, agents and MCP
+- AI automation, agents, MCP, Dify and Prompt Master
 - RPA (UiPath, BotCity, Power Automate)
+- ChatBot / BLIP
 - System Integration
 - Backend Development
 - Business Intelligence
@@ -677,7 +689,7 @@ You can also scroll down the page to see more details about Marcelo! 😊`
     },
     skills: {
       question: ['habilidad', 'habilidades', 'tecnolog', 'domina', 'sabe'],
-      answer: `Marcelo trabaja con Python, UiPath, BotCity, AWS (Lambda, API Gateway, RDS), SQL, Power BI, Azure, agentes de IA, skills y MCP. También tiene certificaciones de UiPath, Power Platform, Power BI y AZ-900.`
+      answer: `Marcelo trabaja con Python, UiPath, BotCity, ChatBot/BLIP, Dify, Prompt Master, AWS (Lambda, API Gateway, RDS), Azure, SQL, Power BI, agentes de IA, skills y MCP. También tiene certificaciones de UiPath, ChatBot Developer (BLIP), Power Platform, Power BI y AZ-900.`
     },
     experience: {
       question: ['experiencia', 'trabaj', 'carrera', 'trayectoria'],
@@ -693,7 +705,7 @@ You can also scroll down the page to see more details about Marcelo! 😊`
     },
     automation: {
       question: ['automat', 'rpa', 'robot', 'uipath', 'botcity'],
-      answer: `Marcelo diseña RPA con UiPath, BotCity, Power Automate y Python, además de agentes de IA y MCP. Hoy aplica eso en PicPay, con soporte a producción y métricas de SLA.`
+      answer: `Marcelo diseña RPA con UiPath, BotCity, Power Automate y Python, además de agentes de IA, MCP, Dify, Prompt Master y ChatBot/BLIP. Hoy aplica eso en PicPay, con soporte a producción y métricas de SLA.`
     },
     powerbi: {
       question: ['power bi', 'bi', 'dashboard', 'analítica'],

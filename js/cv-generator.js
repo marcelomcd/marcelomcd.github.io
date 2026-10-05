@@ -49,7 +49,7 @@ const cvCopy = {
         "Robôs com UiPath e Automation Anywhere e integrações via API."
       ]]
     ],
-    skillLine: "Python · UiPath · BotCity · AWS · SQL · Power BI · Azure · Agentes de IA · MCP · GitHub"
+    skillLine: "Python · UiPath · BotCity · ChatBot · Dify · Prompt Master · AWS · Azure · SQL · Power BI · Agentes de IA · MCP · GitHub"
   },
   en: {
     title: "Resume",
@@ -81,7 +81,7 @@ const cvCopy = {
         "Bots with UiPath and Automation Anywhere, plus API integrations."
       ]]
     ],
-    skillLine: "Python · UiPath · BotCity · AWS · SQL · Power BI · Azure · AI Agents · MCP · GitHub"
+    skillLine: "Python · UiPath · BotCity · ChatBot · Dify · Prompt Master · AWS · Azure · SQL · Power BI · AI Agents · MCP · GitHub"
   },
   es: {
     title: "Currículum",
@@ -113,7 +113,7 @@ const cvCopy = {
         "Robots con UiPath y Automation Anywhere e integraciones por API."
       ]]
     ],
-    skillLine: "Python · UiPath · BotCity · AWS · SQL · Power BI · Azure · Agentes de IA · MCP · GitHub"
+    skillLine: "Python · UiPath · BotCity · ChatBot · Dify · Prompt Master · AWS · Azure · SQL · Power BI · Agentes de IA · MCP · GitHub"
   }
 };
 
