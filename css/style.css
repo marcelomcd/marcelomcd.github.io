@@ -812,9 +812,43 @@ img {
 }
 
 .experience__company {
-  font-size: 1rem;
-  color: var(--text-muted);
-  font-weight: 600;
+  display: block;
+  width: auto;
+  height: 22px;
+  max-width: 45%;
+  object-fit: contain;
+  object-position: right center;
+  box-sizing: content-box;
+  padding: 4px 8px;
+  border-radius: var(--radius-sm, 8px);
+  background: transparent;
+  filter: grayscale(100%) brightness(0) invert(1);
+  opacity: 0.6;
+  transition: filter var(--transition-fast), opacity var(--transition-fast), background-color var(--transition-fast);
+}
+
+.experience__company--mark {
+  height: 26px;
+}
+
+[data-theme="light"] .experience__company {
+  filter: grayscale(100%) brightness(0);
+  opacity: 0.55;
+}
+
+.experience__card:hover .experience__company,
+[data-theme="light"] .experience__card:hover .experience__company {
+  filter: none;
+  opacity: 1;
+}
+
+/* Logos com partes escuras (Quali IT, ONS) somem sobre o card escuro sem esse fundo */
+.experience__card:hover .experience__company {
+  background-color: rgba(255, 255, 255, 0.92);
+}
+
+[data-theme="light"] .experience__card:hover .experience__company {
+  background-color: transparent;
 }
 
 .experience__title {
