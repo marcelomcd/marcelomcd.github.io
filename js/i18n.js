@@ -52,8 +52,9 @@ const translations = {
         experience: 'Conte sobre sua experiência',
         availability: 'Está disponível para projetos?'
       },
+      scope: 'Responde só sobre o currículo. A pergunta não sai do navegador.',
       input: {
-        placeholder: 'Digite sua pergunta...'
+        placeholder: 'Pergunte sobre a experiência, os projetos ou as habilidades...'
       }
     },
     
@@ -329,8 +330,9 @@ const translations = {
         experience: 'Tell me about your experience',
         availability: 'Are you available for projects?'
       },
+      scope: 'Answers only about the résumé. The question never leaves the browser.',
       input: {
-        placeholder: 'Type your question...'
+        placeholder: 'Ask about experience, projects or skills...'
       }
     },
     
@@ -601,8 +603,9 @@ const translations = {
         experience: 'Cuéntame tu experiencia',
         availability: '¿Estás disponible para proyectos?'
       },
+      scope: 'Responde solo sobre el currículum. La pregunta no sale del navegador.',
       input: {
-        placeholder: 'Escribe tu pregunta...'
+        placeholder: 'Pregunta sobre experiencia, proyectos o habilidades...'
       }
     },
     about: {

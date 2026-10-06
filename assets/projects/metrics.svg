@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#052E2B"/>
+      <stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.06"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="980" cy="80" r="180" fill="#34D399" opacity="0.18"/>
+  <circle cx="140" cy="540" r="160" fill="#ffffff" opacity="0.06"/>
+  
+  <rect x="60" y="50" width="250" height="150" rx="22" fill="url(#glass)" stroke="#ffffff" stroke-opacity="0.28"/>
+  <rect x="340" y="50" width="250" height="150" rx="22" fill="url(#glass)" stroke="#ffffff" stroke-opacity="0.28"/>
+  <rect x="620" y="50" width="250" height="150" rx="22" fill="url(#glass)" stroke="#ffffff" stroke-opacity="0.28"/>
+  <rect x="900" y="50" width="240" height="150" rx="22" fill="url(#glass)" stroke="#ffffff" stroke-opacity="0.28"/>
+  <rect x="100" y="110" width="140" height="18" rx="8" fill="#34D399"/>
+  <rect x="380" y="110" width="110" height="18" rx="8" fill="#22D3EE"/>
+  <rect x="660" y="110" width="160" height="18" rx="8" fill="#FBBF24"/>
+  <rect x="940" y="110" width="120" height="18" rx="8" fill="#FB7185"/>
+  <rect x="60" y="230" width="1080" height="340" rx="22" fill="url(#glass)" stroke="#ffffff" stroke-opacity="0.28"/>
+  <polyline points="110,500 250,430 390,450 530,340 700,360 860,260 1040,290" fill="none" stroke="#34D399" stroke-width="8"/>
+  <polyline points="110,520 250,490 390,470 530,420 700,440 860,390 1040,360" fill="none" stroke="#22D3EE" stroke-width="6" opacity="0.8"/>
+
+</svg>

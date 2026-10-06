@@ -155,7 +155,7 @@ function initProjectModal() {
     1: {
       title: 'Automação Financeira RPA',
       category: 'Automação',
-      image: 'https://sspark.genspark.ai/cfimages?u1=A%2FkDLYZIlf13X2e%2BkMwKFm6%2B2XsGb1t7MmCUFpDesupinXtmcWUK1Fnev4YLMlsNyWkMsB2rUdJcv0wrUpXlaA%3D%3D&u2=lvRvJpkjaDnmUrnk&width=1024',
+      image: 'assets/projects/rpa.svg',
       challenge: 'Processos manuais de conciliação bancária e faturamento consumiam mais de 40 horas semanais da equipe financeira, gerando atrasos e erros.',
       solution: 'Desenvolvimento de robô RPA integrado com sistemas bancários e ERPs, automatizando extração de dados, validação e lançamentos contábeis.',
       results: [
@@ -170,7 +170,7 @@ function initProjectModal() {
     2: {
       title: 'Dashboard Power BI Embedded',
       category: 'Business Intelligence',
-      image: 'https://sspark.genspark.ai/cfimages?u1=j4%2FQm50SMlVnmY552lY8Exou5ZptheDUJZOe33m3ufsXxdaj34rdoX4ZGxa2JfLvOj1HtHDzg4OboOvsOFlNxw%3D%3D&u2=JuLL0OBX30Y3qyZO&width=1024',
+      image: 'assets/projects/powerbi.svg',
       challenge: 'Executivos precisavam de visibilidade em tempo real dos KPIs, mas dependiam de relatórios estáticos e desatualizados.',
       solution: 'Dashboard executivo com Power BI Embedded integrado a portal web, com atualização automática e drill-down interativo.',
       results: [
@@ -185,7 +185,7 @@ function initProjectModal() {
     3: {
       title: 'API REST Python + SQL',
       category: 'Backend',
-      image: 'https://sspark.genspark.ai/cfimages?u1=2XH08cdzp8pPvO3QRp1T%2Fdqd5%2B1TsuqHRhqNBy6oG5Sal1BnToZD%2F%2BR%2B2dkgk%2F1KbWnNM04xxwnst7HnP0LcjA%3D%3D&u2=XtP1ynmRwFMDl5%2B5&width=1024',
+      image: 'assets/projects/api.svg',
       challenge: 'Sistemas legados isolados impediam integração de dados e automação de processos críticos.',
       solution: 'API RESTful moderna com FastAPI, arquitetura em camadas, autenticação JWT e documentação automática com Swagger.',
       results: [
@@ -200,7 +200,7 @@ function initProjectModal() {
     4: {
       title: 'Bot Conversacional BLIP',
       category: 'Conversacional',
-      image: 'https://sspark.genspark.ai/cfimages?u1=A%2FkDLYZIlf13X2e%2BkMwKFm6%2B2XsGb1t7MmCUFpDesupinXtmcWUK1Fnev4YLMlsNyWkMsB2rUdJcv0wrUpXlaA%3D%3D&u2=lvRvJpkjaDnmUrnk&width=1024',
+      image: 'assets/projects/chatbot.svg',
       challenge: 'Atendimento ao cliente 24/7 com custos elevados e tempo de resposta lento.',
       solution: 'Chatbot inteligente com NLP, integrado ao WhatsApp e sistemas internos, com análise de sentimentos e transferência para humanos.',
       results: [
@@ -215,7 +215,7 @@ function initProjectModal() {
     5: {
       title: 'Pipeline CI/CD Azure',
       category: 'DevOps',
-      image: 'https://sspark.genspark.ai/cfimages?u1=j4%2FQm50SMlVnmY552lY8Exou5ZptheDUJZOe33m3ufsXxdaj34rdoX4ZGxa2JfLvOj1HtHDzg4OboOvsOFlNxw%3D%3D&u2=JuLL0OBX30Y3qyZO&width=1024',
+      image: 'assets/projects/cicd.svg',
       challenge: 'Deploys manuais demorados e propensos a erros, com downtime frequente.',
       solution: 'Pipeline CI/CD automatizado com Azure DevOps, testes automatizados, deploy blue-green e monitoramento.',
       results: [
@@ -230,7 +230,7 @@ function initProjectModal() {
     6: {
       title: 'Integração Multi-sistemas',
       category: 'Integração',
-      image: 'https://sspark.genspark.ai/cfimages?u1=2XH08cdzp8pPvO3QRp1T%2Fdqd5%2B1TsuqHRhqNBy6oG5Sal1BnToZD%2F%2BR%2B2dkgk%2F1KbWnNM04xxwnst7HnP0LcjA%3D%3D&u2=XtP1ynmRwFMDl5%2B5&width=1024',
+      image: 'assets/projects/integration.svg',
       challenge: 'Dados fragmentados em ERP, CRM e sistemas internos, causando inconsistências.',
       solution: 'Orquestração de dados com Python, APIs REST, filas de mensagens e logs centralizados com tratamento de erros.',
       results: [
@@ -245,7 +245,7 @@ function initProjectModal() {
     7: {
       title: 'Agentes de IA, skills e MCP',
       category: 'Inteligência artificial',
-      image: '',
+      image: 'assets/projects/agents.svg',
       challenge: 'Processos de negócio ainda dependiam de pessoas para tarefas repetitivas que um agente, com acesso controlado aos sistemas, poderia executar.',
       solution: 'Desenho de agentes de IA com skills reutilizáveis e servidores MCP, conectados a APIs e rotinas internas, com trilha de documentação e revisão humana nos pontos críticos.',
       results: [
@@ -260,7 +260,7 @@ function initProjectModal() {
     8: {
       title: 'Métricas de automação',
       category: 'Fintech',
-      image: '',
+      image: 'assets/projects/metrics.svg',
       challenge: 'Robôs em produção precisavam de visibilidade de performance e SLA para a operação decidir com dados, e não só com alertas pontuais.',
       solution: 'Evolução de uma plataforma interna de métricas de automação, acompanhando execução, falhas e SLA, com dados em SQL e serviços em AWS.',
       results: [

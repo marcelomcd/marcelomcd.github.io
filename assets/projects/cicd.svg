@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1020"/>
+      <stop offset="1" stop-color="#1E3A5F"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.06"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="980" cy="80" r="180" fill="#60A5FA" opacity="0.18"/>
+  <circle cx="140" cy="540" r="160" fill="#ffffff" opacity="0.06"/>
+  
+  <rect x="80" y="150" width="1040" height="300" rx="22" fill="url(#glass)" stroke="#ffffff" stroke-opacity="0.28"/>
+  <circle cx="220" cy="300" r="54" fill="#60A5FA"/>
+  <circle cx="480" cy="300" r="54" fill="#34D399"/>
+  <circle cx="740" cy="300" r="54" fill="#FBBF24"/>
+  <circle cx="1000" cy="300" r="54" fill="#A78BFA"/>
+  <path d="M274 300h152M534 300h152M794 300h152" stroke="#ffffff" stroke-width="8" opacity="0.7"/>
+  <rect x="160" y="400" width="120" height="12" rx="6" fill="#ffffff" opacity="0.35"/>
+  <rect x="420" y="400" width="120" height="12" rx="6" fill="#ffffff" opacity="0.35"/>
+  <rect x="680" y="400" width="120" height="12" rx="6" fill="#ffffff" opacity="0.35"/>
+  <rect x="940" y="400" width="120" height="12" rx="6" fill="#ffffff" opacity="0.35"/>
+
+</svg>

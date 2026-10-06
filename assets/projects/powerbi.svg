@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101827"/>
+      <stop offset="1" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.06"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="980" cy="80" r="180" fill="#818CF8" opacity="0.18"/>
+  <circle cx="140" cy="540" r="160" fill="#ffffff" opacity="0.06"/>
+  
+  <rect x="60" y="60" width="1080" height="510" rx="22" fill="url(#glass)" stroke="#ffffff" stroke-opacity="0.28"/>
+  <rect x="110" y="120" width="180" height="280" rx="12" fill="#818CF8"/>
+  <rect x="320" y="200" width="180" height="200" rx="12" fill="#22D3EE" opacity="0.85"/>
+  <rect x="530" y="160" width="180" height="240" rx="12" fill="#A78BFA"/>
+  <rect x="740" y="250" width="180" height="150" rx="12" fill="#34D399" opacity="0.9"/>
+  <rect x="950" y="140" width="140" height="260" rx="12" fill="#ffffff" opacity="0.16"/>
+  <polyline points="120,470 300,390 500,420 700,300 900,340 1040,220" fill="none" stroke="#F8FAFC" stroke-width="6"/>
+
+</svg>
