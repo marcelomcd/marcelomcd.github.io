@@ -762,7 +762,7 @@ function initChat() {
       
       if (knowledge[question]) {
         const questionText = chip.querySelector('span').textContent;
-        await sendMessage(questionText);
+        await sendMessage(questionText, question);
         
         // Hide suggestions after first use
         const suggestions = document.getElementById('chat-suggestions');
@@ -786,7 +786,7 @@ function initChat() {
 }
 
 // Send message
-async function sendMessage(message) {
+async function sendMessage(message, topic) {
   if (isTyping) return;
   
   // Add user message
@@ -795,11 +795,9 @@ async function sendMessage(message) {
   // Show typing indicator
   showTypingIndicator();
   
-  // Simulate thinking time
-  await new Promise(resolve => setTimeout(resolve, 800 + Math.random() * 700));
+  await new Promise(resolve => setTimeout(resolve, 280));
   
-  // Get response
-  const response = await answerQuestion(message);
+  const response = getResponse(message, topic);
   
   // Remove typing indicator
   removeTypingIndicator();
@@ -901,75 +899,47 @@ function removeTypingIndicator() {
   }
 }
 
-function buildCvSystemPrompt(lang) {
-  const knowledge = chatKnowledge[lang] || chatKnowledge.pt;
-  const facts = Object.entries(knowledge)
-    .filter(([key, value]) => key !== 'greetings' && key !== 'unknown' && value && value.answer)
-    .map(([, value]) => value.answer)
-    .join('\n\n');
-  const rule = {
-    pt: 'Você responde somente sobre a carreira, os projetos, as habilidades e o contato de Marcelo Macedo. Se a pergunta não for sobre isso, diga apenas que só fala do currículo dele. Não invente empregadores, cargos ou métricas.',
-    en: 'Answer only about Marcelo Macedo\'s career, projects, skills and contact. If the question is unrelated, say only that you can talk about his résumé. Do not invent employers, roles or metrics.',
-    es: 'Responde solo sobre la carrera, los proyectos, las habilidades y el contacto de Marcelo Macedo. Si la pregunta es de otro tema, di solo que hablas de su currículum. No inventes empleadores, cargos ni métricas.'
-  };
-  return `${rule[lang] || rule.pt}\n\n${facts}`;
+function normalizeText(value) {
+  return String(value)
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '');
 }
 
-let cvSession = null;
-let cvSessionLang = '';
-
-async function askBrowserModel(message, lang) {
-  const Model = globalThis.LanguageModel;
-  if (!Model || typeof Model.availability !== 'function' || typeof Model.create !== 'function') {
-    return null;
-  }
-
-  try {
-    const availability = await Model.availability();
-    if (availability !== 'available') return null;
-    if (!cvSession || cvSessionLang !== lang) {
-      cvSession = await Model.create({
-        initialPrompts: [{ role: 'system', content: buildCvSystemPrompt(lang) }]
-      });
-      cvSessionLang = lang;
-    }
-    const text = await cvSession.prompt(message);
-    return typeof text === 'string' && text.trim() ? text.trim() : null;
-  } catch {
-    cvSession = null;
-    return null;
-  }
-}
-
-async function answerQuestion(message) {
-  const lang = chatKnowledge[currentLang] ? currentLang : 'pt';
-  const modelAnswer = await askBrowserModel(message, lang);
-  return modelAnswer || getResponse(message);
-}
-
-// Get response based on message
-function getResponse(message) {
+function getResponse(message, topic) {
   const lang = chatKnowledge[currentLang] ? currentLang : 'pt';
   const knowledge = chatKnowledge[lang];
-  const lowerMessage = message.toLowerCase();
-  
-  // Check for greetings
-  const greetings = ['oi', 'olá', 'ola', 'hello', 'hi', 'hey', 'hola'];
-  if (greetings.some(g => lowerMessage.includes(g)) && lowerMessage.length < 10) {
+  const normalized = normalizeText(message);
+
+  if (topic && knowledge[topic] && knowledge[topic].answer) {
+    return knowledge[topic].answer;
+  }
+
+  const greetings = ['oi', 'ola', 'hello', 'hi', 'hey', 'hola'];
+  if (greetings.some(greeting => normalized === greeting || normalized.startsWith(`${greeting} `)) && normalized.length < 24) {
     return knowledge.greetings[Math.floor(Math.random() * knowledge.greetings.length)];
   }
-  
-  // Check each knowledge category
-  for (const [category, data] of Object.entries(knowledge)) {
-    if (category === 'greetings' || category === 'unknown') continue;
-    
-    if (data.question && data.question.some(keyword => lowerMessage.includes(keyword))) {
-      return data.answer;
+
+  let bestAnswer = '';
+  let bestScore = 0;
+
+  Object.entries(knowledge).forEach(([category, data]) => {
+    if (category === 'greetings' || category === 'unknown' || !data.question || !data.answer) return;
+    const score = data.question.reduce((total, keyword) => {
+      const term = normalizeText(keyword);
+      if (!term) return total;
+      const matched = term.length < 4
+        ? new RegExp(`(^|[^a-z0-9])${term}([^a-z0-9]|$)`).test(normalized)
+        : normalized.includes(term);
+      return matched ? total + term.length : total;
+    }, 0);
+    if (score > bestScore) {
+      bestScore = score;
+      bestAnswer = data.answer;
     }
-  }
-  
-  // Default response
-  return knowledge.unknown.answer;
+  });
+
+  return bestAnswer || knowledge.unknown.answer;
 }
 
 // Initialize on DOM load

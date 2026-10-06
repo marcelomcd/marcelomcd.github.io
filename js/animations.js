@@ -6,11 +6,11 @@
 // Initialize AOS (Animate On Scroll)
 function initAOS() {
   AOS.init({
-    duration: 800,
+    duration: 450,
     easing: 'ease-out',
     once: true,
-    offset: 100,
-    delay: 50
+    offset: 80,
+    delay: 0
   });
 }
 
@@ -78,10 +78,10 @@ function initParticles() {
     particlesJS('particles-js', {
       particles: {
         number: {
-          value: 80,
+          value: 28,
           density: {
             enable: true,
-            value_area: 800
+            value_area: 1200
           }
         },
         color: {
@@ -98,7 +98,7 @@ function initParticles() {
           value: 0.3,
           random: true,
           anim: {
-            enable: true,
+            enable: false,
             speed: 1,
             opacity_min: 0.1,
             sync: false
@@ -108,7 +108,7 @@ function initParticles() {
           value: 3,
           random: true,
           anim: {
-            enable: true,
+            enable: false,
             speed: 2,
             size_min: 0.1,
             sync: false
@@ -140,11 +140,11 @@ function initParticles() {
         detect_on: 'canvas',
         events: {
           onhover: {
-            enable: true,
+            enable: false,
             mode: 'grab'
           },
           onclick: {
-            enable: true,
+            enable: false,
             mode: 'push'
           },
           resize: true
@@ -169,7 +169,8 @@ function initParticles() {
 // Parallax effect on mouse move
 function initParallax() {
   const parallaxElements = document.querySelectorAll('.parallax-layer');
-  
+  if (!parallaxElements.length) return;
+
   document.addEventListener('mousemove', (e) => {
     const mouseX = e.clientX / window.innerWidth;
     const mouseY = e.clientY / window.innerHeight;

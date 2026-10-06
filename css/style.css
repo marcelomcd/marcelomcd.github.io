@@ -15,7 +15,8 @@
   --accent-primary: #00E0FF;
   --accent-secondary: #667EEA;
   --accent-gradient: linear-gradient(135deg, #667EEA 0%, #00E0FF 100%);
-  --glass-bg: rgba(12, 18, 40, 0.52);
+  --glass-alpha: 0.52;
+  --glass-bg: rgba(12, 18, 40, var(--glass-alpha));
   --glass-border: rgba(255, 255, 255, 0.18);
   --glass-highlight: rgba(255, 255, 255, 0.16);
   --glass-shadow: rgba(0, 0, 0, 0.28);
@@ -61,7 +62,7 @@
   --accent-primary: #667EEA;
   --accent-secondary: #764BA2;
   --accent-gradient: linear-gradient(135deg, #667EEA 0%, #764BA2 100%);
-  --glass-bg: rgba(255, 255, 255, 0.52);
+  --glass-bg: rgba(255, 255, 255, var(--glass-alpha));
   --glass-border: rgba(255, 255, 255, 0.62);
   --glass-highlight: rgba(255, 255, 255, 0.78);
   --glass-shadow: rgba(15, 23, 42, 0.12);
@@ -189,8 +190,6 @@ img {
   background:
     linear-gradient(180deg, var(--glass-highlight), transparent 42%),
     var(--glass-bg);
-  backdrop-filter: blur(var(--glass-blur)) saturate(180%);
-  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(180%);
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-lg);
   box-shadow:
@@ -1457,8 +1456,8 @@ img {
   position: absolute;
   inset: 0;
   background: rgba(8, 12, 28, 0.45);
-  backdrop-filter: blur(16px) saturate(140%);
-  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .modal__content {

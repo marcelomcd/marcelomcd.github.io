@@ -41,6 +41,24 @@ function toggleTheme() {
   setTheme(newTheme);
 }
 
+function initGlassOpacity() {
+  const input = document.getElementById('glass-opacity');
+  if (!input) return;
+
+  const stored = localStorage.getItem('glass-alpha');
+  const parsed = stored === null ? Number(input.value) : Number(stored);
+  const initial = Number.isFinite(parsed) ? parsed : Number(input.value);
+  const apply = (percent) => {
+    const safe = Math.min(92, Math.max(18, percent));
+    document.documentElement.style.setProperty('--glass-alpha', String(safe / 100));
+    input.value = String(safe);
+    localStorage.setItem('glass-alpha', String(safe));
+  };
+
+  apply(initial);
+  input.addEventListener('input', () => apply(Number(input.value)));
+}
+
 // Navigation
 function initNavigation() {
   const header = document.getElementById('header');
@@ -401,6 +419,7 @@ function initContactForm() {
 // Initialize everything
 function init() {
   initTheme();
+  initGlassOpacity();
   initNavigation();
   initSmoothScroll();
   initScrollTop();

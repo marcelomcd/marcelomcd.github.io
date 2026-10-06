@@ -101,6 +101,11 @@
                     </div>
                 </div>
                 
+                <label class="opacity-control">
+                    <i class="fas fa-droplet" aria-hidden="true"></i>
+                    <input type="range" id="glass-opacity" min="18" max="92" value="52" step="1" aria-label="Transparência">
+                </label>
+
                 <!-- Theme Toggle -->
                 <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
                     <i class="fas fa-moon"></i>
@@ -1312,7 +1317,7 @@
         </div>
         
         <div class="chat-sidebar__input">
-            <p class="chat-scope" data-i18n="chat.scope">Responde só sobre o currículo. A pergunta não sai do navegador.</p>
+            <p class="chat-scope" data-i18n="chat.scope">Respostas só com o que está nesta página, sobre o currículo do Marcelo.</p>
             <form class="chat-form" id="chat-form">
                 <input 
                     type="text" 
